@@ -31,15 +31,19 @@ main{padding:12px 14px 40px}h2{font-size:15px;margin:6px 0 10px;color:#ccd}
 .card{background:#151924;border-radius:12px;padding:10px 12px;margin-bottom:10px;border-left:4px solid #444;overflow-wrap:anywhere}
 .card.on{border-left-color:#ff6a00}.card.dim{opacity:.45}.card b{font-size:14px}
 .meta{font-size:12px;color:#9aa3b5;margin-top:4px}.neu{background:#e03131;color:#fff;font-size:10px;padding:1px 5px;border-radius:4px;margin-left:4px}
+.home{position:relative}.home i{position:absolute;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid #4dabf7;box-shadow:0 0 12px 4px rgba(77,171,247,.8)}.home span{position:absolute;left:12px;top:-10px;font:700 12px system-ui;color:#fff;text-shadow:0 0 4px #000,0 0 4px #000;white-space:nowrap}
+#homebtn{border:1px solid #555;background:rgba(40,44,56,.8);color:#eee;border-radius:16px;padding:6px 10px;font-size:14px}
 a{color:#4dabf7}.leaflet-popup-content{font-size:13px}
 </style></head><body>
 <header><h1>Paris Lageradar</h1><span id="stand"></span></header>
 <div id="wrap"><div id="map"></div>
 <div id="legend">Aktivität<div class="g"></div><div class="r"><span>niedrig</span><span>hoch</span></div></div>
-<div id="tl"><div id="tlhead"><button id="play" aria-label="Abspielen">▶</button><div id="tlabel"></div><button id="nowbtn">Jetzt</button></div>
+<div id="tl"><div id="tlhead"><button id="play" aria-label="Abspielen">▶</button><div id="tlabel"></div><button id="nowbtn">Jetzt</button><button id="homebtn" aria-label="Zuhause">🏠</button></div>
 <div id="track"><div id="rail"></div><div id="fill"></div><div id="nowm"><span>JETZT</span></div><div id="thumb"></div></div></div></div>
 <main><h2>Hotspots</h2><div id="list"></div></main>
 <script>
+const HOME=[48.867617,2.350194]; // 31 Rue du Caire, 75002 Paris (api-adresse.data.gouv.fr)
+const km=e=>(map.distance(HOME,[e.lat,e.lon])/1000).toLocaleString('de-DE',{maximumFractionDigits:1,minimumFractionDigits:1})+' km von Zuhause';
 const MIN=-24,MAX=72;let val=0;
 const P=s=>new Date((s.length==16?s+':00':s)+'+01:00');
 const tz={timeZone:'Europe/Paris'};
@@ -48,6 +52,7 @@ const hm=d=>d.toLocaleTimeString('de-DE',{...tz,hour:'2-digit',minute:'2-digit'}
 const map=L.map('map',{zoomControl:false}).setView([48.858,2.36],12);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',maxZoom:19}).addTo(map);
 const heat=L.heatLayer([],{radius:60,blur:45,maxZoom:13,max:1,minOpacity:0.05,gradient:{0.15:'rgba(255,255,0,0)',0.35:'rgba(255,235,59,.55)',0.55:'#ff9800',0.75:'#f44336',1:'#8b0000'}}).addTo(map);
+map.createPane('home').style.zIndex=650;L.marker(HOME,{pane:'home',interactive:false,icon:L.divIcon({className:'home',html:'<i></i><span>Zuhause</span>',iconSize:[0,0]})}).addTo(map);
 let EV=[],hits=[],base=new Date();base.setMinutes(0,0,0);const now=new Date();let timer=null;
 const T=()=>new Date(base.getTime()+val*36e5);
 function inten(e,t){const s=P(e.start),en=P(e.end),H=4*36e5;if(t>=s&&t<=en)return 1;const d=t<s?s-t:t-en;return d<H?1-d/H:0}
@@ -68,14 +73,15 @@ track.addEventListener('pointerdown',e=>{track.setPointerCapture(e.pointerId);se
 track.addEventListener('pointermove',e=>{if(e.buttons||e.pressure)setFromX(e.clientX)});
 L.DomEvent.disableClickPropagation(document.getElementById('tl'));L.DomEvent.disableScrollPropagation(document.getElementById('tl'));
 function popup(ll){const t=T(),near=EV.filter(e=>e.a>0&&map.distance(ll,[e.lat,e.lon])<900);if(!near.length)return;
- L.popup().setLatLng(ll).setContent(near.map(e=>`<b>${e.title}</b><br><small>${e.z} · ${e.type}</small><br><a href="${e.url}" target="_blank" rel="noopener">Quelle</a>`).join('<hr>')).openOn(map)}
+ L.popup().setLatLng(ll).setContent(near.map(e=>`<b>${e.title}</b><br><small>${e.z} · ${e.type} · ${km(e)}</small><br><a href="${e.url}" target="_blank" rel="noopener">Quelle</a>`).join('<hr>')).openOn(map)}
 fetch('events.json?'+Date.now()).then(r=>r.json()).then(d=>{EV=d.events;document.getElementById('stand').textContent='Stand '+fmt(P(d.stand));
  const latest=EV.map(e=>e.first_seen).sort().pop(),list=document.getElementById('list');
  EV.forEach((e,i)=>{const st=P(e.start),en=P(e.end);e.z=fmt(st)+' – '+hm(en);
   hits.push(L.circle([e.lat,e.lon],{radius:600,opacity:0,fillOpacity:0}).on('click',ev=>popup(ev.latlng)).addTo(map));
-  const c=document.createElement('div');c.id='c'+i;c.innerHTML=`<b>${e.title}</b>${e.first_seen==latest?'<span class="neu">NEU</span>':''}<div class="meta">${e.z} · ${e.place} · ${e.type}</div>`;
+  const c=document.createElement('div');c.id='c'+i;c.innerHTML=`<b>${e.title}</b>${e.first_seen==latest?'<span class="neu">NEU</span>':''}<div class="meta">${e.z} · ${e.place} · ${e.type} · ${km(e)}</div>`;
   c.onclick=()=>{val=Math.max(MIN,Math.min(MAX,Math.round((st-base)/36e5)));render();map.setView([e.lat,e.lon],14);window.scrollTo({top:0,behavior:'smooth'});setTimeout(()=>popup(L.latLng(e.lat,e.lon)),400)};list.appendChild(c)});
  ticks();render()});
+document.getElementById('homebtn').onclick=()=>map.setView(HOME,15);
 document.getElementById('nowbtn').onclick=()=>{val=0;render()};
 document.getElementById('play').onclick=function(){if(timer){clearInterval(timer);timer=null;this.textContent='▶'}else{this.textContent='❚❚';timer=setInterval(()=>{val=val>=MAX?MIN:val+1;render()},350)}};
 </script></body></html>
