@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-29T12:05",
+ "stand": "2026-10-29T12:49",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -13,7 +13,147 @@
    "type": "Streik/Verkehr",
    "weight": 3,
    "start": "2026-10-29T00:00",
-   "end": "2026-10-29T23:59"
+   "end": "2026-10-29T23:59",
+   "geometry": {
+    "coordinates": [
+     [
+      2.35409,
+      48.88116
+     ],
+     [
+      2.35356,
+      48.8802
+     ],
+     [
+      2.3523,
+      48.8805
+     ],
+     [
+      2.34952,
+      48.87968
+     ],
+     [
+      2.34791,
+      48.87402
+     ],
+     [
+      2.34791,
+      48.87068
+     ],
+     [
+      2.3539,
+      48.86941
+     ],
+     [
+      2.35553,
+      48.86891
+     ],
+     [
+      2.35377,
+      48.86596
+     ],
+     [
+      2.35566,
+      48.86525
+     ],
+     [
+      2.35151,
+      48.85759
+     ],
+     [
+      2.34697,
+      48.85896
+     ],
+     [
+      2.34518,
+      48.85953
+     ],
+     [
+      2.34438,
+      48.85796
+     ],
+     [
+      2.34896,
+      48.85672
+     ],
+     [
+      2.34519,
+      48.85023
+     ],
+     [
+      2.3428,
+      48.85063
+     ],
+     [
+      2.34395,
+      48.85301
+     ],
+     [
+      2.34434,
+      48.85377
+     ],
+     [
+      2.34179,
+      48.85242
+     ],
+     [
+      2.33826,
+      48.85153
+     ],
+     [
+      2.33843,
+      48.84918
+     ],
+     [
+      2.34063,
+      48.84693
+     ],
+     [
+      2.34021,
+      48.8462
+     ],
+     [
+      2.33665,
+      48.84028
+     ],
+     [
+      2.33659,
+      48.83868
+     ],
+     [
+      2.33262,
+      48.83453
+     ],
+     [
+      2.33183,
+      48.83499
+     ],
+     [
+      2.33092,
+      48.83431
+     ],
+     [
+      2.33234,
+      48.83354
+     ],
+     [
+      2.33605,
+      48.82422
+     ],
+     [
+      2.33437,
+      48.82135
+     ],
+     [
+      2.32539,
+      48.82329
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 1,
+   "level_reason": "Verkehrsstörung durch RATP-Streik, keine Gefahr; Linie 38 ungefähre Linienführung"
   },
   {
    "id": "louvre-strike-20261029",
@@ -27,7 +167,17 @@
    "type": "Streik",
    "weight": 1,
    "start": "2026-10-29T09:00",
-   "end": "2026-10-29T18:00"
+   "end": "2026-10-29T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3376,
+     48.8606
+    ]
+   },
+   "confirmed": true,
+   "level": 1,
+   "level_reason": "Sozialkonflikt endet mit Protokoll – nur Info (Öffnung)"
   },
   {
    "id": "cgt-demo-20261031",
@@ -41,7 +191,83 @@
    "type": "Demonstration",
    "weight": 4,
    "start": "2026-10-31T13:00",
-   "end": "2026-10-31T19:00"
+   "end": "2026-10-31T19:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.36863,
+      48.85331
+     ],
+     [
+      2.36891,
+      48.85353
+     ],
+     [
+      2.3694,
+      48.85353
+     ],
+     [
+      2.36972,
+      48.8533
+     ],
+     [
+      2.37046,
+      48.85321
+     ],
+     [
+      2.3718,
+      48.85247
+     ],
+     [
+      2.37365,
+      48.85193
+     ],
+     [
+      2.37852,
+      48.85072
+     ],
+     [
+      2.37862,
+      48.85106
+     ],
+     [
+      2.37888,
+      48.85151
+     ],
+     [
+      2.38038,
+      48.85125
+     ],
+     [
+      2.38013,
+      48.85048
+     ],
+     [
+      2.3842,
+      48.85017
+     ],
+     [
+      2.39247,
+      48.8489
+     ],
+     [
+      2.39502,
+      48.84852
+     ],
+     [
+      2.39505,
+      48.84818
+     ],
+     [
+      2.39526,
+      48.84796
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 4,
+   "level_reason": "Route Bastille–Nation von Präfektur abgelehnt + Demoverbot Innenstadt → Polizei-Großeinsatz/Spannungen möglich"
   },
   {
    "id": "cgt-demo-alt-20261031",
@@ -55,7 +281,75 @@
    "type": "Demonstration",
    "weight": 3,
    "start": "2026-10-31T13:00",
-   "end": "2026-10-31T19:00"
+   "end": "2026-10-31T19:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.40922,
+      48.86421
+     ],
+     [
+      2.40884,
+      48.86411
+     ],
+     [
+      2.40898,
+      48.86456
+     ],
+     [
+      2.40854,
+      48.86461
+     ],
+     [
+      2.4114,
+      48.84887
+     ],
+     [
+      2.41124,
+      48.84727
+     ],
+     [
+      2.4108,
+      48.84712
+     ],
+     [
+      2.40621,
+      48.84741
+     ],
+     [
+      2.41081,
+      48.84701
+     ],
+     [
+      2.41113,
+      48.8468
+     ],
+     [
+      2.41096,
+      48.84623
+     ],
+     [
+      2.40777,
+      48.83681
+     ],
+     [
+      2.40647,
+      48.83552
+     ],
+     [
+      2.40443,
+      48.83429
+     ],
+     [
+      2.39909,
+      48.83239
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 3,
+   "level_reason": "Von Präfektur vorgeschlagene Ausweichroute über Maréchaux-Boulevards, friedlicher Zug erwartet, noch nicht bestätigt"
   },
   {
    "id": "cgt-demo-alt2-20261031",
@@ -69,7 +363,17 @@
    "type": "Demonstration",
    "weight": 2,
    "start": "2026-10-31T13:00",
-   "end": "2026-10-31T19:00"
+   "end": "2026-10-31T19:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.399,
+     48.8325
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Endpunkt der Ausweichroute (Porte de Charenton), Auflösung der Demo erwartet"
   },
   {
    "id": "curfew-suspended-20261028",
@@ -83,7 +387,17 @@
    "type": "Behörde/Justiz",
    "weight": 2,
    "start": "2026-10-28T00:00",
-   "end": "2026-10-28T23:59"
+   "end": "2026-10-28T23:59",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.347,
+     48.862
+    ]
+   },
+   "confirmed": true,
+   "level": 1,
+   "level_reason": "Gerichtsentscheid (Ausgangssperre ausgesetzt) – keine Lage vor Ort"
   },
   {
    "id": "bac-arrest-charenton-20261027",
@@ -97,7 +411,17 @@
    "type": "Polizeieinsatz",
    "weight": 1,
    "start": "2026-10-27T12:30",
-   "end": "2026-10-27T14:00"
+   "end": "2026-10-27T14:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.388,
+     48.844
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Einzelne Festnahme durch BAC, abgeschlossen; Hausnummer in Quelle nicht genannt"
   },
   {
    "id": "gj-casserolade-20261030",
@@ -111,7 +435,37 @@
    "type": "Kundgebung",
    "weight": 3,
    "start": "2026-10-30T18:00",
-   "end": "2026-10-30T21:00"
+   "end": "2026-10-30T21:00",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.3155,
+       48.8627
+      ],
+      [
+       2.3205,
+       48.8627
+      ],
+      [
+       2.3205,
+       48.8605
+      ],
+      [
+       2.3155,
+       48.8605
+      ],
+      [
+       2.3155,
+       48.8627
+      ]
+     ]
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Angemeldete Lärm-Kundgebung vor Palais Bourbon, friedlich erwartet"
   },
   {
    "id": "pp-ban-centre-20261031",
@@ -125,7 +479,17 @@
    "type": "Demo-Verbot",
    "weight": 2,
    "start": "2026-10-31T00:00",
-   "end": "2026-10-31T23:59"
+   "end": "2026-10-31T23:59",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.369,
+     48.853
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Behördliches Demo-Verbot Innenstadt → Kontrollen/Sperren; genauer Perimeter nicht in Quelle"
   },
   {
    "id": "gj-mairie-sitin-20261031",
@@ -139,7 +503,37 @@
    "type": "Kundgebung",
    "weight": 2,
    "start": "2026-10-31T14:00",
-   "end": "2026-10-31T18:00"
+   "end": "2026-10-31T18:00",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.3497,
+       48.8574
+      ],
+      [
+       2.3517,
+       48.8574
+      ],
+      [
+       2.3517,
+       48.8561
+      ],
+      [
+       2.3497,
+       48.8561
+      ],
+      [
+       2.3497,
+       48.8574
+      ]
+     ]
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Sit-in auf dem Rathausplatz, friedlich erwartet"
   }
  ]
 }

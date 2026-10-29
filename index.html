@@ -9,7 +9,7 @@ header{padding:10px 14px 8px;display:flex;justify-content:space-between;align-it
 h1{font-size:18px;margin:0}#stand{color:#8a93a6;font-size:12px}
 #wrap{position:relative;height:70vh;min-height:420px}#map{position:absolute;inset:0;background:#0b0d12}
 .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9)}
-.leaflet-heatmap-layer{opacity:.85}
+.leaflet-heatmap-layer{opacity:.75}.glow{filter:blur(4px)}
 #legend{position:absolute;top:10px;left:10px;z-index:500;background:rgba(15,18,26,.75);backdrop-filter:blur(6px);border-radius:10px;padding:6px 10px;font-size:11px;color:#ccc}
 #legend .g{width:110px;height:8px;border-radius:4px;margin:4px 0 2px;background:linear-gradient(90deg,rgba(255,255,0,.2),#ffeb3b,#ff9800,#f44336,#8b0000)}
 #legend .r{display:flex;justify-content:space-between}
@@ -33,17 +33,23 @@ main{padding:12px 14px 40px}h2{font-size:15px;margin:6px 0 10px;color:#ccd}
 .meta{font-size:12px;color:#9aa3b5;margin-top:4px}.neu{background:#e03131;color:#fff;font-size:10px;padding:1px 5px;border-radius:4px;margin-left:4px}
 .home{position:relative}.home i{position:absolute;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid #4dabf7;box-shadow:0 0 12px 4px rgba(77,171,247,.8)}.home span{position:absolute;left:12px;top:-10px;font:700 12px system-ui;color:#fff;text-shadow:0 0 4px #000,0 0 4px #000;white-space:nowrap}
 #homebtn{border:1px solid #555;background:rgba(40,44,56,.8);color:#eee;border-radius:16px;padding:6px 10px;font-size:14px}
+.lv{display:flex;gap:3px;margin:4px 0 2px}.lv i{font-style:normal;width:20px;height:16px;border-radius:3px;color:#000;font-weight:700;font-size:10px;text-align:center;line-height:16px}.lv i:last-child{color:#fff}.dl{margin-top:3px;color:#aaa}
+.bdg{display:inline-block;min-width:20px;padding:1px 6px;border-radius:5px;font-weight:800;font-size:11px;color:#000;margin-right:6px}.bdg.l5{color:#fff}.why{font-size:12px;color:#c9cfdb;margin-top:3px;font-style:italic}
+#ovl{flex:0 0 auto;padding:4px 8px;border-radius:8px;font-size:12px;font-weight:800;color:#000;background:#444;text-align:center;line-height:1.1}
+#tlabel{font-size:17px;white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
 a{color:#4dabf7}.leaflet-popup-content{font-size:13px}
 </style></head><body>
 <header><h1>Paris Lageradar</h1><span id="stand"></span></header>
 <div id="wrap"><div id="map"></div>
-<div id="legend">Aktivität<div class="g"></div><div class="r"><span>niedrig</span><span>hoch</span></div></div>
-<div id="tl"><div id="tlhead"><button id="play" aria-label="Abspielen">▶</button><div id="tlabel"></div><button id="nowbtn">Jetzt</button><button id="homebtn" aria-label="Zuhause">🏠</button></div>
+<div id="legend">Gefahrenstufe<div class="lv"><i style="background:#ffe066">1</i><i style="background:#ffc107">2</i><i style="background:#ff9800">3</i><i style="background:#f44336">4</i><i style="background:#8b0000">5</i></div><div class="r"><span>Info</span><span>akut</span></div><div class="dl">┅ unbestätigt</div></div>
+<div id="tl"><div id="tlhead"><button id="play" aria-label="Abspielen">▶</button><div id="tlabel"></div><div id="ovl" title="Gesamtlage">–</div><button id="nowbtn">Jetzt</button><button id="homebtn" aria-label="Zuhause">🏠</button></div>
 <div id="track"><div id="rail"></div><div id="fill"></div><div id="nowm"><span>JETZT</span></div><div id="thumb"></div></div></div></div>
 <main><h2>Hotspots</h2><div id="list"></div></main>
 <script>
 const HOME=[48.867617,2.350194]; // 31 Rue du Caire, 75002 Paris (api-adresse.data.gouv.fr)
 const km=e=>(map.distance(HOME,[e.lat,e.lon])/1000).toLocaleString('de-DE',{maximumFractionDigits:1,minimumFractionDigits:1})+' km von Zuhause';
+const LC=['#888','#ffe066','#ffc107','#ff9800','#f44336','#8b0000'],LN=['','Info/Verkehr','Störung','Demo friedlich','Spannungen','Akute Gefahr'];
+const bdg=l=>`<span class="bdg l${l}" style="background:${LC[l]}">${l}</span>`;
 const MIN=-24,MAX=72;let val=0;
 const P=s=>new Date((s.length==16?s+':00':s)+'+01:00');
 const tz={timeZone:'Europe/Paris'};
@@ -51,7 +57,7 @@ const fmt=d=>d.toLocaleString('de-DE',{...tz,weekday:'short',day:'2-digit',month
 const hm=d=>d.toLocaleTimeString('de-DE',{...tz,hour:'2-digit',minute:'2-digit'});
 const map=L.map('map',{zoomControl:false}).setView([48.858,2.36],12);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',maxZoom:19}).addTo(map);
-const heat=L.heatLayer([],{radius:60,blur:45,maxZoom:13,max:1,minOpacity:0.05,gradient:{0.15:'rgba(255,255,0,0)',0.35:'rgba(255,235,59,.55)',0.55:'#ff9800',0.75:'#f44336',1:'#8b0000'}}).addTo(map);
+const heat=L.heatLayer([],{radius:38,blur:30,maxZoom:13,max:1,minOpacity:0.05,gradient:{0.1:'rgba(255,255,0,0)',0.3:'rgba(255,224,102,.5)',0.5:'#ffc107',0.65:'#ff9800',0.8:'#f44336',1:'#8b0000'}}).addTo(map);
 map.createPane('home').style.zIndex=650;L.marker(HOME,{pane:'home',interactive:false,icon:L.divIcon({className:'home',html:'<i></i><span>Zuhause</span>',iconSize:[0,0]})}).addTo(map);
 let EV=[],hits=[],base=new Date();base.setMinutes(0,0,0);const now=new Date();let timer=null;
 const T=()=>new Date(base.getTime()+val*36e5);
@@ -63,22 +69,34 @@ function ticks(){let h='';for(let v=MIN;v<=MAX;v++){const t=new Date(base.getTim
  else if(H%6==0){h+=`<div class="tick" style="left:${pct(v)}%"></div><div class="tl" style="left:${pct(v)}%">${H}h</div>`}
  else if(H%3==0)h+=`<div class="tick" style="left:${pct(v)}%"></div>`}
  track.insertAdjacentHTML('beforeend',h);document.getElementById('nowm').style.left=pct(0)+'%'}
-function render(){const t=T();document.getElementById('tlabel').textContent=fmt(t);
+function render(){const t=T();document.getElementById('tlabel').textContent=t.toLocaleString('de-DE',{...tz,weekday:'short',hour:'2-digit',minute:'2-digit'}).replace(',','');
  thumb.style.left=pct(val)+'%';fill.style.width=pct(val)+'%';
- const pts=[];EV.forEach((e,i)=>{const a=inten(e,t);e.a=a;if(a>0)pts.push([e.lat,e.lon,a*Math.min(1,.25+e.weight/4)]);
-  hits[i].setStyle({interactive:a>0});document.getElementById('c'+i).className='card'+(a==1?' on':a==0?' dim':'')});
- heat.setLatLngs(pts)}
+ const pts=[];let mx=0;EV.forEach((e,i)=>{const a=inten(e,t);e.a=a;const w=a*(.15+.85*e.level/5);
+  if(a>0){{const S=samples(e),k=S.length>1?.28:1;S.forEach(q=>pts.push([q[0],q[1],w*k]))};if(a>.5)mx=Math.max(mx,e.level)}
+  hits[i].forEach(l=>l.setStyle({opacity:a*l.o,fillOpacity:a*(l.f||0),interactive:a>0}));
+  document.getElementById('c'+i).className='card'+(a==1?' on':a==0?' dim':'')});
+ heat.setLatLngs(pts);const o=document.getElementById('ovl');o.innerHTML=mx?`Lage ${mx}<br><small>${LN[mx]}</small>`:'Lage<br><small>ruhig</small>';o.style.background=LC[mx];o.style.color=mx==5?'#fff':'#000'}
+function lls(e){const g=e.geometry,c=g.type=='Polygon'?g.coordinates[0]:g.type=='LineString'?g.coordinates:[g.coordinates];return c.map(([x,y])=>[y,x])}
+function samples(e){if(e._s)return e._s;const c=lls(e),out=[];if(c.length==1)return e._s=c;
+ for(let i=1;i<c.length;i++){const A=c[i-1],B=c[i],n=Math.max(1,Math.ceil(map.distance(A,B)/120));for(let k=0;k<n;k++)out.push([A[0]+(B[0]-A[0])*k/n,A[1]+(B[1]-A[1])*k/n])}
+ out.push(c[c.length-1]);if(e.geometry.type=='Polygon'){const cx=c.reduce((s,p)=>s+p[0],0)/c.length,cy=c.reduce((s,p)=>s+p[1],0)/c.length;out.push([cx,cy],[cx,cy])}return e._s=out}
+function draw(e){const c=lls(e),col=LC[e.level],dash=e.confirmed?null:'10 10',T=e.geometry.type,ls=[];
+ const mk=(f,o,x)=>{const l=f.addTo(map);l.o=o;Object.assign(l,x||{});l.on('click',ev=>popup(ev.latlng));ls.push(l)};
+ if(T=='LineString'){mk(L.polyline(c,{color:col,weight:22,opacity:.18,className:'glow',lineCap:'round'}),.18);mk(L.polyline(c,{color:col,weight:10,opacity:.35,className:'glow',lineCap:'round'}),.35);mk(L.polyline(c,{color:'#fff3d6',weight:3,opacity:.9,dashArray:dash,lineCap:'round'}),.9)}
+ else if(T=='Polygon'){mk(L.polygon(c,{color:col,weight:8,opacity:.3,className:'glow',fillColor:col,fillOpacity:.35}),.3,{f:.35});mk(L.polygon(c,{color:'#fff3d6',weight:2,opacity:.8,dashArray:dash,fill:false}),.8)}
+ else mk(L.circleMarker(c[0],{radius:14,weight:0,fillColor:col,opacity:0,fillOpacity:.0001}),0,{f:.0001});
+ return ls}
 function setFromX(x){const r=track.getBoundingClientRect();val=Math.round(MIN+Math.min(1,Math.max(0,(x-r.left)/r.width))*(MAX-MIN));render()}
 track.addEventListener('pointerdown',e=>{track.setPointerCapture(e.pointerId);setFromX(e.clientX)});
 track.addEventListener('pointermove',e=>{if(e.buttons||e.pressure)setFromX(e.clientX)});
 L.DomEvent.disableClickPropagation(document.getElementById('tl'));L.DomEvent.disableScrollPropagation(document.getElementById('tl'));
-function popup(ll){const t=T(),near=EV.filter(e=>e.a>0&&map.distance(ll,[e.lat,e.lon])<900);if(!near.length)return;
- L.popup().setLatLng(ll).setContent(near.map(e=>`<b>${e.title}</b><br><small>${e.z} · ${e.type} · ${km(e)}</small><br><a href="${e.url}" target="_blank" rel="noopener">Quelle</a>`).join('<hr>')).openOn(map)}
+function popup(ll){const t=T(),near=EV.filter(e=>e.a>0&&samples(e).some(q=>map.distance(ll,q)<350)).sort((x,y)=>y.level-x.level);if(!near.length)return;
+ L.popup().setLatLng(ll).setContent(near.map(e=>`${bdg(e.level)}<b>${e.title}</b><div class="why">${e.level_reason}</div><small>${e.z} · ${e.type} · ${km(e)}</small><br><a href="${e.url}" target="_blank" rel="noopener">Quelle</a>`).join('<hr>')).openOn(map)}
 fetch('events.json?'+Date.now()).then(r=>r.json()).then(d=>{EV=d.events;document.getElementById('stand').textContent='Stand '+fmt(P(d.stand));
  const latest=EV.map(e=>e.first_seen).sort().pop(),list=document.getElementById('list');
  EV.forEach((e,i)=>{const st=P(e.start),en=P(e.end);e.z=fmt(st)+' – '+hm(en);
-  hits.push(L.circle([e.lat,e.lon],{radius:600,opacity:0,fillOpacity:0}).on('click',ev=>popup(ev.latlng)).addTo(map));
-  const c=document.createElement('div');c.id='c'+i;c.innerHTML=`<b>${e.title}</b>${e.first_seen==latest?'<span class="neu">NEU</span>':''}<div class="meta">${e.z} · ${e.place} · ${e.type} · ${km(e)}</div>`;
+  hits.push(draw(e));
+  const c=document.createElement('div');c.id='c'+i;c.innerHTML=`${bdg(e.level)}<b>${e.title}</b>${e.first_seen==latest?'<span class="neu">NEU</span>':''}<div class="meta">${e.z} · ${e.place} · ${e.type} · ${km(e)}</div><div class="why">Stufe ${e.level}: ${e.level_reason}${e.confirmed?'':' (gestrichelt = unbestätigt/ungefähr)'}</div>`;
   c.onclick=()=>{val=Math.max(MIN,Math.min(MAX,Math.round((st-base)/36e5)));render();map.setView([e.lat,e.lon],14);window.scrollTo({top:0,behavior:'smooth'});setTimeout(()=>popup(L.latLng(e.lat,e.lon)),400)};list.appendChild(c)});
  ticks();render()});
 document.getElementById('homebtn').onclick=()=>map.setView(HOME,15);
