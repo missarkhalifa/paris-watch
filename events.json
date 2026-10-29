@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-29T12:49",
+ "stand": "2026-10-29T15:02",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -400,30 +400,6 @@
    "level_reason": "Gerichtsentscheid (Ausgangssperre ausgesetzt) – keine Lage vor Ort"
   },
   {
-   "id": "bac-arrest-charenton-20261027",
-   "title": "BAC-Festnahme (Apologie du terrorisme, Drohungen)",
-   "time": "2026-10-27 ~13:00",
-   "place": "Rue de Charenton, 12e",
-   "url": "https://www.cnews.fr/faits-divers/2026-10-28/va-les-egorger-les-sales-blancs-un-homme-interpelle-paris-pour-apologie-du",
-   "first_seen": "2026-10-29T11:57",
-   "lat": 48.844,
-   "lon": 2.388,
-   "type": "Polizeieinsatz",
-   "weight": 1,
-   "start": "2026-10-27T12:30",
-   "end": "2026-10-27T14:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.388,
-     48.844
-    ]
-   },
-   "confirmed": true,
-   "level": 2,
-   "level_reason": "Einzelne Festnahme durch BAC, abgeschlossen; Hausnummer in Quelle nicht genannt"
-  },
-  {
    "id": "gj-casserolade-20261030",
    "title": "Gilets jaunes: Casserolade vor der Assemblée nationale",
    "time": "2026-10-30 18:00–21:00",
@@ -534,6 +510,400 @@
    "confirmed": true,
    "level": 3,
    "level_reason": "Sit-in auf dem Rathausplatz, friedlich erwartet"
+  },
+  {
+   "id": "etu-coord-demo-20261029",
+   "title": "Studenten-Demo (Coordination étudiante): Zug Uni Paris-Cité → Santé teilweise verboten, nur Kundgebung am Start",
+   "time": "2026-10-29 15:00",
+   "place": "Uni Paris-Cité, 12 rue de l'École-de-Médecine, 6e",
+   "url": "https://actu.fr/societe/blocus-lyceens-pendant-les-vacances-le-mouvement-de-contestation-se-poursuit-dans-des-facs-a-paris-et-en-ile-de-france_64985679.html",
+   "first_seen": "2026-10-29T15:05",
+   "lat": 48.85147,
+   "lon": 2.34163,
+   "type": "Kundgebung",
+   "weight": 3,
+   "start": "2026-10-29T15:00",
+   "end": "2026-10-29T18:30",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.34163,
+     48.85147
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "PP-Arrêté verbietet Demozug teilweise, statische Kundgebung am Startpunkt erlaubt (Ouest-France); Spannungen möglich"
+  },
+  {
+   "id": "etu-coord-route-20261029",
+   "title": "Verbotene Route Uni Paris-Cité → Prison de la Santé (Ausweichzüge möglich)",
+   "time": "2026-10-29 ab 15:00",
+   "place": "Rue Saint-Jacques / Rue de la Santé, 5e/14e",
+   "url": "https://www.ouest-france.fr/societe/manifestation/direct-manifestations-plusieurs-manifestations-interdites-partiellement-aujourdhui-et-demain-a-paris-b9f83aef-9b61-4f89-b25c-11ae973258e7",
+   "first_seen": "2026-10-29T15:05",
+   "lat": 48.8426,
+   "lon": 2.342,
+   "type": "Demo-Verbot",
+   "weight": 2,
+   "start": "2026-10-29T15:00",
+   "end": "2026-10-29T18:30",
+   "geometry": {
+    "coordinates": [
+     [
+      2.34177,
+      48.85142
+     ],
+     [
+      2.34151,
+      48.85112
+     ],
+     [
+      2.3428,
+      48.85063
+     ],
+     [
+      2.34317,
+      48.8514
+     ],
+     [
+      2.34552,
+      48.85084
+     ],
+     [
+      2.34335,
+      48.8468
+     ],
+     [
+      2.34449,
+      48.84655
+     ],
+     [
+      2.34487,
+      48.84606
+     ],
+     [
+      2.34455,
+      48.84548
+     ],
+     [
+      2.34375,
+      48.84591
+     ],
+     [
+      2.34297,
+      48.84611
+     ],
+     [
+      2.34335,
+      48.8468
+     ],
+     [
+      2.34085,
+      48.84733
+     ],
+     [
+      2.34077,
+      48.84751
+     ],
+     [
+      2.34039,
+      48.84748
+     ],
+     [
+      2.34292,
+      48.84257
+     ],
+     [
+      2.34136,
+      48.84274
+     ],
+     [
+      2.34114,
+      48.84112
+     ],
+     [
+      2.34068,
+      48.84038
+     ],
+     [
+      2.33774,
+      48.83588
+     ],
+     [
+      2.34167,
+      48.83538
+     ],
+     [
+      2.34159,
+      48.83481
+     ],
+     [
+      2.33821,
+      48.83466
+     ],
+     [
+      2.33805,
+      48.83379
+     ],
+     [
+      2.33953,
+      48.83346
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 2,
+   "level_reason": "Strecke laut PP verboten; genaue Straßenführung nicht veröffentlicht, Linie geschätzt"
+  },
+  {
+   "id": "gj-edmond-michelet-20261030",
+   "title": "Gilets jaunes: Kundgebung Place Edmond-Michelet (statt verbotener Demo nahe Élysée)",
+   "time": "2026-10-30 16:30–23:59",
+   "place": "Place Edmond-Michelet, 4e (Beaubourg)",
+   "url": "https://www.leparisien.fr/societe/direct-colere-lyceenne-une-reunion-au-ministere-de-linterieur-prevue-ce-jeudi-macron-appelle-a-la-reprise-des-cours-lundi-29-10-2026-MK4V6NXXANB4XMDIHIXQSDNEOQ.php",
+   "first_seen": "2026-10-29T15:05",
+   "lat": 48.86007,
+   "lon": 2.35045,
+   "type": "Kundgebung",
+   "weight": 3,
+   "start": "2026-10-30T16:30",
+   "end": "2026-10-30T23:59",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.35045,
+     48.86007
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Von PP genehmigte statische Kundgebung bis Mitternacht, Demo im 8e verboten; Polizeipräsenz erwartet"
+  },
+  {
+   "id": "commerce-clichy-stalingrad-20261030",
+   "title": "Demo Syndicat commerce indépendant: Champs-Élysées verboten, PP schlägt Place de Clichy → Stalingrad vor",
+   "time": "2026-10-30 (Uhrzeit nicht genannt)",
+   "place": "Bd de Clichy / Rochechouart / La Chapelle, 17e/18e/19e",
+   "url": "https://www.ouest-france.fr/societe/manifestation/direct-manifestations-plusieurs-manifestations-interdites-partiellement-aujourdhui-et-demain-a-paris-b9f83aef-9b61-4f89-b25c-11ae973258e7",
+   "first_seen": "2026-10-29T15:05",
+   "lat": 48.883,
+   "lon": 2.348,
+   "type": "Demonstration",
+   "weight": 2,
+   "start": "2026-10-30T10:00",
+   "end": "2026-10-30T18:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.32723,
+      48.88347
+     ],
+     [
+      2.32735,
+      48.88337
+     ],
+     [
+      2.32795,
+      48.88354
+     ],
+     [
+      2.32945,
+      48.88441
+     ],
+     [
+      2.3321,
+      48.88379
+     ],
+     [
+      2.33751,
+      48.88223
+     ],
+     [
+      2.33987,
+      48.8819
+     ],
+     [
+      2.3472,
+      48.88335
+     ],
+     [
+      2.3497,
+      48.88362
+     ],
+     [
+      2.3597,
+      48.88429
+     ],
+     [
+      2.36443,
+      48.88428
+     ],
+     [
+      2.36821,
+      48.88405
+     ],
+     [
+      2.36897,
+      48.88352
+     ],
+     [
+      2.36895,
+      48.88374
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 2,
+   "level_reason": "Kleine Händler-Demo, Ausweichroute nur vorgeschlagen; Linienführung über die Boulevards geschätzt, Zeit unbekannt"
+  },
+  {
+   "id": "gj-route-bastille-concorde-20261031",
+   "title": "Gilets jaunes Akt III: angemeldete Route Bastille → République → Grands Boulevards → Opéra → Concorde (Verbot erwartet)",
+   "time": "2026-10-31 ab 14:00",
+   "place": "Bd Beaumarchais, République, Bd Saint-Denis/Poissonnière, Opéra, Madeleine, Concorde",
+   "url": "https://www.leparisien.fr/paris-75/31-octobre-a-paris-les-gilets-jaunes-deposent-un-parcours-bastille-opera-concorde-et-menacent-de-porter-plainte-en-cas-de-refus-27-10-2026-TLJXPZ75MZH6XCWPAHX2DZBBYA.php",
+   "first_seen": "2026-10-29T15:05",
+   "lat": 48.8697,
+   "lon": 2.3534,
+   "type": "Demonstration",
+   "weight": 4,
+   "start": "2026-10-31T14:00",
+   "end": "2026-10-31T20:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.36863,
+      48.85331
+     ],
+     [
+      2.36717,
+      48.85345
+     ],
+     [
+      2.36726,
+      48.85801
+     ],
+     [
+      2.36715,
+      48.85845
+     ],
+     [
+      2.36784,
+      48.85856
+     ],
+     [
+      2.368,
+      48.85784
+     ],
+     [
+      2.36654,
+      48.86344
+     ],
+     [
+      2.36481,
+      48.86653
+     ],
+     [
+      2.36348,
+      48.86728
+     ],
+     [
+      2.36236,
+      48.86795
+     ],
+     [
+      2.35636,
+      48.86884
+     ],
+     [
+      2.35332,
+      48.86953
+     ],
+     [
+      2.346,
+      48.871
+     ],
+     [
+      2.33959,
+      48.87207
+     ],
+     [
+      2.33889,
+      48.87178
+     ],
+     [
+      2.332,
+      48.87061
+     ],
+     [
+      2.32799,
+      48.86993
+     ],
+     [
+      2.32441,
+      48.87097
+     ],
+     [
+      2.32332,
+      48.86987
+     ],
+     [
+      2.32408,
+      48.86921
+     ],
+     [
+      2.32498,
+      48.86936
+     ],
+     [
+      2.3251,
+      48.86981
+     ],
+     [
+      2.32559,
+      48.87063
+     ],
+     [
+      2.32441,
+      48.87097
+     ],
+     [
+      2.32334,
+      48.86995
+     ],
+     [
+      2.3239,
+      48.86926
+     ],
+     [
+      2.32261,
+      48.8675
+     ],
+     [
+      2.32199,
+      48.86667
+     ],
+     [
+      2.32104,
+      48.86627
+     ],
+     [
+      2.32053,
+      48.8656
+     ],
+     [
+      2.32083,
+      48.86571
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 4,
+   "level_reason": "Route durchs generelle Demo-Verbotsgebiet, Verbot laut Le Parisien/Europe 1 wahrscheinlich; wilde Züge und Polizei-Großeinsatz möglich"
   }
  ]
 }
