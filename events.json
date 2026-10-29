@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-29T18:04",
+ "stand": "2026-10-29T21:00",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -349,7 +349,7 @@
    },
    "confirmed": false,
    "level": 4,
-   "level_reason": "PP lehnt Bastille–Nation/Bastille–Concorde ab, Périph-Route kann auferlegt werden; Raid, Drohnen, Wasserwerfer; Nuñez: Gewaltrisiko sehr hoch"
+   "level_reason": "PP lehnt Bastille–Nation/Bastille–Concorde ab, Périph-Route kann auferlegt werden; Raid, Drohnen, Wasserwerfer; Nuñez: Gewaltrisiko sehr hoch | Update 29.10.: CGT FERC Sup nennt Start 14 Uhr Porte de Bagnolet 'nach letzten Infos'; 7 Gewerkschaften klagen per Eilverfahren gegen PP, Route Bastille–Nation weiter offen"
   },
   {
    "id": "cgt-demo-alt2-20261031",
@@ -401,15 +401,15 @@
   },
   {
    "id": "gj-casserolade-20261030",
-   "title": "Gilets jaunes: Casserolade vor der Assemblée nationale",
+   "title": "Gilets jaunes: Casserolade vor der Assemblée nationale – von PP verboten, in Paris abgesagt",
    "time": "2026-10-30 18:00–21:00",
    "place": "Assemblée nationale / Palais Bourbon, 7e",
-   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/356011-casserolades-des-gilets-jaunes-a-paris-le-30-octobre-a-quoi-faut-il-s-attendre",
+   "url": "https://www.leparisien.fr/politique/paris-la-prefecture-de-police-interdit-la-casserolade-prevue-vendredi-par-les-gilets-jaunes-devant-lassemblee-nationale-29-10-2026-BOIJIOCGPFFY3DQZLUSM3UHN6U.php",
    "first_seen": "2026-10-29T11:59",
    "lat": 48.8619,
    "lon": 2.3186,
    "type": "Kundgebung",
-   "weight": 3,
+   "weight": 1,
    "start": "2026-10-30T18:00",
    "end": "2026-10-30T21:00",
    "geometry": {
@@ -440,8 +440,8 @@
     ]
    },
    "confirmed": true,
-   "level": 3,
-   "level_reason": "Angemeldete Lärm-Kundgebung vor Palais Bourbon, friedlich erwartet"
+   "level": 1,
+   "level_reason": "PP verbot Kundgebung, Alternativort Invalides abgelehnt; Koordination sagt Paris-Termin ab (Le Parisien/AFP 29.10. 18:29)"
   },
   {
    "id": "pp-ban-centre-20261031",
@@ -952,6 +952,71 @@
    "confirmed": true,
    "level": 3,
    "level_reason": "Rechtsextreme Demo am So von PP verboten (BFM), Gegenkundgebung angekündigt; Spannungen möglich"
+  },
+  {
+   "id": "halloween-dispositif-20261031",
+   "title": "31.10.: PP/Innenminister – 'sehr hohes Risiko', Großeinsatz ganztägig; Halloween-Aufrufe ab ~20 Uhr verboten, werden aufgelöst (Innenstadt-Schutz, Zone ungefähr)",
+   "time": "2026-10-31 ganztägig, v.a. ab 20:00",
+   "place": "Pariser Innenstadt (Handelszonen, Bahnhöfe; genaue Sektoren nicht veröffentlicht)",
+   "url": "https://x.com/prefpolice/status/2115889776230572363",
+   "url2": "https://www.france24.com/fr/info-en-continu/20261029-manifestations-du-31-octobre-70-000-policiers-et-gendarmes-mobilis%C3%A9s-un-dispositif-exceptionnel-reconduit-selon-nu%C3%B1ez",
+   "first_seen": "2026-10-29T21:05",
+   "lat": 48.864,
+   "lon": 2.34,
+   "type": "Polizei-Großeinsatz",
+   "weight": 4,
+   "start": "2026-10-31T08:00",
+   "end": "2026-11-01T06:00",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.295,
+       48.8738
+      ],
+      [
+       2.308,
+       48.879
+      ],
+      [
+       2.34,
+       48.876
+      ],
+      [
+       2.365,
+       48.87
+      ],
+      [
+       2.37,
+       48.853
+      ],
+      [
+       2.355,
+       48.851
+      ],
+      [
+       2.33,
+       48.856
+      ],
+      [
+       2.31,
+       48.861
+      ],
+      [
+       2.295,
+       48.868
+      ],
+      [
+       2.295,
+       48.8738
+      ]
+     ]
+    ]
+   },
+   "confirmed": false,
+   "level": 4,
+   "level_reason": "Nuñez: 70.000 Polizisten bundesweit, Aufrufe zu Plünderungen/'attroupements violents' ab 20 Uhr, Auflösung + Festnahmen angekündigt; Kontrollen an Bahnhöfen"
   }
  ]
 }
