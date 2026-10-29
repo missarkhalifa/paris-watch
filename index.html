@@ -1,60 +1,81 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Paris Lagekarte</title>
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Paris Lageradar</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
 <style>
-body{margin:0;font-family:system-ui,sans-serif;background:#111;color:#eee}
-header{padding:10px 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-h1{font-size:18px;margin:0}#stand{color:#aaa;font-size:13px}
-#map{height:62vh;min-height:340px}
-.seg button{background:#222;color:#ddd;border:1px solid #444;padding:6px 12px;cursor:pointer}
-.seg button.on{background:#e8590c;color:#fff;border-color:#e8590c}
-#bar{padding:10px 14px;background:#1a1a1a;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-#play{font-size:20px;width:44px;height:44px;border-radius:50%;border:0;background:#e8590c;color:#fff;cursor:pointer}
-#slider{flex:1;min-width:200px;accent-color:#e8590c}#tlabel{font-size:20px;font-weight:600;min-width:220px}
-#nowbtn{background:#333;color:#eee;border:1px solid #555;padding:6px 10px;border-radius:6px;cursor:pointer}
-table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:8px;border-bottom:1px solid #333;text-align:left;vertical-align:top}
-tr{cursor:pointer}tr:hover{background:#222}.neu{background:#e03131;color:#fff;font-size:11px;padding:1px 5px;border-radius:4px;margin-left:4px}
-.num{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#1c7ed6;color:#fff;font-weight:700;border:2px solid #fff;font-size:13px}
-.num.new{background:#e03131}a{color:#4dabf7}.dim{opacity:.45}
+*{box-sizing:border-box}html,body{margin:0;overflow-x:hidden;background:#0b0d12;color:#eee;font-family:-apple-system,system-ui,sans-serif}
+header{padding:10px 14px 8px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+h1{font-size:18px;margin:0}#stand{color:#8a93a6;font-size:12px}
+#wrap{position:relative;height:70vh;min-height:420px}#map{position:absolute;inset:0;background:#0b0d12}
 .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9)}
-@media(max-width:640px){table,tbody,tr,td{display:block;width:auto}thead{display:none}tr{border:1px solid #333;border-radius:8px;margin:0 0 10px;padding:6px 10px}td{border:0;padding:3px 0;display:flex;gap:8px;overflow-wrap:anywhere}td::before{content:attr(data-l);flex:0 0 70px;color:#999;font-size:12px}#slider{min-width:0}#tlabel{min-width:0;font-size:16px}}
+.leaflet-heatmap-layer{opacity:.85}
+#legend{position:absolute;top:10px;left:10px;z-index:500;background:rgba(15,18,26,.75);backdrop-filter:blur(6px);border-radius:10px;padding:6px 10px;font-size:11px;color:#ccc}
+#legend .g{width:110px;height:8px;border-radius:4px;margin:4px 0 2px;background:linear-gradient(90deg,rgba(255,255,0,.2),#ffeb3b,#ff9800,#f44336,#8b0000)}
+#legend .r{display:flex;justify-content:space-between}
+#tl{position:absolute;left:0;right:0;bottom:0;z-index:600;background:linear-gradient(transparent,rgba(8,10,15,.92) 25%);padding:26px 0 calc(10px + env(safe-area-inset-bottom))}
+#tlhead{display:flex;align-items:center;gap:12px;padding:0 14px 6px}
+#play{flex:0 0 46px;height:46px;border-radius:50%;border:0;background:#ff6a00;color:#fff;font-size:18px;box-shadow:0 0 14px rgba(255,106,0,.6)}
+#tlabel{font-size:22px;font-weight:700;flex:1}#nowbtn{border:1px solid #555;background:rgba(40,44,56,.8);color:#eee;border-radius:16px;padding:6px 12px;font-size:13px}
+#track{position:relative;height:58px;margin:0 14px;touch-action:none}
+#rail{position:absolute;left:0;right:0;top:12px;height:6px;border-radius:3px;background:#2a2f3c}
+#fill{position:absolute;left:0;top:12px;height:6px;border-radius:3px;background:linear-gradient(90deg,#ffeb3b,#ff6a00)}
+.tick{position:absolute;top:22px;width:1px;height:6px;background:#556;transform:translateX(-.5px)}
+.tick.d{height:14px;background:#aab;top:20px}
+.tl{position:absolute;top:30px;font-size:10px;color:#8a93a6;transform:translateX(-50%);white-space:nowrap}
+.tl.d{color:#fff;font-weight:700;font-size:11px}
+#nowm{position:absolute;top:2px;width:2px;height:26px;background:#4dabf7;transform:translateX(-1px)}
+#nowm span{position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:9px;color:#4dabf7;font-weight:700}
+#thumb{position:absolute;top:3px;width:26px;height:26px;margin-left:-13px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,106,0,.5),0 2px 8px #000}
+main{padding:12px 14px 40px}h2{font-size:15px;margin:6px 0 10px;color:#ccd}
+.card{background:#151924;border-radius:12px;padding:10px 12px;margin-bottom:10px;border-left:4px solid #444;overflow-wrap:anywhere}
+.card.on{border-left-color:#ff6a00}.card.dim{opacity:.45}.card b{font-size:14px}
+.meta{font-size:12px;color:#9aa3b5;margin-top:4px}.neu{background:#e03131;color:#fff;font-size:10px;padding:1px 5px;border-radius:4px;margin-left:4px}
+a{color:#4dabf7}.leaflet-popup-content{font-size:13px}
 </style></head><body>
-<header><h1>Paris Lagekarte</h1><span id="stand"></span>
-<div class="seg" id="seg"><button data-f="alle" class="on">Alle</button><button data-f="heute">Heute</button><button data-f="kommende">Kommende</button></div></header>
-<div id="map"></div>
-<div id="bar"><button id="play" title="Abspielen/Pause">▶</button><div id="tlabel"></div>
-<input id="slider" type="range" min="-24" max="72" step="1" value="0"><button id="nowbtn">Jetzt</button></div>
-<div style="padding:0 14px 30px"><h2 style="font-size:16px">Hotspots</h2><table><thead><tr><th>#</th><th>Ereignis</th><th>Zeit (Paris)</th><th>Ort</th><th>Art</th><th>Status</th></tr></thead><tbody id="tb"></tbody></table></div>
+<header><h1>Paris Lageradar</h1><span id="stand"></span></header>
+<div id="wrap"><div id="map"></div>
+<div id="legend">Aktivität<div class="g"></div><div class="r"><span>niedrig</span><span>hoch</span></div></div>
+<div id="tl"><div id="tlhead"><button id="play" aria-label="Abspielen">▶</button><div id="tlabel"></div><button id="nowbtn">Jetzt</button></div>
+<div id="track"><div id="rail"></div><div id="fill"></div><div id="nowm"><span>JETZT</span></div><div id="thumb"></div></div></div></div>
+<main><h2>Hotspots</h2><div id="list"></div></main>
 <script>
+const MIN=-24,MAX=72;let val=0;
 const P=s=>new Date((s.length==16?s+':00':s)+'+01:00');
-const fmt=d=>d.toLocaleString('de-DE',{timeZone:'Europe/Paris',weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
-const dayKey=d=>d.toLocaleDateString('sv-SE',{timeZone:'Europe/Paris'});
-const map=L.map('map').setView([48.8566,2.3522],12);
+const tz={timeZone:'Europe/Paris'};
+const fmt=d=>d.toLocaleString('de-DE',{...tz,weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+const hm=d=>d.toLocaleTimeString('de-DE',{...tz,hour:'2-digit',minute:'2-digit'});
+const map=L.map('map',{zoomControl:false}).setView([48.858,2.36],12);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',maxZoom:19}).addTo(map);
-
-const heat=L.heatLayer([],{radius:45,blur:30,maxZoom:14,max:1}).addTo(map);
-let EV=[],markers=[],filter='alle',base=new Date();base.setMinutes(0,0,0);let now=new Date(),timer=null;
-const sl=document.getElementById('slider');
-function intensity(e,t){const s=P(e.start),en=P(e.end),H=3*36e5;if(t>=s&&t<=en)return 1;const d=t<s?s-t:t-en;return d<H?1-d/H:0}
-function pass(e){const s=P(e.start),en=P(e.end);if(filter=='heute'){const k=dayKey(now);return dayKey(s)<=k&&dayKey(en)>=k}if(filter=='kommende')return en>=now;return true}
-function render(){const t=new Date(base.getTime()+sl.value*36e5);document.getElementById('tlabel').textContent=fmt(t)+(sl.value==0?' (jetzt)':'');
- const pts=[];EV.forEach((e,i)=>{const m=markers[i],ok=pass(e),a=intensity(e,t);
-  if(!ok){map.removeLayer(m);return}if(!map.hasLayer(m))m.addTo(map);m.setOpacity(.35+.65*a);
-  if(a>0)pts.push([e.lat,e.lon,a*Math.min(1,e.weight/4)])});heat.setLatLngs(pts);
- document.querySelectorAll('#tb tr').forEach((r,i)=>{r.style.display=pass(EV[i])?'':'none';r.classList.toggle('dim',intensity(EV[i],t)==0)})}
-fetch('events.json?'+Date.now()).then(r=>r.json()).then(d=>{EV=d.events;document.getElementById('stand').textContent='Stand: '+fmt(P(d.stand))+' (Paris-Zeit)';
- const latest=EV.map(e=>e.first_seen).sort().pop();const tb=document.getElementById('tb');
- EV.forEach((e,i)=>{e.neu=e.first_seen==latest;const n=i+1,neu=e.neu?'<span class="neu">NEU</span>':'';
-  const st=P(e.start),en=P(e.end),z=fmt(st)+' – '+en.toLocaleTimeString('de-DE',{timeZone:'Europe/Paris',hour:'2-digit',minute:'2-digit'});
-  const m=L.marker([e.lat,e.lon],{icon:L.divIcon({className:'',html:`<div class="num ${e.neu?'new':''}">${n}</div>`,iconSize:[26,26],iconAnchor:[13,13]})})
-   .bindPopup(`<b>${n}. ${e.title}</b>${neu}<br><b>Zeit:</b> ${z} (Paris-Zeit)<br><small>${e.time}</small><br><b>Ort:</b> ${e.place}<br><b>Art:</b> ${e.type}<br><a href="${e.url}" target="_blank" rel="noopener">Quelle öffnen</a>`);
-  markers.push(m);const tr=document.createElement('tr');
-  tr.innerHTML=`<td data-l="#">${n}</td><td data-l="Ereignis">${e.title}${neu}</td><td data-l="Zeit">${z}</td><td data-l="Ort">${e.place}</td><td data-l="Art">${e.type}</td><td data-l="Status">${en<now?'vorbei':st>now?'kommend':'aktiv'}</td>`;
-  tr.onclick=()=>{map.setView([e.lat,e.lon],15);m.openPopup();window.scrollTo({top:0,behavior:'smooth'})};tb.appendChild(tr)});render()});
-sl.oninput=render;
-document.getElementById('nowbtn').onclick=()=>{sl.value=0;render()};
-document.getElementById('play').onclick=function(){if(timer){clearInterval(timer);timer=null;this.textContent='▶'}else{this.textContent='❚❚';timer=setInterval(()=>{sl.value=+sl.value>=72?-24:+sl.value+1;render()},500)}};
-document.querySelectorAll('#seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#seg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');filter=b.dataset.f;render()});
+const heat=L.heatLayer([],{radius:60,blur:45,maxZoom:13,max:1,minOpacity:0.05,gradient:{0.15:'rgba(255,255,0,0)',0.35:'rgba(255,235,59,.55)',0.55:'#ff9800',0.75:'#f44336',1:'#8b0000'}}).addTo(map);
+let EV=[],hits=[],base=new Date();base.setMinutes(0,0,0);const now=new Date();let timer=null;
+const T=()=>new Date(base.getTime()+val*36e5);
+function inten(e,t){const s=P(e.start),en=P(e.end),H=4*36e5;if(t>=s&&t<=en)return 1;const d=t<s?s-t:t-en;return d<H?1-d/H:0}
+const track=document.getElementById('track'),thumb=document.getElementById('thumb'),fill=document.getElementById('fill');
+const pct=v=>(v-MIN)/(MAX-MIN)*100;
+function ticks(){let h='';for(let v=MIN;v<=MAX;v++){const t=new Date(base.getTime()+v*36e5);const H=+t.toLocaleString('en-GB',{...tz,hour:'2-digit',hour12:false})%24;
+ if(H==0){h+=`<div class="tick d" style="left:${pct(v)}%"></div><div class="tl d" style="left:${pct(v)}%">${t.toLocaleDateString('de-DE',{...tz,weekday:'short'}).replace('.','')}</div>`}
+ else if(H%6==0){h+=`<div class="tick" style="left:${pct(v)}%"></div><div class="tl" style="left:${pct(v)}%">${H}h</div>`}
+ else if(H%3==0)h+=`<div class="tick" style="left:${pct(v)}%"></div>`}
+ track.insertAdjacentHTML('beforeend',h);document.getElementById('nowm').style.left=pct(0)+'%'}
+function render(){const t=T();document.getElementById('tlabel').textContent=fmt(t);
+ thumb.style.left=pct(val)+'%';fill.style.width=pct(val)+'%';
+ const pts=[];EV.forEach((e,i)=>{const a=inten(e,t);e.a=a;if(a>0)pts.push([e.lat,e.lon,a*Math.min(1,.25+e.weight/4)]);
+  hits[i].setStyle({interactive:a>0});document.getElementById('c'+i).className='card'+(a==1?' on':a==0?' dim':'')});
+ heat.setLatLngs(pts)}
+function setFromX(x){const r=track.getBoundingClientRect();val=Math.round(MIN+Math.min(1,Math.max(0,(x-r.left)/r.width))*(MAX-MIN));render()}
+track.addEventListener('pointerdown',e=>{track.setPointerCapture(e.pointerId);setFromX(e.clientX)});
+track.addEventListener('pointermove',e=>{if(e.buttons||e.pressure)setFromX(e.clientX)});
+L.DomEvent.disableClickPropagation(document.getElementById('tl'));L.DomEvent.disableScrollPropagation(document.getElementById('tl'));
+function popup(ll){const t=T(),near=EV.filter(e=>e.a>0&&map.distance(ll,[e.lat,e.lon])<900);if(!near.length)return;
+ L.popup().setLatLng(ll).setContent(near.map(e=>`<b>${e.title}</b><br><small>${e.z} · ${e.type}</small><br><a href="${e.url}" target="_blank" rel="noopener">Quelle</a>`).join('<hr>')).openOn(map)}
+fetch('events.json?'+Date.now()).then(r=>r.json()).then(d=>{EV=d.events;document.getElementById('stand').textContent='Stand '+fmt(P(d.stand));
+ const latest=EV.map(e=>e.first_seen).sort().pop(),list=document.getElementById('list');
+ EV.forEach((e,i)=>{const st=P(e.start),en=P(e.end);e.z=fmt(st)+' – '+hm(en);
+  hits.push(L.circle([e.lat,e.lon],{radius:600,opacity:0,fillOpacity:0}).on('click',ev=>popup(ev.latlng)).addTo(map));
+  const c=document.createElement('div');c.id='c'+i;c.innerHTML=`<b>${e.title}</b>${e.first_seen==latest?'<span class="neu">NEU</span>':''}<div class="meta">${e.z} · ${e.place} · ${e.type}</div>`;
+  c.onclick=()=>{val=Math.max(MIN,Math.min(MAX,Math.round((st-base)/36e5)));render();map.setView([e.lat,e.lon],14);window.scrollTo({top:0,behavior:'smooth'});setTimeout(()=>popup(L.latLng(e.lat,e.lon)),400)};list.appendChild(c)});
+ ticks();render()});
+document.getElementById('nowbtn').onclick=()=>{val=0;render()};
+document.getElementById('play').onclick=function(){if(timer){clearInterval(timer);timer=null;this.textContent='▶'}else{this.textContent='❚❚';timer=setInterval(()=>{val=val>=MAX?MIN:val+1;render()},350)}};
 </script></body></html>
