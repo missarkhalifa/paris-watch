@@ -1,0 +1,57 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paris Lagekarte</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+<style>
+body{margin:0;font-family:system-ui,sans-serif;background:#111;color:#eee}
+header{padding:10px 14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+h1{font-size:18px;margin:0}#stand{color:#aaa;font-size:13px}
+#map{height:62vh;min-height:340px}
+.seg button{background:#222;color:#ddd;border:1px solid #444;padding:6px 12px;cursor:pointer}
+.seg button.on{background:#e8590c;color:#fff;border-color:#e8590c}
+#bar{padding:10px 14px;background:#1a1a1a;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#play{font-size:20px;width:44px;height:44px;border-radius:50%;border:0;background:#e8590c;color:#fff;cursor:pointer}
+#slider{flex:1;min-width:200px;accent-color:#e8590c}#tlabel{font-size:20px;font-weight:600;min-width:220px}
+#nowbtn{background:#333;color:#eee;border:1px solid #555;padding:6px 10px;border-radius:6px;cursor:pointer}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:8px;border-bottom:1px solid #333;text-align:left;vertical-align:top}
+tr{cursor:pointer}tr:hover{background:#222}.neu{background:#e03131;color:#fff;font-size:11px;padding:1px 5px;border-radius:4px;margin-left:4px}
+.num{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#1c7ed6;color:#fff;font-weight:700;border:2px solid #fff;font-size:13px}
+.num.new{background:#e03131}a{color:#4dabf7}.dim{opacity:.45}
+</style></head><body>
+<header><h1>Paris Lagekarte</h1><span id="stand"></span>
+<div class="seg" id="seg"><button data-f="alle" class="on">Alle</button><button data-f="heute">Heute</button><button data-f="kommende">Kommende</button></div></header>
+<div id="map"></div>
+<div id="bar"><button id="play" title="Abspielen/Pause">▶</button><div id="tlabel"></div>
+<input id="slider" type="range" min="-24" max="72" step="1" value="0"><button id="nowbtn">Jetzt</button></div>
+<div style="padding:0 14px 30px"><h2 style="font-size:16px">Hotspots</h2><table><thead><tr><th>#</th><th>Ereignis</th><th>Zeit (Paris)</th><th>Ort</th><th>Art</th><th>Status</th></tr></thead><tbody id="tb"></tbody></table></div>
+<script>
+const P=s=>new Date((s.length==16?s+':00':s)+'+01:00');
+const fmt=d=>d.toLocaleString('de-DE',{timeZone:'Europe/Paris',weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+const dayKey=d=>d.toLocaleDateString('sv-SE',{timeZone:'Europe/Paris'});
+const map=L.map('map').setView([48.8566,2.3522],12);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap, &copy; CARTO',maxZoom:19}).addTo(map);
+const heat=L.heatLayer([],{radius:45,blur:30,maxZoom:14,max:1}).addTo(map);
+let EV=[],markers=[],filter='alle',base=new Date();base.setMinutes(0,0,0);let now=new Date(),timer=null;
+const sl=document.getElementById('slider');
+function intensity(e,t){const s=P(e.start),en=P(e.end),H=3*36e5;if(t>=s&&t<=en)return 1;const d=t<s?s-t:t-en;return d<H?1-d/H:0}
+function pass(e){const s=P(e.start),en=P(e.end);if(filter=='heute'){const k=dayKey(now);return dayKey(s)<=k&&dayKey(en)>=k}if(filter=='kommende')return en>=now;return true}
+function render(){const t=new Date(base.getTime()+sl.value*36e5);document.getElementById('tlabel').textContent=fmt(t)+(sl.value==0?' (jetzt)':'');
+ const pts=[];EV.forEach((e,i)=>{const m=markers[i],ok=pass(e),a=intensity(e,t);
+  if(!ok){map.removeLayer(m);return}if(!map.hasLayer(m))m.addTo(map);m.setOpacity(.35+.65*a);
+  if(a>0)pts.push([e.lat,e.lon,a*Math.min(1,e.weight/4)])});heat.setLatLngs(pts);
+ document.querySelectorAll('#tb tr').forEach((r,i)=>{r.style.display=pass(EV[i])?'':'none';r.classList.toggle('dim',intensity(EV[i],t)==0)})}
+fetch('events.json?'+Date.now()).then(r=>r.json()).then(d=>{EV=d.events;document.getElementById('stand').textContent='Stand: '+fmt(P(d.stand))+' (Paris-Zeit)';
+ const latest=EV.map(e=>e.first_seen).sort().pop();const tb=document.getElementById('tb');
+ EV.forEach((e,i)=>{e.neu=e.first_seen==latest;const n=i+1,neu=e.neu?'<span class="neu">NEU</span>':'';
+  const st=P(e.start),en=P(e.end),z=fmt(st)+' – '+en.toLocaleTimeString('de-DE',{timeZone:'Europe/Paris',hour:'2-digit',minute:'2-digit'});
+  const m=L.marker([e.lat,e.lon],{icon:L.divIcon({className:'',html:`<div class="num ${e.neu?'new':''}">${n}</div>`,iconSize:[26,26],iconAnchor:[13,13]})})
+   .bindPopup(`<b>${n}. ${e.title}</b>${neu}<br><b>Zeit:</b> ${z} (Paris-Zeit)<br><small>${e.time}</small><br><b>Ort:</b> ${e.place}<br><b>Art:</b> ${e.type}<br><a href="${e.url}" target="_blank" rel="noopener">Quelle öffnen</a>`);
+  markers.push(m);const tr=document.createElement('tr');
+  tr.innerHTML=`<td>${n}</td><td>${e.title}${neu}</td><td>${z}</td><td>${e.place}</td><td>${e.type}</td><td>${en<now?'vorbei':st>now?'kommend':'aktiv'}</td>`;
+  tr.onclick=()=>{map.setView([e.lat,e.lon],15);m.openPopup();window.scrollTo({top:0,behavior:'smooth'})};tb.appendChild(tr)});render()});
+sl.oninput=render;
+document.getElementById('nowbtn').onclick=()=>{sl.value=0;render()};
+document.getElementById('play').onclick=function(){if(timer){clearInterval(timer);timer=null;this.textContent='▶'}else{this.textContent='❚❚';timer=setInterval(()=>{sl.value=+sl.value>=72?-24:+sl.value+1;render()},500)}};
+document.querySelectorAll('#seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#seg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');filter=b.dataset.f;render()});
+</script></body></html>
