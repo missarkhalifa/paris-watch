@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-29T15:02",
+ "stand": "2026-10-29T18:04",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -271,10 +271,10 @@
   },
   {
    "id": "cgt-demo-alt-20261031",
-   "title": "Mögliche Alternativroute Porte de Bagnolet–Porte de Charenton",
+   "title": "Route entlang Périphérique Porte de Bagnolet → Porte de Charenton (von PP vorgegeben, kann auferlegt werden)",
    "time": "2026-10-31",
    "place": "Porte de Bagnolet / T3",
-   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/356351-manifestation-du-31-octobre-a-paris-le-parcours-de-la-cgt-refuse-un-nouveau-propose",
+   "url": "https://www.bfmtv.com/societe/manifestations/nombreux-policiers-raid-en-renfort-controles-accrus-quel-dispositif-de-maintien-de-l-ordre-pour-les-manifestations-du-31-octobre_AV-202610290164.html",
    "first_seen": "2026-10-29T11:57",
    "lat": 48.864,
    "lon": 2.409,
@@ -348,8 +348,8 @@
     "type": "LineString"
    },
    "confirmed": false,
-   "level": 3,
-   "level_reason": "Von Präfektur vorgeschlagene Ausweichroute über Maréchaux-Boulevards, friedlicher Zug erwartet, noch nicht bestätigt"
+   "level": 4,
+   "level_reason": "PP lehnt Bastille–Nation/Bastille–Concorde ab, Périph-Route kann auferlegt werden; Raid, Drohnen, Wasserwerfer; Nuñez: Gewaltrisiko sehr hoch"
   },
   {
    "id": "cgt-demo-alt2-20261031",
@@ -904,6 +904,54 @@
    "confirmed": false,
    "level": 4,
    "level_reason": "Route durchs generelle Demo-Verbotsgebiet, Verbot laut Le Parisien/Europe 1 wahrscheinlich; wilde Züge und Polizei-Großeinsatz möglich"
+  },
+  {
+   "id": "pp-zones-curfew-20261029",
+   "title": "PP-Arrêté: unangemeldete Versammlungen verboten (u.a. Châtelet-Les Halles, Hôtel de Ville, Bastille, Gare de l'Est/Nord, Élysée, Champs-Élysées) + Jugend-Ausgangssperre 21–6 Uhr",
+   "time": "2026-10-29 20:00 bis 2026-11-02 06:00",
+   "place": "Mehrere Sektoren, nächster: Châtelet-Les Halles (1er)",
+   "url": "https://www.leparisien.fr/paris-75/paris-couvre-feu-des-mineurs-reconduit-et-rassemblements-interdits-dans-de-nombreux-secteurs-jusqua-lundi-29-10-2026-3736IZZ6RZD6HA6UBKZGKSQG4M.php",
+   "first_seen": "2026-10-29T18:05",
+   "lat": 48.86216,
+   "lon": 2.34537,
+   "type": "Demo-Verbot/Behörde",
+   "weight": 3,
+   "start": "2026-10-29T20:00",
+   "end": "2026-11-02T06:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.34537,
+     48.86216
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "PP erwartet 100–150k Teilnehmer am Sa + Halloween; Nuñez warnt vor 'sehr hohem' Risiko urbaner Gewalt ab Abend; Verbot Do 20–Fr 6 und Fr 20–Mo 6 Uhr"
+  },
+  {
+   "id": "antifa-tollet-20261101",
+   "title": "Antifa-Gegenkundgebung gegen (verbotene) 'Remigration'-Demo, Esplanade André Tollet (République)",
+   "time": "2026-11-01 13:00–14:00",
+   "place": "Esplanade André Tollet, 75011",
+   "url": "https://www.manifs.fr/2026-11-01-paris-bloquons-les-fachos-et-leur-week-end-sur-la-remigration-2000",
+   "first_seen": "2026-10-29T18:05",
+   "lat": 48.86745,
+   "lon": 2.36422,
+   "type": "Kundgebung",
+   "weight": 3,
+   "start": "2026-11-01T13:00",
+   "end": "2026-11-01T15:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.36422,
+     48.86745
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Rechtsextreme Demo am So von PP verboten (BFM), Gegenkundgebung angekündigt; Spannungen möglich"
   }
  ]
 }
