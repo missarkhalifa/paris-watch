@@ -18,6 +18,8 @@ table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:8px;borde
 tr{cursor:pointer}tr:hover{background:#222}.neu{background:#e03131;color:#fff;font-size:11px;padding:1px 5px;border-radius:4px;margin-left:4px}
 .num{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#1c7ed6;color:#fff;font-weight:700;border:2px solid #fff;font-size:13px}
 .num.new{background:#e03131}a{color:#4dabf7}.dim{opacity:.45}
+.leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9)}
+@media(max-width:640px){table,tbody,tr,td{display:block;width:auto}thead{display:none}tr{border:1px solid #333;border-radius:8px;margin:0 0 10px;padding:6px 10px}td{border:0;padding:3px 0;display:flex;gap:8px;overflow-wrap:anywhere}td::before{content:attr(data-l);flex:0 0 70px;color:#999;font-size:12px}#slider{min-width:0}#tlabel{min-width:0;font-size:16px}}
 </style></head><body>
 <header><h1>Paris Lagekarte</h1><span id="stand"></span>
 <div class="seg" id="seg"><button data-f="alle" class="on">Alle</button><button data-f="heute">Heute</button><button data-f="kommende">Kommende</button></div></header>
@@ -30,8 +32,8 @@ const P=s=>new Date((s.length==16?s+':00':s)+'+01:00');
 const fmt=d=>d.toLocaleString('de-DE',{timeZone:'Europe/Paris',weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
 const dayKey=d=>d.toLocaleDateString('sv-SE',{timeZone:'Europe/Paris'});
 const map=L.map('map').setView([48.8566,2.3522],12);
-const carto=L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',subdomains:'abcd',maxZoom:19}).addTo(map);
-let tErr=0;carto.on('tileerror',()=>{if(++tErr==3){map.removeLayer(carto);L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',maxZoom:19}).addTo(map)}});
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',maxZoom:19}).addTo(map);
+
 const heat=L.heatLayer([],{radius:45,blur:30,maxZoom:14,max:1}).addTo(map);
 let EV=[],markers=[],filter='alle',base=new Date();base.setMinutes(0,0,0);let now=new Date(),timer=null;
 const sl=document.getElementById('slider');
@@ -49,7 +51,7 @@ fetch('events.json?'+Date.now()).then(r=>r.json()).then(d=>{EV=d.events;document
   const m=L.marker([e.lat,e.lon],{icon:L.divIcon({className:'',html:`<div class="num ${e.neu?'new':''}">${n}</div>`,iconSize:[26,26],iconAnchor:[13,13]})})
    .bindPopup(`<b>${n}. ${e.title}</b>${neu}<br><b>Zeit:</b> ${z} (Paris-Zeit)<br><small>${e.time}</small><br><b>Ort:</b> ${e.place}<br><b>Art:</b> ${e.type}<br><a href="${e.url}" target="_blank" rel="noopener">Quelle öffnen</a>`);
   markers.push(m);const tr=document.createElement('tr');
-  tr.innerHTML=`<td>${n}</td><td>${e.title}${neu}</td><td>${z}</td><td>${e.place}</td><td>${e.type}</td><td>${en<now?'vorbei':st>now?'kommend':'aktiv'}</td>`;
+  tr.innerHTML=`<td data-l="#">${n}</td><td data-l="Ereignis">${e.title}${neu}</td><td data-l="Zeit">${z}</td><td data-l="Ort">${e.place}</td><td data-l="Art">${e.type}</td><td data-l="Status">${en<now?'vorbei':st>now?'kommend':'aktiv'}</td>`;
   tr.onclick=()=>{map.setView([e.lat,e.lon],15);m.openPopup();window.scrollTo({top:0,behavior:'smooth'})};tb.appendChild(tr)});render()});
 sl.oninput=render;
 document.getElementById('nowbtn').onclick=()=>{sl.value=0;render()};
