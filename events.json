@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-30T18:11",
+ "stand": "2026-10-30T21:01",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -181,10 +181,10 @@
   },
   {
    "id": "cgt-demo-20261031",
-   "title": "CGT-Route Bastille → Nation – per PP-Arrêté 30.10. offiziell VERBOTEN",
-   "time": "2026-10-31 Nachmittag",
-   "place": "Bastille–Nation (12e)",
-   "url": "https://www.franceinfo.fr/societe/manifestations/direct-manifestations-du-31-octobre-le-parcours-du-defile-parisien-objet-d-un-bras-de-fer-entre-les-syndicats-et-les-autorites_8259785.html",
+   "title": "TA kippt PP-Verbot: Intersyndicale/CGT-Zug Bastille → Nation (Rue de Lyon, Av. Daumesnil, Bd de Picpus) ERLAUBT – PP geht in Berufung (Conseil d'État)",
+   "time": "2026-10-31 ab 14:00",
+   "place": "Bastille → Nation (11e/12e)",
+   "url": "https://www.leparisien.fr/paris-75/manifestation-du-31-octobre-a-paris-bastille-nation-voici-le-parcours-autorise-par-le-tribunal-administratif-30-10-2026-VHV7WTYF3FDVFOJUDLHZFG5QZQ.php",
    "first_seen": "2026-10-29T11:57",
    "lat": 48.85,
    "lon": 2.38,
@@ -203,8 +203,8 @@
       48.85353
      ],
      [
-      2.3694,
-      48.85353
+      2.36944,
+      48.85352
      ],
      [
       2.36972,
@@ -215,48 +215,184 @@
       48.85321
      ],
      [
-      2.3718,
-      48.85247
+      2.37202,
+      48.8524
      ],
      [
-      2.37365,
-      48.85193
+      2.37614,
+      48.85131
      ],
      [
-      2.37852,
-      48.85072
+      2.37429,
+      48.84961
      ],
      [
-      2.37862,
-      48.85106
+      2.37145,
+      48.848
      ],
      [
-      2.37888,
-      48.85151
+      2.37155,
+      48.8477
      ],
      [
-      2.38038,
-      48.85125
+      2.37231,
+      48.84595
      ],
      [
-      2.38013,
-      48.85048
+      2.37266,
+      48.84568
      ],
      [
-      2.3842,
-      48.85017
+      2.37741,
+      48.84628
      ],
      [
-      2.39247,
-      48.8489
+      2.38043,
+      48.84481
      ],
      [
-      2.39502,
-      48.84852
+      2.37877,
+      48.84412
      ],
      [
-      2.39505,
-      48.84818
+      2.3781,
+      48.84438
+     ],
+     [
+      2.37733,
+      48.84524
+     ],
+     [
+      2.37696,
+      48.84547
+     ],
+     [
+      2.37599,
+      48.84611
+     ],
+     [
+      2.37741,
+      48.84628
+     ],
+     [
+      2.38752,
+      48.84148
+     ],
+     [
+      2.39521,
+      48.83971
+     ],
+     [
+      2.39536,
+      48.83989
+     ],
+     [
+      2.39589,
+      48.83978
+     ],
+     [
+      2.39627,
+      48.8397
+     ],
+     [
+      2.39891,
+      48.8411
+     ],
+     [
+      2.39782,
+      48.84234
+     ],
+     [
+      2.40036,
+      48.84253
+     ],
+     [
+      2.40111,
+      48.84241
+     ],
+     [
+      2.40096,
+      48.84201
+     ],
+     [
+      2.40041,
+      48.8405
+     ],
+     [
+      2.39947,
+      48.84045
+     ],
+     [
+      2.39534,
+      48.84531
+     ],
+     [
+      2.39573,
+      48.84734
+     ],
+     [
+      2.39672,
+      48.84747
+     ],
+     [
+      2.39739,
+      48.84797
+     ],
+     [
+      2.39829,
+      48.84789
+     ],
+     [
+      2.39818,
+      48.84736
+     ],
+     [
+      2.39846,
+      48.84733
+     ],
+     [
+      2.39893,
+      48.84729
+     ],
+     [
+      2.40007,
+      48.84647
+     ],
+     [
+      2.40025,
+      48.84658
+     ],
+     [
+      2.39911,
+      48.84733
+     ],
+     [
+      2.3992,
+      48.84815
+     ],
+     [
+      2.39684,
+      48.84844
+     ],
+     [
+      2.39649,
+      48.84886
+     ],
+     [
+      2.39588,
+      48.84899
+     ],
+     [
+      2.39539,
+      48.84888
+     ],
+     [
+      2.39507,
+      48.84862
+     ],
+     [
+      2.39501,
+      48.84829
      ],
      [
       2.39526,
@@ -265,14 +401,15 @@
     ],
     "type": "LineString"
    },
-   "confirmed": false,
-   "level": 3,
-   "level_reason": "Route offiziell verboten (Arrêté 30.10.), Bastille liegt in Zone mit Versammlungsverbot; Intersyndicale ficht an, wilde Ansammlungen möglich",
-   "last_update": "2026-10-30T12:15"
+   "confirmed": true,
+   "level": 4,
+   "level_reason": "Tribunal administratif hat das Verbot am 30.10. abends ausgesetzt; Nuñez kündigt Berufung an, Innenministerium erwartet Gewalt wie am 17.10. – Route kann kurzfristig noch kippen",
+   "last_update": "2026-10-30T12:15",
+   "updated": "2026-10-30T21:05"
   },
   {
    "id": "cgt-demo-alt-20261031",
-   "title": "OFFIZIELL (PP-Arrêté 30.10.): einziger erlaubter Zug Porte de Bagnolet → Porte de Charenton über Bd des Maréchaux, Sammeln ab 12 Uhr, Start 14 Uhr",
+   "title": "PP-Route Porte de Bagnolet → Porte de Charenton (Bd des Maréchaux) – bleibt Pflichtroute für Gelbwesten & andere verbotene Züge",
    "time": "2026-10-31 12:00–18:00",
    "place": "Porte de Bagnolet / T3",
    "url": "https://www.cnews.fr/france/2026-10-30/mobilisation-du-31-octobre-les-parcours-proposes-par-la-cgt-et-les-gilets-jaunes",
@@ -354,7 +491,8 @@
    "extra_urls": [
     "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/"
    ],
-   "last_update": "2026-10-30T12:15"
+   "last_update": "2026-10-30T12:15",
+   "updated": "2026-10-30T21:05"
   },
   {
    "id": "cgt-demo-alt2-20261031",
@@ -383,10 +521,10 @@
   },
   {
    "id": "gj-casserolade-20261030",
-   "title": "Gilets jaunes: Casserolade vor der Assemblée nationale – trotz PP-Verbot laut X-Post im Gange (unbestätigt)",
+   "title": "Gilets jaunes: Casserolade vor der Assemblée nationale ABGESAGT (PP-Verbot)",
    "time": "2026-10-30 18:00–21:00",
    "place": "Assemblée nationale / Palais Bourbon, 7e",
-   "url": "https://x.com/GPTVoff/status/2116206050269368825",
+   "url": "https://actu.fr/ile-de-france/paris_75056/la-coordination-des-gilets-jaunes-annule-le-rassemblement-casserolade-du-30-octobre-a-paris_64993060.html",
    "first_seen": "2026-10-29T11:59",
    "lat": 48.8619,
    "lon": 2.3186,
@@ -422,16 +560,16 @@
     ]
    },
    "confirmed": true,
-   "level": 2,
-   "level_reason": "PP-Verbot; ein X-Post (17:30) zeigt Gelbwesten vor der Assemblée, keine Medienbestätigung, keine Gewaltberichte",
+   "level": 1,
+   "level_reason": "Koordination hat die Pariser Casserolade nach PP-Verbot abgesagt (actu.fr/Le Parisien); früherer X-Hinweis nicht bestätigt",
    "url2": "https://www.leparisien.fr/politique/paris-la-prefecture-de-police-interdit-la-casserolade-prevue-vendredi-par-les-gilets-jaunes-devant-lassemblee-nationale-29-10-2026-BOIJIOCGPFFY3DQZLUSM3UHN6U.php",
-   "updated": "2026-10-30T18:15"
+   "updated": "2026-10-30T21:05"
   },
   {
    "id": "pp-ban-centre-20261031",
-   "title": "PP-Arrêté 30.10.: Demo-Züge im Zentrum am 31.10. verboten, nur Maréchaux-Route Bagnolet–Charenton erlaubt",
+   "title": "PP-Verbote 31.10.: Gelbwesten-Route Bastille–Concorde, Ruches citoyennes, AFPS-Kundgebung (15e) verboten; Bastille–Nation per TA wieder erlaubt",
    "time": "2026-10-31",
-   "place": "Innenstadt (Bastille/Nation gesperrt)",
+   "place": "Innenstadt",
    "url": "https://www.cnews.fr/france/2026-10-30/mobilisation-du-31-octobre-les-parcours-proposes-par-la-cgt-et-les-gilets-jaunes",
    "first_seen": "2026-10-29T11:59",
    "lat": 48.853,
@@ -450,7 +588,8 @@
    "confirmed": true,
    "level": 2,
    "level_reason": "Behördliches Verbot (Arrêté 30.10.), Kontrollen/Sperren im Zentrum; genauer Perimeter nicht in Quelle",
-   "last_update": "2026-10-30T12:15"
+   "last_update": "2026-10-30T12:15",
+   "updated": "2026-10-30T21:05"
   },
   {
    "id": "gj-mairie-sitin-20261031",
@@ -1361,10 +1500,10 @@
   },
   {
    "id": "interfac-bastille-20261031",
-   "title": "Interfac-IDF/UNEF: Aufruf zu Treffpunkt Bastille trotz PP-Verbot ('marcher sur Bastille-Nation')",
+   "title": "Interfac-IDF/UNEF: Treffpunkt Bastille – nach TA-Urteil Teil des erlaubten Zugs Bastille–Nation (Berufung der PP offen)",
    "time": "2026-10-31 nachmittags",
    "place": "Place de la Bastille (4e/11e/12e)",
-   "url": "https://x.com/info_Paris_IDF/status/2116169276499386550",
+   "url": "https://www.leparisien.fr/paris-75/manifestation-du-31-octobre-a-paris-bastille-nation-voici-le-parcours-autorise-par-le-tribunal-administratif-30-10-2026-VHV7WTYF3FDVFOJUDLHZFG5QZQ.php",
    "lat": 48.8532,
    "lon": 2.3691,
    "type": "Demonstration (verboten)",
@@ -1380,7 +1519,8 @@
    },
    "confirmed": true,
    "level": 4,
-   "level_reason": "PP hat die Bastille-Kundgebung ausdrücklich verboten, UNEF kündigt trotzdem Marsch an (France24/AFP) – Polizeieinsatz/Auflösung wahrscheinlich"
+   "level_reason": "Bastille-Start durch TA-Urteil erlaubt, aber PP legt Berufung ein; Bastille-Metro ab 9 Uhr zu",
+   "updated": "2026-10-30T21:05"
   },
   {
    "id": "ratp-etoile-20261031",
@@ -1427,6 +1567,342 @@
    "confirmed": true,
    "level": 2,
    "level_reason": "Angeordnete Stationsschließungen auf PP-Anweisung; weitere Schließungen (Portes, Champs-Élysées, Assemblée) möglich"
+  },
+  {
+   "id": "ratp-grands-blvds-20261031",
+   "title": "Metro zu ab 9 Uhr: Strasbourg-St-Denis, Bonne Nouvelle, Grands Boulevards, Richelieu-Drouot (dazu République, Bastille, Opéra-Umfeld)",
+   "time": "2026-10-31 ab 09:00",
+   "place": "Grands Boulevards (2e/9e/10e)",
+   "url": "https://www.ratp.fr/infos-trafic",
+   "lat": 48.8706,
+   "lon": 2.3466,
+   "type": "Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T09:00",
+   "end": "2026-11-01T01:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.33895,
+      48.87215
+     ],
+     [
+      2.3383,
+      48.87224
+     ],
+     [
+      2.33807,
+      48.87164
+     ],
+     [
+      2.33917,
+      48.87183
+     ],
+     [
+      2.3401,
+      48.87192
+     ],
+     [
+      2.34334,
+      48.87144
+     ],
+     [
+      2.3491,
+      48.87044
+     ],
+     [
+      2.34903,
+      48.86988
+     ],
+     [
+      2.34862,
+      48.86995
+     ],
+     [
+      2.34869,
+      48.8704
+     ],
+     [
+      2.3487,
+      48.87052
+     ],
+     [
+      2.3543,
+      48.86932
+     ],
+     [
+      2.35444,
+      48.86957
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Stationsschließungen auf PP-Anordnung entlang der Grands Boulevards, Wiederöffnung nur mit PP-Freigabe",
+   "first_seen": "2026-10-30T21:05"
+  },
+  {
+   "id": "ratp-chatelet-20261031",
+   "title": "Metro: Châtelet & Les Halles zu ab 10 Uhr, M1 unterbrochen Châtelet–Hôtel de Ville; ab 20 Uhr auch RER Châtelet-Les Halles zu",
+   "time": "2026-10-31 ab 10:00",
+   "place": "Châtelet-Les Halles (1er)",
+   "url": "https://www.ratp.fr/infos-trafic",
+   "lat": 48.861,
+   "lon": 2.347,
+   "type": "Verkehr",
+   "weight": 3,
+   "start": "2026-10-31T10:00",
+   "end": "2026-11-01T06:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.347,
+     48.861
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Großer Knoten geschlossen, ab 20 Uhr RER-Station zu; Sektor mit nächtlicher Ausgangssperre",
+   "first_seen": "2026-10-30T21:05"
+  },
+  {
+   "id": "ratp-rive-gauche-20261031",
+   "title": "Metro zu ab 12 Uhr: St-Germain-des-Prés, Mabillon, Odéon, Cluny-La Sorbonne, Maubert-Mutualité",
+   "time": "2026-10-31 ab 12:00",
+   "place": "Rive gauche (5e/6e)",
+   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/355777-manifestation-du-31-octobre-plus-de-33-stations-de-metro-et-rer-fermees-ce-samedi",
+   "lat": 48.8525,
+   "lon": 2.34,
+   "type": "Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T12:00",
+   "end": "2026-11-01T01:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.34,
+     48.8525
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Stationsschließungen auf PP-Anordnung",
+   "first_seen": "2026-10-30T21:05"
+  },
+  {
+   "id": "ratp-ouest-20261031",
+   "title": "Metro zu ab 5:30: Concorde, Madeleine, Champs-Élysées-Clemenceau, FDR, George V, Tuileries, Assemblée nationale, Solférino, Varenne u.a.; M12 Rennes–St-Lazare unterbrochen",
+   "time": "2026-10-31 ab 05:30",
+   "place": "Concorde/Champs-Élysées/7e",
+   "url": "https://www.ratp.fr/infos-trafic",
+   "lat": 48.8656,
+   "lon": 2.3212,
+   "type": "Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T05:30",
+   "end": "2026-11-01T01:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3212,
+     48.8656
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Ganztägige Schließungen im Regierungsviertel auf PP-Anordnung",
+   "first_seen": "2026-10-30T21:05"
+  },
+  {
+   "id": "tram-t3-20261031",
+   "title": "Tram T3a/T3b unterbrochen ab 11 Uhr: Stade Charléty – Porte de Vincennes – Porte des Lilas (entlang der Maréchaux-Route)",
+   "time": "2026-10-31 ab 11:00",
+   "place": "Boulevards des Maréchaux (13e/12e/20e)",
+   "url": "https://www.ratp.fr/infos-trafic",
+   "lat": 48.847,
+   "lon": 2.4108,
+   "type": "Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T11:00",
+   "end": "2026-10-31T21:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.34383,
+      48.81882
+     ],
+     [
+      2.34248,
+      48.81881
+     ],
+     [
+      2.34194,
+      48.81965
+     ],
+     [
+      2.34473,
+      48.81936
+     ],
+     [
+      2.35131,
+      48.82104
+     ],
+     [
+      2.35466,
+      48.82097
+     ],
+     [
+      2.35839,
+      48.81899
+     ],
+     [
+      2.36197,
+      48.81919
+     ],
+     [
+      2.38208,
+      48.82567
+     ],
+     [
+      2.38494,
+      48.82427
+     ],
+     [
+      2.38697,
+      48.82446
+     ],
+     [
+      2.39031,
+      48.82141
+     ],
+     [
+      2.39262,
+      48.82252
+     ],
+     [
+      2.38883,
+      48.82512
+     ],
+     [
+      2.38701,
+      48.82641
+     ],
+     [
+      2.3834,
+      48.82561
+     ],
+     [
+      2.38276,
+      48.8259
+     ],
+     [
+      2.38966,
+      48.82906
+     ],
+     [
+      2.39634,
+      48.83105
+     ],
+     [
+      2.40473,
+      48.83428
+     ],
+     [
+      2.40694,
+      48.8356
+     ],
+     [
+      2.40564,
+      48.8359
+     ],
+     [
+      2.40618,
+      48.83643
+     ],
+     [
+      2.40792,
+      48.8372
+     ],
+     [
+      2.4066,
+      48.83537
+     ],
+     [
+      2.40796,
+      48.83667
+     ],
+     [
+      2.41145,
+      48.84707
+     ],
+     [
+      2.40623,
+      48.84752
+     ],
+     [
+      2.41081,
+      48.84701
+     ],
+     [
+      2.41144,
+      48.84702
+     ],
+     [
+      2.41151,
+      48.84905
+     ],
+     [
+      2.40884,
+      48.86411
+     ],
+     [
+      2.40876,
+      48.87207
+     ],
+     [
+      2.40808,
+      48.8747
+     ],
+     [
+      2.40679,
+      48.87725
+     ],
+     [
+      2.4065,
+      48.877
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 2,
+   "level_reason": "RATP: Tram-Unterbrechung wegen Demo; Ende offen, Linie entlang Maréchaux angenähert",
+   "first_seen": "2026-10-30T21:05"
+  },
+  {
+   "id": "rerb-strike-20261031",
+   "title": "RER B Streik: Nordast (CDG/Mitry) nur 2 von 3 Zügen, Umsteigen in Gare du Nord (Gleise 43/44)",
+   "time": "2026-10-31 & 2026-11-01 ganztägig",
+   "place": "Gare du Nord (10e)",
+   "url": "https://www.ratp.fr/infos-trafic/rer-transilien/b",
+   "lat": 48.8809,
+   "lon": 2.3553,
+   "type": "Streik/Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T05:00",
+   "end": "2026-11-01T23:59",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3553,
+     48.8809
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Lokaler Streik laut RATP/maligneb.fr, Süd fast normal",
+   "first_seen": "2026-10-30T21:05"
   }
  ]
 }
