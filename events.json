@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-30T15:07",
+ "stand": "2026-10-30T18:11",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -383,10 +383,10 @@
   },
   {
    "id": "gj-casserolade-20261030",
-   "title": "Gilets jaunes: Casserolade vor der Assemblée nationale – von PP verboten, in Paris abgesagt",
+   "title": "Gilets jaunes: Casserolade vor der Assemblée nationale – trotz PP-Verbot laut X-Post im Gange (unbestätigt)",
    "time": "2026-10-30 18:00–21:00",
    "place": "Assemblée nationale / Palais Bourbon, 7e",
-   "url": "https://www.leparisien.fr/politique/paris-la-prefecture-de-police-interdit-la-casserolade-prevue-vendredi-par-les-gilets-jaunes-devant-lassemblee-nationale-29-10-2026-BOIJIOCGPFFY3DQZLUSM3UHN6U.php",
+   "url": "https://x.com/GPTVoff/status/2116206050269368825",
    "first_seen": "2026-10-29T11:59",
    "lat": 48.8619,
    "lon": 2.3186,
@@ -422,8 +422,10 @@
     ]
    },
    "confirmed": true,
-   "level": 1,
-   "level_reason": "Von Gelbwesten-Koordination abgesagt (actu.fr 29.10.)"
+   "level": 2,
+   "level_reason": "PP-Verbot; ein X-Post (17:30) zeigt Gelbwesten vor der Assemblée, keine Medienbestätigung, keine Gewaltberichte",
+   "url2": "https://www.leparisien.fr/politique/paris-la-prefecture-de-police-interdit-la-casserolade-prevue-vendredi-par-les-gilets-jaunes-devant-lassemblee-nationale-29-10-2026-BOIJIOCGPFFY3DQZLUSM3UHN6U.php",
+   "updated": "2026-10-30T18:15"
   },
   {
    "id": "pp-ban-centre-20261031",
@@ -1233,6 +1235,198 @@
    "confirmed": true,
    "level": 1,
    "level_reason": "Einzelunfall, Ermittlung; Verkehr wieder normal"
+  },
+  {
+   "id": "pp-perimetre-gare-nord-20261031",
+   "title": "PP-Arrêté 2026-01482: Schutzperimeter Gare du Nord (Versammlungen, Pyro, Wurfgegenstände verboten; Durchsuchungen)",
+   "time": "2026-10-31 08:00–23:30",
+   "place": "Gare du Nord: Rue de Dunkerque / Rue de Maubeuge / Bd de la Chapelle / Rue du Fbg-Saint-Denis (10e)",
+   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/355779-manifestation-du-31-octobre-a-paris-parcours-impose-couvre-feu-metro-les-infos",
+   "lat": 48.8809,
+   "lon": 2.3553,
+   "type": "Behörde/Sperrzone",
+   "weight": 3,
+   "start": "2026-10-31T08:00",
+   "end": "2026-10-31T23:30",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.35,
+       48.8796
+      ],
+      [
+       2.3494,
+       48.8838
+      ],
+      [
+       2.36,
+       48.8841
+      ],
+      [
+       2.359,
+       48.8806
+      ],
+      [
+       2.35,
+       48.8796
+      ]
+     ]
+    ]
+   },
+   "confirmed": false,
+   "level": 3,
+   "level_reason": "Behördlicher Schutzperimeter mit Kontrollen/Fouilles am Demo- und Halloween-Tag; Umriss aus Straßennamen genähert"
+  },
+  {
+   "id": "pp-perimetre-gare-lyon-20261031",
+   "title": "PP-Arrêté 2026-01482: Schutzperimeter Gare de Lyon (Versammlungen, Pyro verboten; Durchsuchungen)",
+   "time": "2026-10-31 08:00–23:30",
+   "place": "Gare de Lyon: Place Louis-Armand / Rue de Bercy / Rue de Rambouillet / Rue de Chalon (12e)",
+   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/355779-manifestation-du-31-octobre-a-paris-parcours-impose-couvre-feu-metro-les-infos",
+   "lat": 48.8443,
+   "lon": 2.377,
+   "type": "Behörde/Sperrzone",
+   "weight": 3,
+   "start": "2026-10-31T08:00",
+   "end": "2026-10-31T23:30",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.3725,
+       48.8452
+      ],
+      [
+       2.3745,
+       48.8424
+      ],
+      [
+       2.383,
+       48.8418
+      ],
+      [
+       2.38,
+       48.8463
+      ],
+      [
+       2.3725,
+       48.8452
+      ]
+     ]
+    ]
+   },
+   "confirmed": false,
+   "level": 3,
+   "level_reason": "Behördlicher Schutzperimeter mit Kontrollen am Demo-Tag; Umriss aus Straßennamen genähert"
+  },
+  {
+   "id": "antifourrure-ban-20261031",
+   "title": "PP-Arrêté 2026-01483: drei Anti-Pelz-Kundgebungen an Luxusboutiquen verboten",
+   "time": "2026-10-31 ca. 12:00",
+   "place": "Rue Saint-Honoré / Rue du Faubourg-Saint-Honoré (1er/8e)",
+   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/355779-manifestation-du-31-octobre-a-paris-parcours-impose-couvre-feu-metro-les-infos",
+   "lat": 48.868,
+   "lon": 2.325,
+   "type": "Demo-Verbot",
+   "weight": 2,
+   "start": "2026-10-31T11:00",
+   "end": "2026-10-31T15:00",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      2.3165,
+      48.8712
+     ],
+     [
+      2.3237,
+      48.8693
+     ],
+     [
+      2.329,
+      48.8668
+     ],
+     [
+      2.336,
+      48.8635
+     ]
+    ]
+   },
+   "confirmed": false,
+   "level": 2,
+   "level_reason": "Kleine Kundgebungen, verboten; genaue Boutiquen nicht genannt, Straßenzug genähert"
+  },
+  {
+   "id": "interfac-bastille-20261031",
+   "title": "Interfac-IDF/UNEF: Aufruf zu Treffpunkt Bastille trotz PP-Verbot ('marcher sur Bastille-Nation')",
+   "time": "2026-10-31 nachmittags",
+   "place": "Place de la Bastille (4e/11e/12e)",
+   "url": "https://x.com/info_Paris_IDF/status/2116169276499386550",
+   "lat": 48.8532,
+   "lon": 2.3691,
+   "type": "Demonstration (verboten)",
+   "weight": 4,
+   "start": "2026-10-31T12:00",
+   "end": "2026-10-31T19:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3691,
+     48.8532
+    ]
+   },
+   "confirmed": true,
+   "level": 4,
+   "level_reason": "PP hat die Bastille-Kundgebung ausdrücklich verboten, UNEF kündigt trotzdem Marsch an (France24/AFP) – Polizeieinsatz/Auflösung wahrscheinlich"
+  },
+  {
+   "id": "ratp-etoile-20261031",
+   "title": "Metro/RER: Charles de Gaulle-Étoile ganztägig geschlossen (RER A, M1/2/6 fahren ohne Halt)",
+   "time": "2026-10-31 ganztägig",
+   "place": "Charles de Gaulle-Étoile (8e/16e/17e)",
+   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/355779-manifestation-du-31-octobre-a-paris-parcours-impose-couvre-feu-metro-les-infos",
+   "lat": 48.8738,
+   "lon": 2.295,
+   "type": "Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T05:30",
+   "end": "2026-11-01T01:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.295,
+     48.8738
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Angeordnete Stationsschließungen auf PP-Anweisung; weitere Schließungen (Portes, Champs-Élysées, Assemblée) möglich"
+  },
+  {
+   "id": "ratp-invalides-20261031",
+   "title": "Metro/RER: Invalides – Ausgänge geschlossen, Umsteigen möglich",
+   "time": "2026-10-31 ganztägig",
+   "place": "Invalides (7e)",
+   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/355779-manifestation-du-31-octobre-a-paris-parcours-impose-couvre-feu-metro-les-infos",
+   "lat": 48.861,
+   "lon": 2.3145,
+   "type": "Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T05:30",
+   "end": "2026-11-01T01:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3145,
+     48.861
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Angeordnete Stationsschließungen auf PP-Anweisung; weitere Schließungen (Portes, Champs-Élysées, Assemblée) möglich"
   }
  ]
 }
