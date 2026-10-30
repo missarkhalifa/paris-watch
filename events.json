@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-30T06:01",
+ "stand": "2026-10-30T09:05",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -349,7 +349,10 @@
    },
    "confirmed": false,
    "level": 4,
-   "level_reason": "PP lehnt Bastille–Nation/Bastille–Concorde ab, Périph-Route kann auferlegt werden; Raid, Drohnen, Wasserwerfer; Nuñez: Gewaltrisiko sehr hoch | Update 29.10.: CGT FERC Sup nennt Start 14 Uhr Porte de Bagnolet 'nach letzten Infos'; 7 Gewerkschaften klagen per Eilverfahren gegen PP, Route Bastille–Nation weiter offen"
+   "level_reason": "PP lehnt Bastille–Nation/Bastille–Concorde ab, Périph-Route kann auferlegt werden; Raid, Drohnen, Wasserwerfer; Nuñez: Gewaltrisiko sehr hoch | Update 29.10.: CGT FERC Sup nennt Start 14 Uhr Porte de Bagnolet 'nach letzten Infos'; 7 Gewerkschaften klagen per Eilverfahren gegen PP, Route Bastille–Nation weiter offen | Update 30.10.: PP-Präfekt Faure verteidigt Route Bagnolet–Charenton (Le Figaro); Bürgermeister Charenton-le-Pont lehnt Auflösungspunkt in seiner Gemeinde ab; Referé der Intersyndicale fordert Arrêté bis Fr 12 Uhr",
+   "extra_urls": [
+    "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/"
+   ]
   },
   {
    "id": "cgt-demo-alt2-20261031",
@@ -1018,6 +1021,30 @@
    "confirmed": true,
    "level": 3,
    "level_reason": "~20 Organisationen rufen 16:30 zur Gegenkundgebung (La Horde: Blockade ab 15 Uhr); Schaufenster am 28.10. eingeschlagen; Sellner laut eigener Aussage ausgewiesen, Signierstunde fraglich | Update 30.10.: Sellner in Beauvais festgehalten, Ausweisung angeordnet (X-News)"
+  },
+  {
+   "id": "intersyndicale-pk-bourse-20261030",
+   "title": "Intersyndicale-Pressekonferenz zur Demo am 31.10. (Route/Referé), Bourse du Travail",
+   "time": "2026-10-30 10:00",
+   "place": "Bourse du Travail, 3 rue du Château-d'Eau (10e)",
+   "url": "https://www.lefigaro.fr/actualite-france/manifestation-du-31-octobre-syndicats-de-salaries-et-d-etudiants-attaquent-en-justice-sur-le-parcours-a-paris-20261029",
+   "first_seen": "2026-10-30T09:05",
+   "lat": 48.86965,
+   "lon": 2.36075,
+   "type": "Kundgebung/Presse",
+   "weight": 1,
+   "start": "2026-10-30T10:00",
+   "end": "2026-10-30T12:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.36075,
+     48.86965
+    ]
+   },
+   "confirmed": true,
+   "level": 1,
+   "level_reason": "Angekündigte Pressekonferenz von CGT, FO, FSU, Solidaires, Fage, UE, Unef; kein Aufzug angekündigt, evtl. Menschenansammlung/Medien vor Ort"
   }
  ]
 }
