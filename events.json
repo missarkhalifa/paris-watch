@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-29T21:00",
+ "stand": "2026-10-30T03:03",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -374,30 +374,6 @@
    "confirmed": true,
    "level": 3,
    "level_reason": "Endpunkt der Ausweichroute (Porte de Charenton), Auflösung der Demo erwartet"
-  },
-  {
-   "id": "curfew-suspended-20261028",
-   "title": "Jugend-Ausgangssperre vom Verwaltungsgericht ausgesetzt (Halles/République)",
-   "time": "2026-10-28",
-   "place": "Forum des Halles / République",
-   "url": "https://www.bfmtv.com/paris/couvre-feu-a-paris-pour-les-mineurs-le-tribunal-administratif-suspend-l-arrete-prefectoral_AN-202610280865.html",
-   "first_seen": "2026-10-29T11:57",
-   "lat": 48.865,
-   "lon": 2.356,
-   "type": "Behörde/Justiz",
-   "weight": 2,
-   "start": "2026-10-28T00:00",
-   "end": "2026-10-28T23:59",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.347,
-     48.862
-    ]
-   },
-   "confirmed": true,
-   "level": 1,
-   "level_reason": "Gerichtsentscheid (Ausgangssperre ausgesetzt) – keine Lage vor Ort"
   },
   {
    "id": "gj-casserolade-20261030",
@@ -951,7 +927,7 @@
    },
    "confirmed": true,
    "level": 3,
-   "level_reason": "Rechtsextreme Demo am So von PP verboten (BFM), Gegenkundgebung angekündigt; Spannungen möglich"
+   "level_reason": "Gegenkundgebung; Organisatoren von 'Objectif Remigration' wollen ihre verbotene Demo laut Nouvel Obs bis zum Gerichtsentscheid aufrechterhalten – Konfrontationsrisiko"
   },
   {
    "id": "halloween-dispositif-20261031",
@@ -1017,6 +993,30 @@
    "confirmed": false,
    "level": 4,
    "level_reason": "Nuñez: 70.000 Polizisten bundesweit, Aufrufe zu Plünderungen/'attroupements violents' ab 20 Uhr, Auflösung + Festnahmen angekündigt; Kontrollen an Bahnhöfen"
+  },
+  {
+   "id": "logos-counter-20261030",
+   "title": "Antifa-Gegenkundgebung vor Librairie Logos gegen Sellner-Signierstunde (Sellner wird ausgewiesen)",
+   "time": "2026-10-30 16:30",
+   "place": "Librairie Logos, 115 avenue de La Bourdonnais (7e)",
+   "url": "https://www.nouvelobs.com/politique/20261029.OBS119641/objectif-remigration-le-colloque-et-la-manifestation-d-extreme-droite-interdits-apres-l-attentat-raciste-de-trappes.html",
+   "first_seen": "2026-10-30T03:00",
+   "lat": 48.85484,
+   "lon": 2.30476,
+   "type": "Kundgebung",
+   "weight": 3,
+   "start": "2026-10-30T15:00",
+   "end": "2026-10-30T19:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.30476,
+     48.85484
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "~20 Organisationen rufen 16:30 zur Gegenkundgebung (La Horde: Blockade ab 15 Uhr); Schaufenster am 28.10. eingeschlagen; Sellner laut eigener Aussage ausgewiesen, Signierstunde fraglich"
   }
  ]
 }
