@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-30T12:08",
+ "stand": "2026-10-30T15:07",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -423,7 +423,7 @@
    },
    "confirmed": true,
    "level": 1,
-   "level_reason": "PP verbot Kundgebung, Alternativort Invalides abgelehnt; Koordination sagt Paris-Termin ab (Le Parisien/AFP 29.10. 18:29)"
+   "level_reason": "Von Gelbwesten-Koordination abgesagt (actu.fr 29.10.)"
   },
   {
    "id": "pp-ban-centre-20261031",
@@ -1049,6 +1049,190 @@
    "confirmed": true,
    "level": 1,
    "level_reason": "Angekündigte Pressekonferenz von CGT, FO, FSU, Solidaires, Fage, UE, Unef; kein Aufzug angekündigt, evtl. Menschenansammlung/Medien vor Ort"
+  },
+  {
+   "id": "couvrefeu-chatelet-20261031",
+   "title": "PP-Arrêté: Ausgangssperre für ALLE 23–6 Uhr, Sektor Châtelet-Les Halles (Nächte Sa→So, So→Mo)",
+   "time": "2026-10-31 23:00 – 2026-11-02 06:00",
+   "place": "Châtelet-Les Halles (1er), genauer Perimeter nicht veröffentlicht",
+   "url": "https://www.bfmtv.com/paris/manifestations-a-paris-un-couvre-feu-instaure-ce-week-end-a-republique-et-a-chatelet_AD-202610300455.html",
+   "first_seen": "2026-10-30T15:10",
+   "lat": 48.862,
+   "lon": 2.347,
+   "type": "Behörde/Sperrzone",
+   "weight": 4,
+   "start": "2026-10-31T23:00",
+   "end": "2026-11-02T06:00",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.352,
+       48.8618
+      ],
+      [
+       2.35114,
+       48.86345
+      ],
+      [
+       2.34889,
+       48.86446
+      ],
+      [
+       2.34611,
+       48.86446
+      ],
+      [
+       2.34386,
+       48.86345
+      ],
+      [
+       2.343,
+       48.8618
+      ],
+      [
+       2.34386,
+       48.86015
+      ],
+      [
+       2.34611,
+       48.85914
+      ],
+      [
+       2.34889,
+       48.85914
+      ],
+      [
+       2.35114,
+       48.86015
+      ],
+      [
+       2.352,
+       48.8618
+      ]
+     ]
+    ]
+   },
+   "confirmed": false,
+   "level": 4,
+   "level_reason": "Personenverkehr im Sektor verboten wegen Demo + Halloween und vorheriger Unruhen; Zone ungefähr"
+  },
+  {
+   "id": "couvrefeu-republique-20261031",
+   "title": "PP-Arrêté: Ausgangssperre für ALLE 23–6 Uhr, Sektor Place de la République (Nächte Sa→So, So→Mo)",
+   "time": "2026-10-31 23:00 – 2026-11-02 06:00",
+   "place": "Place de la République (3e/10e/11e), genauer Perimeter nicht veröffentlicht",
+   "url": "https://www.bfmtv.com/paris/manifestations-a-paris-un-couvre-feu-instaure-ce-week-end-a-republique-et-a-chatelet_AD-202610300455.html",
+   "first_seen": "2026-10-30T15:10",
+   "lat": 48.8674,
+   "lon": 2.3636,
+   "type": "Behörde/Sperrzone",
+   "weight": 4,
+   "start": "2026-10-31T23:00",
+   "end": "2026-11-02T06:00",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.3676,
+       48.8674
+      ],
+      [
+       2.36684,
+       48.86887
+      ],
+      [
+       2.36484,
+       48.86978
+      ],
+      [
+       2.36236,
+       48.86978
+      ],
+      [
+       2.36036,
+       48.86887
+      ],
+      [
+       2.3596,
+       48.8674
+      ],
+      [
+       2.36036,
+       48.86593
+      ],
+      [
+       2.36236,
+       48.86502
+      ],
+      [
+       2.36484,
+       48.86502
+      ],
+      [
+       2.36684,
+       48.86593
+      ],
+      [
+       2.3676,
+       48.8674
+      ]
+     ]
+    ]
+   },
+   "confirmed": false,
+   "level": 4,
+   "level_reason": "Personenverkehr im Sektor verboten; PP begründet mit Ordnungsstörungen; Zone ungefähr"
+  },
+  {
+   "id": "gj-gambetta-20261030",
+   "title": "Gilets jaunes: Kundgebung vor Mairie du 20e (Fr 18 Uhr), Sit-in Sa 14 Uhr",
+   "time": "2026-10-30 18:00 / 2026-10-31 14:00",
+   "place": "Place Gambetta, Mairie du 20e",
+   "url": "https://www.mobilisationgiletsjaunes.fr/mobilisations/500002331/paris-mairie-du-20e-arrondissement",
+   "first_seen": "2026-10-30T15:10",
+   "lat": 48.86509,
+   "lon": 2.399,
+   "type": "Kundgebung",
+   "weight": 2,
+   "start": "2026-10-30T18:00",
+   "end": "2026-10-31T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.399,
+     48.86509
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Kleine angekündigte Kundgebung (Gelbwesten-Listing), keine Gewaltberichte"
+  },
+  {
+   "id": "gare-est-chute-20261030",
+   "title": "Person von Brücke auf Gleise der Gare de l'Est gestürzt, Linie P den Vormittag gestört (jetzt normal)",
+   "time": "2026-10-30 ab ~09:00",
+   "place": "Gare de l'Est (10e), Brücke über die Gleise",
+   "url": "https://actu.fr/ile-de-france/paris_75056/ligne-p-le-trafic-perturbe-dans-les-deux-sens-de-circulation-des-individus-sur-les-voies-a-paris-est_64993571.html",
+   "first_seen": "2026-10-30T15:10",
+   "lat": 48.879,
+   "lon": 2.359,
+   "type": "Vorfall/Verkehr",
+   "weight": 1,
+   "start": "2026-10-30T09:00",
+   "end": "2026-10-30T12:15",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.359,
+     48.879
+    ]
+   },
+   "confirmed": true,
+   "level": 1,
+   "level_reason": "Einzelunfall, Ermittlung; Verkehr wieder normal"
   }
  ]
 }
