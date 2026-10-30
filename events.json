@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-30T03:03",
+ "stand": "2026-10-30T06:01",
  "events": [
   {
    "id": "ratp-bus-strike-20261029",
@@ -373,7 +373,8 @@
    },
    "confirmed": true,
    "level": 3,
-   "level_reason": "Endpunkt der Ausweichroute (Porte de Charenton), Auflösung der Demo erwartet"
+   "level_reason": "Endpunkt der Ausweichroute (Porte de Charenton), Auflösung der Demo erwartet | Update 30.10.: Bürgermeister von Charenton-le-Pont lehnt Auflösungspunkt in seiner Gemeinde ab; PP-Arrêté noch nicht veröffentlicht (Referé: Frist Fr 12 Uhr) – lespritfr.com 30.10.",
+   "url2": "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/"
   },
   {
    "id": "gj-casserolade-20261030",
@@ -1016,7 +1017,7 @@
    },
    "confirmed": true,
    "level": 3,
-   "level_reason": "~20 Organisationen rufen 16:30 zur Gegenkundgebung (La Horde: Blockade ab 15 Uhr); Schaufenster am 28.10. eingeschlagen; Sellner laut eigener Aussage ausgewiesen, Signierstunde fraglich"
+   "level_reason": "~20 Organisationen rufen 16:30 zur Gegenkundgebung (La Horde: Blockade ab 15 Uhr); Schaufenster am 28.10. eingeschlagen; Sellner laut eigener Aussage ausgewiesen, Signierstunde fraglich | Update 30.10.: Sellner in Beauvais festgehalten, Ausweisung angeordnet (X-News)"
   }
  ]
 }
