@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-31T09:03",
+ "stand": "2026-10-31T12:03",
  "events": [
   {
    "id": "cgt-demo-20261031",
@@ -309,13 +309,13 @@
    },
    "confirmed": true,
    "level": 4,
-   "level_reason": "Einzige erlaubte Route für CGT/Intersyndicale & Gelbwesten (Conseil d'État-Ordonnance in der Nacht); Regierung: 'sehr hohes Risiko', 70.000 Einsatzkräfte bundesweit; am 24.10. auf ähnlicher Randroute Krawalle",
+   "level_reason": "DOPC-Lagebild (BFMTV): 100–150k erwartet, 300–600 Ultralinke + gewaltbereite Jugendliche; Mélenchon/LFI, CGT, UNEF, Interfac rufen zum Zug auf",
    "extra_urls": [
     "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/",
     "https://x.com/BFMTV/status/2116392616015106332"
    ],
    "last_update": "2026-10-30T12:15",
-   "updated": "2026-10-31T06:10"
+   "updated": "2026-10-31T12:05"
   },
   {
    "id": "cgt-demo-alt2-20261031",
@@ -845,30 +845,6 @@
    "level_reason": "~20 Organisationen rufen 16:30 zur Gegenkundgebung (La Horde: Blockade ab 15 Uhr); Schaufenster am 28.10. eingeschlagen; Sellner laut eigener Aussage ausgewiesen, Signierstunde fraglich | Update 30.10.: Sellner in Beauvais festgehalten, Ausweisung angeordnet (X-News)"
   },
   {
-   "id": "intersyndicale-pk-bourse-20261030",
-   "title": "Intersyndicale-Pressekonferenz zur Demo am 31.10. (Route/Referé), Bourse du Travail",
-   "time": "2026-10-30 10:00",
-   "place": "Bourse du Travail, 3 rue du Château-d'Eau (10e)",
-   "url": "https://www.lefigaro.fr/actualite-france/manifestation-du-31-octobre-syndicats-de-salaries-et-d-etudiants-attaquent-en-justice-sur-le-parcours-a-paris-20261029",
-   "first_seen": "2026-10-30T09:05",
-   "lat": 48.86965,
-   "lon": 2.36075,
-   "type": "Kundgebung/Presse",
-   "weight": 1,
-   "start": "2026-10-30T10:00",
-   "end": "2026-10-30T12:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.36075,
-     48.86965
-    ]
-   },
-   "confirmed": true,
-   "level": 1,
-   "level_reason": "Angekündigte Pressekonferenz von CGT, FO, FSU, Solidaires, Fage, UE, Unef; kein Aufzug angekündigt, evtl. Menschenansammlung/Medien vor Ort"
-  },
-  {
    "id": "couvrefeu-chatelet-20261031",
    "title": "PP-Arrêté: Ausgangssperre für ALLE 23–6 Uhr, Sektor Châtelet-Les Halles (Nächte Sa→So, So→Mo)",
    "time": "2026-10-31 23:00 – 2026-11-02 06:00",
@@ -934,7 +910,7 @@
    },
    "confirmed": false,
    "level": 4,
-   "level_reason": "Personenverkehr im Sektor verboten wegen Demo + Halloween und vorheriger Unruhen; Zone ungefähr"
+   "level_reason": "Personenverkehr im Sektor verboten wegen Demo + Halloween und vorheriger Unruhen; Zone ungefähr | Vigie Liberté klagt mittags vor dem Tribunal administratif dagegen (BFMTV)"
   },
   {
    "id": "couvrefeu-republique-20261031",
@@ -1002,7 +978,7 @@
    },
    "confirmed": false,
    "level": 4,
-   "level_reason": "Personenverkehr im Sektor verboten; PP begründet mit Ordnungsstörungen; Zone ungefähr"
+   "level_reason": "Personenverkehr im Sektor verboten; PP begründet mit Ordnungsstörungen; Zone ungefähr | Vigie Liberté klagt mittags vor dem Tribunal administratif dagegen (BFMTV)"
   },
   {
    "id": "gj-gambetta-20261030",
@@ -1027,30 +1003,6 @@
    "confirmed": true,
    "level": 2,
    "level_reason": "Kleine angekündigte Kundgebung (Gelbwesten-Listing), keine Gewaltberichte"
-  },
-  {
-   "id": "gare-est-chute-20261030",
-   "title": "Person von Brücke auf Gleise der Gare de l'Est gestürzt, Linie P den Vormittag gestört (jetzt normal)",
-   "time": "2026-10-30 ab ~09:00",
-   "place": "Gare de l'Est (10e), Brücke über die Gleise",
-   "url": "https://actu.fr/ile-de-france/paris_75056/ligne-p-le-trafic-perturbe-dans-les-deux-sens-de-circulation-des-individus-sur-les-voies-a-paris-est_64993571.html",
-   "first_seen": "2026-10-30T15:10",
-   "lat": 48.879,
-   "lon": 2.359,
-   "type": "Vorfall/Verkehr",
-   "weight": 1,
-   "start": "2026-10-30T09:00",
-   "end": "2026-10-30T12:15",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.359,
-     48.879
-    ]
-   },
-   "confirmed": true,
-   "level": 1,
-   "level_reason": "Einzelunfall, Ermittlung; Verkehr wieder normal"
   },
   {
    "id": "pp-perimetre-gare-nord-20261031",
@@ -1177,14 +1129,14 @@
   },
   {
    "id": "interfac-bastille-20261031",
-   "title": "Interfac-IDF/UNEF: Treffpunkt Bastille – nach Conseil-d'État-Entscheid nicht mehr Teil einer erlaubten Route",
+   "title": "Interfac-IDF/UNEF: rufen jetzt zum erlaubten Zug ab Porte de Bagnolet 14 Uhr auf (kein Bastille-Treffpunkt mehr)",
    "time": "2026-10-31 nachmittags",
    "place": "Place de la Bastille (4e/11e/12e)",
-   "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
+   "url": "https://www.leparisien.fr/societe/direct-mobilisation-du-31-octobre-nouvelle-journee-de-manifestations-dans-plusieurs-villes-lexecutif-craint-des-debordements-31-10-2026-DRJIUI3CBVHBBAGX66RVWDYPBM.php",
    "lat": 48.8532,
    "lon": 2.3691,
    "type": "Demonstration (verboten)",
-   "weight": 4,
+   "weight": 2,
    "start": "2026-10-31T12:00",
    "end": "2026-10-31T19:00",
    "geometry": {
@@ -1195,9 +1147,9 @@
     ]
    },
    "confirmed": true,
-   "level": 4,
-   "level_reason": "Bastille–Nation per Conseil d'État verboten; Bastille-Metro ab 9 Uhr zu; Auflösung wahrscheinlich",
-   "updated": "2026-10-31T06:10"
+   "level": 2,
+   "level_reason": "Le Parisien: Interfac IDF schließt sich dem genehmigten Zug an; Bastille-Treff entfällt",
+   "updated": "2026-10-31T12:05"
   },
   {
    "id": "ratp-etoile-20261031",
@@ -1509,10 +1461,10 @@
   },
   {
    "id": "ratp-bastille-republique-20261031",
-   "title": "Metro zu ab 9 Uhr: République, Filles du Calvaire, St-Sébastien-Froissart, Chemin Vert, Bréguet-Sabin, Bastille (+ St-François-Xavier)",
+   "title": "Metro zu ab 9 Uhr: République, Filles du Calvaire, St-Sébastien-Froissart, Chemin Vert, Bréguet-Sabin (+ St-François-Xavier) – Bastille wieder OFFEN",
    "time": "2026-10-31 ab 09:00",
    "place": "Bd Beaumarchais/Richard-Lenoir, République–Bastille (3e/11e)",
-   "url": "https://www.ratp.fr/infos-trafic",
+   "url": "https://actu.fr/ile-de-france/paris_75056/direct-manifestation-a-paris-ce-samedi-31-octobre-parcours-bouleverse-metro-ferme-tensions-suivez-la-mobilisation_64998603.html",
    "lat": 48.861,
    "lon": 2.3675,
    "type": "Verkehr",
@@ -1611,7 +1563,8 @@
    "confirmed": true,
    "level": 2,
    "level_reason": "RATP auf PP-Anordnung: Stationen entlang der (verbotenen) Innenstadt-Achse zu, Wiederöffnung nur mit PP-Freigabe",
-   "first_seen": "2026-10-31T09:05"
+   "first_seen": "2026-10-31T09:05",
+   "updated": "2026-10-31T12:05"
   },
   {
    "id": "ratp-opera-20261031",
@@ -1782,6 +1735,144 @@
    "level": 2,
    "level_reason": "RATP auf PP-Anordnung: Stationen nahe der erlaubten Route Bagnolet–Charenton zu; Linie verbindet nur die Stationen",
    "first_seen": "2026-10-31T09:05"
+  },
+  {
+   "id": "periph-risk-20261031",
+   "title": "DOPC-Lagebild: Risiko, dass der Périphérique besetzt und Zufahrts-Portes (Bagnolet–Charenton) blockiert werden; auch gezielte Angriffe auf Machtorte befürchtet",
+   "time": "2026-10-31 ab ~14:00",
+   "place": "Boulevard périphérique Ost, Porte de Bagnolet bis Porte de Charenton",
+   "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
+   "lat": 48.8468,
+   "lon": 2.4163,
+   "type": "Sicherheitsrisiko/Blockade",
+   "weight": 4,
+   "start": "2026-10-31T14:00",
+   "end": "2026-10-31T21:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.41386,
+      48.8648
+     ],
+     [
+      2.41347,
+      48.867
+     ],
+     [
+      2.4117,
+      48.86527
+     ],
+     [
+      2.41286,
+      48.86416
+     ],
+     [
+      2.41369,
+      48.86168
+     ],
+     [
+      2.41391,
+      48.85401
+     ],
+     [
+      2.41522,
+      48.85075
+     ],
+     [
+      2.41385,
+      48.84671
+     ],
+     [
+      2.41471,
+      48.84641
+     ],
+     [
+      2.4163,
+      48.8468
+     ],
+     [
+      2.416,
+      48.84726
+     ],
+     [
+      2.41654,
+      48.84721
+     ],
+     [
+      2.41648,
+      48.84665
+     ],
+     [
+      2.41105,
+      48.8471
+     ],
+     [
+      2.40777,
+      48.83681
+     ],
+     [
+      2.40643,
+      48.83549
+     ],
+     [
+      2.40783,
+      48.83645
+     ],
+     [
+      2.40843,
+      48.83819
+     ],
+     [
+      2.41115,
+      48.83797
+     ],
+     [
+      2.41196,
+      48.83724
+     ],
+     [
+      2.41115,
+      48.83797
+     ],
+     [
+      2.40843,
+      48.83819
+     ],
+     [
+      2.40846,
+      48.83892
+     ],
+     [
+      2.40769,
+      48.83664
+     ],
+     [
+      2.40643,
+      48.83549
+     ],
+     [
+      2.40443,
+      48.83429
+     ],
+     [
+      2.39764,
+      48.8318
+     ],
+     [
+      2.40118,
+      48.82954
+     ],
+     [
+      2.4036,
+      48.8291
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 4,
+   "level_reason": "Interne Polizeinote (DOPC) laut BFMTV warnt vor Périph-Besetzung und Blockaden der Portes – Risiko, nicht bestätigt",
+   "first_seen": "2026-10-31T12:05"
   }
  ]
 }
