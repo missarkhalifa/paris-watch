@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-31T06:08",
+ "stand": "2026-10-31T09:03",
  "events": [
   {
    "id": "cgt-demo-20261031",
@@ -1246,80 +1246,6 @@
    "level_reason": "Angeordnete Stationsschließungen auf PP-Anweisung; weitere Schließungen (Portes, Champs-Élysées, Assemblée) möglich"
   },
   {
-   "id": "ratp-grands-blvds-20261031",
-   "title": "Metro zu ab 9 Uhr: Strasbourg-St-Denis, Bonne Nouvelle, Grands Boulevards, Richelieu-Drouot (dazu République, Bastille, Opéra-Umfeld)",
-   "time": "2026-10-31 ab 09:00",
-   "place": "Grands Boulevards (2e/9e/10e)",
-   "url": "https://www.ratp.fr/infos-trafic",
-   "lat": 48.8706,
-   "lon": 2.3466,
-   "type": "Verkehr",
-   "weight": 2,
-   "start": "2026-10-31T09:00",
-   "end": "2026-11-01T01:00",
-   "geometry": {
-    "coordinates": [
-     [
-      2.33895,
-      48.87215
-     ],
-     [
-      2.3383,
-      48.87224
-     ],
-     [
-      2.33807,
-      48.87164
-     ],
-     [
-      2.33917,
-      48.87183
-     ],
-     [
-      2.3401,
-      48.87192
-     ],
-     [
-      2.34334,
-      48.87144
-     ],
-     [
-      2.3491,
-      48.87044
-     ],
-     [
-      2.34903,
-      48.86988
-     ],
-     [
-      2.34862,
-      48.86995
-     ],
-     [
-      2.34869,
-      48.8704
-     ],
-     [
-      2.3487,
-      48.87052
-     ],
-     [
-      2.3543,
-      48.86932
-     ],
-     [
-      2.35444,
-      48.86957
-     ]
-    ],
-    "type": "LineString"
-   },
-   "confirmed": true,
-   "level": 2,
-   "level_reason": "Stationsschließungen auf PP-Anordnung entlang der Grands Boulevards, Wiederöffnung nur mit PP-Freigabe",
-   "first_seen": "2026-10-30T21:05"
-  },
-  {
    "id": "ratp-chatelet-20261031",
    "title": "Metro: Châtelet & Les Halles zu ab 10 Uhr, M1 unterbrochen Châtelet–Hôtel de Ville; ab 20 Uhr auch RER Châtelet-Les Halles zu",
    "time": "2026-10-31 ab 10:00",
@@ -1580,6 +1506,282 @@
    "level": 2,
    "level_reason": "Lokaler Streik laut RATP/maligneb.fr, Süd fast normal",
    "first_seen": "2026-10-30T21:05"
+  },
+  {
+   "id": "ratp-bastille-republique-20261031",
+   "title": "Metro zu ab 9 Uhr: République, Filles du Calvaire, St-Sébastien-Froissart, Chemin Vert, Bréguet-Sabin, Bastille (+ St-François-Xavier)",
+   "time": "2026-10-31 ab 09:00",
+   "place": "Bd Beaumarchais/Richard-Lenoir, République–Bastille (3e/11e)",
+   "url": "https://www.ratp.fr/infos-trafic",
+   "lat": 48.861,
+   "lon": 2.3675,
+   "type": "Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T09:00",
+   "end": "2026-11-01T01:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.36358,
+      48.86722
+     ],
+     [
+      2.36481,
+      48.86653
+     ],
+     [
+      2.36689,
+      48.86246
+     ],
+     [
+      2.36731,
+      48.86265
+     ],
+     [
+      2.36721,
+      48.86303
+     ],
+     [
+      2.36695,
+      48.86388
+     ],
+     [
+      2.36637,
+      48.86372
+     ],
+     [
+      2.36726,
+      48.86098
+     ],
+     [
+      2.36813,
+      48.85731
+     ],
+     [
+      2.36906,
+      48.85355
+     ],
+     [
+      2.3686,
+      48.85325
+     ],
+     [
+      2.36764,
+      48.85337
+     ],
+     [
+      2.36735,
+      48.85262
+     ],
+     [
+      2.36836,
+      48.85286
+     ],
+     [
+      2.36891,
+      48.85353
+     ],
+     [
+      2.37015,
+      48.8533
+     ],
+     [
+      2.37318,
+      48.85056
+     ],
+     [
+      2.37198,
+      48.8489
+     ],
+     [
+      2.37065,
+      48.84978
+     ],
+     [
+      2.36943,
+      48.85248
+     ],
+     [
+      2.36962,
+      48.85299
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "RATP auf PP-Anordnung: Stationen entlang der (verbotenen) Innenstadt-Achse zu, Wiederöffnung nur mit PP-Freigabe",
+   "first_seen": "2026-10-31T09:05"
+  },
+  {
+   "id": "ratp-opera-20261031",
+   "title": "Metro zu ab 11 Uhr: Pyramides, Opéra, Chaussée d'Antin-La Fayette",
+   "time": "2026-10-31 ab 11:00",
+   "place": "Opéra / Grands Magasins (1er/9e)",
+   "url": "https://www.ratp.fr/infos-trafic",
+   "lat": 48.8712,
+   "lon": 2.3316,
+   "type": "Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T11:00",
+   "end": "2026-11-01T01:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3316,
+     48.8712
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "RATP auf PP-Anordnung: Stationsschließungen am Opéra-Sektor",
+   "first_seen": "2026-10-31T09:05"
+  },
+  {
+   "id": "ratp-est-20261031",
+   "title": "Metro zu ab 12 Uhr: Porte Dorée, Michel Bizot, Bel-Air, Picpus, Porte de Montreuil (Umfeld der Demo-Route)",
+   "time": "2026-10-31 ab 12:00",
+   "place": "12e/20e entlang Maréchaux",
+   "url": "https://actu.fr/ile-de-france/paris_75056/ratp-manifestations-a-paris-40-stations-de-metro-fermees-ce-samedi-31-octobre-voici-la-liste-et-les-horaires_64998362.html",
+   "lat": 48.8434,
+   "lon": 2.3993,
+   "type": "Verkehr",
+   "weight": 2,
+   "start": "2026-10-31T12:00",
+   "end": "2026-10-31T21:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.40548,
+      48.83561
+     ],
+     [
+      2.40507,
+      48.83508
+     ],
+     [
+      2.40382,
+      48.83505
+     ],
+     [
+      2.40064,
+      48.83922
+     ],
+     [
+      2.4002,
+      48.83965
+     ],
+     [
+      2.40055,
+      48.83986
+     ],
+     [
+      2.40247,
+      48.84509
+     ],
+     [
+      2.40198,
+      48.84506
+     ],
+     [
+      2.40134,
+      48.84302
+     ],
+     [
+      2.39925,
+      48.84291
+     ],
+     [
+      2.39921,
+      48.84336
+     ],
+     [
+      2.40068,
+      48.84341
+     ],
+     [
+      2.40052,
+      48.84389
+     ],
+     [
+      2.39933,
+      48.84385
+     ],
+     [
+      2.3993,
+      48.84336
+     ],
+     [
+      2.39925,
+      48.84291
+     ],
+     [
+      2.39744,
+      48.84277
+     ],
+     [
+      2.39534,
+      48.84531
+     ],
+     [
+      2.39573,
+      48.84734
+     ],
+     [
+      2.39672,
+      48.84747
+     ],
+     [
+      2.39739,
+      48.84797
+     ],
+     [
+      2.39829,
+      48.84789
+     ],
+     [
+      2.39818,
+      48.84736
+     ],
+     [
+      2.39893,
+      48.84729
+     ],
+     [
+      2.40139,
+      48.84556
+     ],
+     [
+      2.4022,
+      48.84478
+     ],
+     [
+      2.4029,
+      48.84491
+     ],
+     [
+      2.41044,
+      48.84427
+     ],
+     [
+      2.41144,
+      48.84702
+     ],
+     [
+      2.41151,
+      48.84879
+     ],
+     [
+      2.41077,
+      48.85359
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 2,
+   "level_reason": "RATP auf PP-Anordnung: Stationen nahe der erlaubten Route Bagnolet–Charenton zu; Linie verbindet nur die Stationen",
+   "first_seen": "2026-10-31T09:05"
   }
  ]
 }
