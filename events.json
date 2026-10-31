@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-31T14:59",
+ "stand": "2026-10-31T18:06",
  "events": [
   {
    "id": "cgt-demo-20261031",
@@ -231,7 +231,7 @@
   },
   {
    "id": "cgt-demo-alt-20261031",
-   "title": "Demo-Zug LÄUFT seit 14:08: Porte de Bagnolet → Porte de Charenton über Bd des Maréchaux (bisher ohne Zwischenfälle, ~14:50 an Porte de Montreuil)",
+   "title": "Demo-Zug Porte de Bagnolet → Porte de Charenton: 70.000 Teilnehmer (PP), ruhig verlaufen, Spitze ~16:05 am Ziel; Auflösung läuft, am Ende Ausschreitungen",
    "time": "2026-10-31 12:00–18:00, Zugstart 14:00",
    "place": "Porte de Bagnolet / T3",
    "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
@@ -309,14 +309,15 @@
    },
    "confirmed": true,
    "level": 4,
-   "level_reason": "Zug gestartet, Berichte: ruhig, keine Zusammenstöße (Stand ~15 Uhr); DOPC erwartet 100–150k und 300–600 Gewaltbereite, daher Stufe bleibt 4",
+   "level_reason": "Zug selbst ruhig (PP/franceinfo), aber am Endpunkt Porte de Charenton Zusammenstöße mit mehreren hundert Randalierern",
    "extra_urls": [
     "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/",
     "https://x.com/BFMTV/status/2116392616015106332",
-    "https://x.com/bez_adrien/status/2116528238021451853"
+    "https://x.com/bez_adrien/status/2116528238021451853",
+    "https://actu.fr/ile-de-france/paris_75056/direct-manifestation-a-paris-ce-samedi-31-octobre-parcours-bouleverse-metro-ferme-tensions-suivez-la-mobilisation_64998603.html"
    ],
    "last_update": "2026-10-30T12:15",
-   "updated": "2026-10-31T15:05"
+   "updated": "2026-10-31T18:10"
   },
   {
    "id": "cgt-demo-alt2-20261031",
@@ -482,84 +483,6 @@
    "confirmed": true,
    "level": 3,
    "level_reason": "Von PP genehmigte statische Kundgebung bis Mitternacht, Demo im 8e verboten; Polizeipräsenz erwartet"
-  },
-  {
-   "id": "commerce-clichy-stalingrad-20261030",
-   "title": "Demo Syndicat commerce indépendant: Champs-Élysées verboten, PP schlägt Place de Clichy → Stalingrad vor",
-   "time": "2026-10-30 (Uhrzeit nicht genannt)",
-   "place": "Bd de Clichy / Rochechouart / La Chapelle, 17e/18e/19e",
-   "url": "https://www.ouest-france.fr/societe/manifestation/direct-manifestations-plusieurs-manifestations-interdites-partiellement-aujourdhui-et-demain-a-paris-b9f83aef-9b61-4f89-b25c-11ae973258e7",
-   "first_seen": "2026-10-29T15:05",
-   "lat": 48.883,
-   "lon": 2.348,
-   "type": "Demonstration",
-   "weight": 2,
-   "start": "2026-10-30T10:00",
-   "end": "2026-10-30T18:00",
-   "geometry": {
-    "coordinates": [
-     [
-      2.32723,
-      48.88347
-     ],
-     [
-      2.32735,
-      48.88337
-     ],
-     [
-      2.32795,
-      48.88354
-     ],
-     [
-      2.32945,
-      48.88441
-     ],
-     [
-      2.3321,
-      48.88379
-     ],
-     [
-      2.33751,
-      48.88223
-     ],
-     [
-      2.33987,
-      48.8819
-     ],
-     [
-      2.3472,
-      48.88335
-     ],
-     [
-      2.3497,
-      48.88362
-     ],
-     [
-      2.3597,
-      48.88429
-     ],
-     [
-      2.36443,
-      48.88428
-     ],
-     [
-      2.36821,
-      48.88405
-     ],
-     [
-      2.36897,
-      48.88352
-     ],
-     [
-      2.36895,
-      48.88374
-     ]
-    ],
-    "type": "LineString"
-   },
-   "confirmed": false,
-   "level": 2,
-   "level_reason": "Kleine Händler-Demo, Ausweichroute nur vorgeschlagen; Linienführung über die Boulevards geschätzt, Zeit unbekannt"
   },
   {
    "id": "gj-route-bastille-concorde-20261031",
@@ -1901,6 +1824,192 @@
    "level": 3,
    "level_reason": "Platz komplett abgeriegelt, Sommationen der CRS und Bußgelder; laut Berichten nur wenige Demonstranten, keine Ausschreitungen gemeldet",
    "first_seen": "2026-10-31T15:05"
+  },
+  {
+   "id": "heurts-charenton-20261031",
+   "title": "Ausschreitungen am Demo-Ende Porte de Charenton: Pflastersteine, Molotow-Cocktail, CRS mit Tränengas und Schlagstock-Charges, Wasserwerfer bereit",
+   "time": "2026-10-31 ab ~16:50, laufend",
+   "place": "Porte de Charenton (12e), Bd Poniatowski / Av. de la Porte de Charenton",
+   "url": "https://actu.fr/ile-de-france/paris_75056/direct-manifestation-a-paris-ce-samedi-31-octobre-parcours-bouleverse-metro-ferme-tensions-suivez-la-mobilisation_64998603.html",
+   "extra_urls": [
+    "https://www.lessentiel.lu/fr/story/colere-sociale-la-fin-de-la-manifestation-tourne-au-vinaigre-a-paris-103659373",
+    "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html"
+   ],
+   "lat": 48.8335,
+   "lon": 2.402,
+   "type": "Ausschreitungen",
+   "weight": 5,
+   "start": "2026-10-31T16:50",
+   "end": "2026-10-31T22:00",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.3975,
+       48.8355
+      ],
+      [
+       2.407,
+       48.8355
+      ],
+      [
+       2.407,
+       48.8315
+      ],
+      [
+       2.3975,
+       48.8315
+      ],
+      [
+       2.3975,
+       48.8355
+      ]
+     ]
+    ]
+   },
+   "confirmed": false,
+   "level": 5,
+   "level_reason": "AFP/PP: 'harter Kern von mehreren hundert Randalierern', Pflastersteine und Molotow auf Polizei, Platz voller Tränengas (Zone ungefähr)",
+   "first_seen": "2026-10-31T18:10"
+  },
+  {
+   "id": "roquette-sauvage-20261031",
+   "title": "Unangemeldete Versammlung (~200 Pers.) in der Rue de la Roquette – Polizei fordert Auflösung bzw. Anschluss an erlaubten Zug",
+   "time": "2026-10-31 ~16:40",
+   "place": "Rue de la Roquette (11e), genauer Abschnitt nicht genannt",
+   "url": "https://actu.fr/ile-de-france/paris_75056/direct-manifestation-a-paris-ce-samedi-31-octobre-parcours-bouleverse-metro-ferme-tensions-suivez-la-mobilisation_64998603.html",
+   "lat": 48.8575,
+   "lon": 2.3795,
+   "type": "Wilde Demo",
+   "weight": 3,
+   "start": "2026-10-31T16:30",
+   "end": "2026-10-31T19:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.37117,
+      48.85397
+     ],
+     [
+      2.37104,
+      48.85402
+     ],
+     [
+      2.37144,
+      48.85434
+     ],
+     [
+      2.37137,
+      48.85442
+     ],
+     [
+      2.37198,
+      48.85508
+     ],
+     [
+      2.37202,
+      48.85532
+     ],
+     [
+      2.37101,
+      48.85631
+     ],
+     [
+      2.37287,
+      48.85723
+     ],
+     [
+      2.3765,
+      48.85855
+     ],
+     [
+      2.37788,
+      48.85677
+     ],
+     [
+      2.37968,
+      48.85742
+     ],
+     [
+      2.37975,
+      48.85753
+     ],
+     [
+      2.38011,
+      48.85768
+     ],
+     [
+      2.38042,
+      48.85766
+     ],
+     [
+      2.38053,
+      48.85778
+     ],
+     [
+      2.38047,
+      48.8579
+     ],
+     [
+      2.3803,
+      48.85796
+     ],
+     [
+      2.38013,
+      48.85793
+     ],
+     [
+      2.38003,
+      48.8578
+     ],
+     [
+      2.38016,
+      48.85766
+     ],
+     [
+      2.38037,
+      48.85764
+     ],
+     [
+      2.38053,
+      48.85781
+     ],
+     [
+      2.38065,
+      48.85779
+     ],
+     [
+      2.38117,
+      48.85789
+     ],
+     [
+      2.38901,
+      48.85989
+     ],
+     [
+      2.38845,
+      48.86102
+     ],
+     [
+      2.3882,
+      48.86097
+     ],
+     [
+      2.38834,
+      48.86069
+     ],
+     [
+      2.38795,
+      48.86061
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 3,
+   "level_reason": "PP: ca. 200 Personen, Aufforderung zur Auflösung; keine Gewalt gemeldet; Abschnitt unbekannt, daher ganze Straße gestrichelt",
+   "first_seen": "2026-10-31T18:10"
   }
  ]
 }
