@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-31T12:03",
+ "stand": "2026-10-31T14:59",
  "events": [
   {
    "id": "cgt-demo-20261031",
@@ -231,7 +231,7 @@
   },
   {
    "id": "cgt-demo-alt-20261031",
-   "title": "OFFIZIELLE Demo-Route (Conseil d'État bestätigt): Porte de Bagnolet → Porte de Charenton über Bd des Maréchaux, Start 14 Uhr",
+   "title": "Demo-Zug LÄUFT seit 14:08: Porte de Bagnolet → Porte de Charenton über Bd des Maréchaux (bisher ohne Zwischenfälle, ~14:50 an Porte de Montreuil)",
    "time": "2026-10-31 12:00–18:00, Zugstart 14:00",
    "place": "Porte de Bagnolet / T3",
    "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
@@ -309,13 +309,14 @@
    },
    "confirmed": true,
    "level": 4,
-   "level_reason": "DOPC-Lagebild (BFMTV): 100–150k erwartet, 300–600 Ultralinke + gewaltbereite Jugendliche; Mélenchon/LFI, CGT, UNEF, Interfac rufen zum Zug auf",
+   "level_reason": "Zug gestartet, Berichte: ruhig, keine Zusammenstöße (Stand ~15 Uhr); DOPC erwartet 100–150k und 300–600 Gewaltbereite, daher Stufe bleibt 4",
    "extra_urls": [
     "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/",
-    "https://x.com/BFMTV/status/2116392616015106332"
+    "https://x.com/BFMTV/status/2116392616015106332",
+    "https://x.com/bez_adrien/status/2116528238021451853"
    ],
    "last_update": "2026-10-30T12:15",
-   "updated": "2026-10-31T12:05"
+   "updated": "2026-10-31T15:05"
   },
   {
    "id": "cgt-demo-alt2-20261031",
@@ -1873,6 +1874,33 @@
    "level": 4,
    "level_reason": "Interne Polizeinote (DOPC) laut BFMTV warnt vor Périph-Besetzung und Blockaden der Portes – Risiko, nicht bestätigt",
    "first_seen": "2026-10-31T12:05"
+  },
+  {
+   "id": "bastille-evac-20261031",
+   "title": "CRS räumen Place de la Bastille: Wer am verbotenen Treffpunkt bleibt, wird kontrolliert/mit 135 € bestraft",
+   "time": "2026-10-31 ab ~13:30",
+   "place": "Place de la Bastille (4e/11e/12e)",
+   "url": "https://x.com/franceinfo/status/2116511200838140259",
+   "extra_urls": [
+    "https://x.com/BFMTV/status/2116510127855382928"
+   ],
+   "lat": 48.8532,
+   "lon": 2.3691,
+   "type": "Polizeieinsatz",
+   "weight": 3,
+   "start": "2026-10-31T13:30",
+   "end": "2026-10-31T20:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3691,
+     48.8532
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Platz komplett abgeriegelt, Sommationen der CRS und Bußgelder; laut Berichten nur wenige Demonstranten, keine Ausschreitungen gemeldet",
+   "first_seen": "2026-10-31T15:05"
   }
  ]
 }
