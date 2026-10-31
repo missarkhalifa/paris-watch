@@ -1,16 +1,16 @@
 {
- "stand": "2026-10-31T03:04",
+ "stand": "2026-10-31T06:08",
  "events": [
   {
    "id": "cgt-demo-20261031",
-   "title": "TA kippt PP-Verbot: Intersyndicale/CGT-Zug Bastille → Nation (Rue de Lyon, Av. Daumesnil, Bd de Picpus) ERLAUBT – PP geht in Berufung (Conseil d'État)",
+   "title": "Conseil d'État kippt TA-Urteil: Zug Bastille → Nation wieder VERBOTEN (Aufrufe, trotzdem dort zu marschieren)",
    "time": "2026-10-31 ab 14:00",
    "place": "Bastille → Nation (11e/12e)",
-   "url": "https://www.leparisien.fr/paris-75/manifestation-du-31-octobre-a-paris-bastille-nation-voici-le-parcours-autorise-par-le-tribunal-administratif-30-10-2026-VHV7WTYF3FDVFOJUDLHZFG5QZQ.php",
+   "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
    "first_seen": "2026-10-29T11:57",
    "lat": 48.85,
    "lon": 2.38,
-   "type": "Demonstration",
+   "type": "Demonstration (verboten)",
    "weight": 4,
    "start": "2026-10-31T13:00",
    "end": "2026-10-31T19:00",
@@ -223,18 +223,18 @@
     ],
     "type": "LineString"
    },
-   "confirmed": true,
+   "confirmed": false,
    "level": 4,
-   "level_reason": "Tribunal administratif hat das Verbot am 30.10. abends ausgesetzt; Nuñez kündigt Berufung an, Innenministerium erwartet Gewalt wie am 17.10. – Route kann kurzfristig noch kippen",
+   "level_reason": "Conseil d'État hat in der Nacht die PP-Untersagung bestätigt; einzelne Aufrufe auf X, trotzdem Bastille–Nation zu laufen – Polizei wird unangemeldete Züge auflösen",
    "last_update": "2026-10-30T12:15",
-   "updated": "2026-10-30T21:05"
+   "updated": "2026-10-31T06:10"
   },
   {
    "id": "cgt-demo-alt-20261031",
-   "title": "PP-Route Porte de Bagnolet → Porte de Charenton (Bd des Maréchaux) – bleibt Pflichtroute für Gelbwesten & andere verbotene Züge",
-   "time": "2026-10-31 12:00–18:00",
+   "title": "OFFIZIELLE Demo-Route (Conseil d'État bestätigt): Porte de Bagnolet → Porte de Charenton über Bd des Maréchaux, Start 14 Uhr",
+   "time": "2026-10-31 12:00–18:00, Zugstart 14:00",
    "place": "Porte de Bagnolet / T3",
-   "url": "https://www.cnews.fr/france/2026-10-30/mobilisation-du-31-octobre-les-parcours-proposes-par-la-cgt-et-les-gilets-jaunes",
+   "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
    "first_seen": "2026-10-29T11:57",
    "lat": 48.864,
    "lon": 2.409,
@@ -309,12 +309,13 @@
    },
    "confirmed": true,
    "level": 4,
-   "level_reason": "PP-Arrêté vom 30.10.: CGT- und Gelbwesten-Züge müssen hier zusammengelegt werden (100–150k erwartet), 70.000 Einsatzkräfte bundesweit, Nuñez: 'sehr hohes Risiko'; am 24.10. auf ähnlicher Randroute Krawalle (~500 Casseurs, 142 Festnahmen)",
+   "level_reason": "Einzige erlaubte Route für CGT/Intersyndicale & Gelbwesten (Conseil d'État-Ordonnance in der Nacht); Regierung: 'sehr hohes Risiko', 70.000 Einsatzkräfte bundesweit; am 24.10. auf ähnlicher Randroute Krawalle",
    "extra_urls": [
-    "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/"
+    "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/",
+    "https://x.com/BFMTV/status/2116392616015106332"
    ],
    "last_update": "2026-10-30T12:15",
-   "updated": "2026-10-30T21:05"
+   "updated": "2026-10-31T06:10"
   },
   {
    "id": "cgt-demo-alt2-20261031",
@@ -389,10 +390,10 @@
   },
   {
    "id": "pp-ban-centre-20261031",
-   "title": "PP-Verbote 31.10.: Gelbwesten-Route Bastille–Concorde, Ruches citoyennes, AFPS-Kundgebung (15e) verboten; Bastille–Nation per TA wieder erlaubt",
+   "title": "PP-Verbote 31.10.: Bastille–Nation (per Conseil d'État bestätigt), Gelbwesten-Route Bastille–Concorde, Ruches citoyennes, AFPS-Kundgebung (15e)",
    "time": "2026-10-31",
    "place": "Innenstadt",
-   "url": "https://www.cnews.fr/france/2026-10-30/mobilisation-du-31-octobre-les-parcours-proposes-par-la-cgt-et-les-gilets-jaunes",
+   "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
    "first_seen": "2026-10-29T11:59",
    "lat": 48.853,
    "lon": 2.369,
@@ -411,7 +412,7 @@
    "level": 2,
    "level_reason": "Behördliches Verbot (Arrêté 30.10.), Kontrollen/Sperren im Zentrum; genauer Perimeter nicht in Quelle",
    "last_update": "2026-10-30T12:15",
-   "updated": "2026-10-30T21:05"
+   "updated": "2026-10-31T06:10"
   },
   {
    "id": "gj-mairie-sitin-20261031",
@@ -1176,10 +1177,10 @@
   },
   {
    "id": "interfac-bastille-20261031",
-   "title": "Interfac-IDF/UNEF: Treffpunkt Bastille – nach TA-Urteil Teil des erlaubten Zugs Bastille–Nation (Berufung der PP offen)",
+   "title": "Interfac-IDF/UNEF: Treffpunkt Bastille – nach Conseil-d'État-Entscheid nicht mehr Teil einer erlaubten Route",
    "time": "2026-10-31 nachmittags",
    "place": "Place de la Bastille (4e/11e/12e)",
-   "url": "https://www.leparisien.fr/paris-75/manifestation-du-31-octobre-a-paris-bastille-nation-voici-le-parcours-autorise-par-le-tribunal-administratif-30-10-2026-VHV7WTYF3FDVFOJUDLHZFG5QZQ.php",
+   "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
    "lat": 48.8532,
    "lon": 2.3691,
    "type": "Demonstration (verboten)",
@@ -1195,8 +1196,8 @@
    },
    "confirmed": true,
    "level": 4,
-   "level_reason": "Bastille-Start durch TA-Urteil erlaubt, aber PP legt Berufung ein; Bastille-Metro ab 9 Uhr zu",
-   "updated": "2026-10-30T21:05"
+   "level_reason": "Bastille–Nation per Conseil d'État verboten; Bastille-Metro ab 9 Uhr zu; Auflösung wahrscheinlich",
+   "updated": "2026-10-31T06:10"
   },
   {
    "id": "ratp-etoile-20261031",
