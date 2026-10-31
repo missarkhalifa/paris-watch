@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-31T21:08",
+ "stand": "2026-11-01T00:05",
  "events": [
   {
    "id": "cgt-demo-20261031",
@@ -413,30 +413,6 @@
    "confirmed": true,
    "level": 3,
    "level_reason": "Sit-in auf dem Rathausplatz, friedlich erwartet"
-  },
-  {
-   "id": "gj-edmond-michelet-20261030",
-   "title": "Gilets jaunes: Kundgebung Place Edmond-Michelet (statt verbotener Demo nahe Élysée)",
-   "time": "2026-10-30 16:30–23:59",
-   "place": "Place Edmond-Michelet, 4e (Beaubourg)",
-   "url": "https://www.leparisien.fr/societe/direct-colere-lyceenne-une-reunion-au-ministere-de-linterieur-prevue-ce-jeudi-macron-appelle-a-la-reprise-des-cours-lundi-29-10-2026-MK4V6NXXANB4XMDIHIXQSDNEOQ.php",
-   "first_seen": "2026-10-29T15:05",
-   "lat": 48.86007,
-   "lon": 2.35045,
-   "type": "Kundgebung",
-   "weight": 3,
-   "start": "2026-10-30T16:30",
-   "end": "2026-10-30T23:59",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.35045,
-     48.86007
-    ]
-   },
-   "confirmed": true,
-   "level": 3,
-   "level_reason": "Von PP genehmigte statische Kundgebung bis Mitternacht, Demo im 8e verboten; Polizeipräsenz erwartet"
   },
   {
    "id": "gj-route-bastille-concorde-20261031",
@@ -1736,7 +1712,8 @@
    "url": "https://www.ouest-france.fr/societe/manifestation/direct-manifestations-du-31-octobre-lordre-public-a-ete-maintenu-dit-laurent-nunez-422-interpellations-a-20-h-f0456614-dbb0-4931-a575-f21f70103a2b",
    "extra_urls": [
     "https://x.com/BFMTV/status/2116510127855382928",
-    "https://www.ouest-france.fr/societe/manifestation/direct-manifestations-du-31-octobre-lordre-public-a-ete-maintenu-dit-laurent-nunez-422-interpellations-a-20-h-f0456614-dbb0-4931-a575-f21f70103a2b"
+    "https://www.ouest-france.fr/societe/manifestation/direct-manifestations-du-31-octobre-lordre-public-a-ete-maintenu-dit-laurent-nunez-422-interpellations-a-20-h-f0456614-dbb0-4931-a575-f21f70103a2b",
+    "https://x.com/RLalung/status/2116660954624614414"
    ],
    "lat": 48.8532,
    "lon": 2.3691,
@@ -1753,9 +1730,9 @@
    },
    "confirmed": true,
    "level": 4,
-   "level_reason": "Innenminister: Gruppen wollen zur Bastille, Polizei blockiert Zugänge und kündigt Festnahmen an; Stimmung laut Reportern vor Ort aber entspannt",
+   "level_reason": "Innenminister: Gruppen wollen zur Bastille, Polizei blockiert Zugänge und kündigt Festnahmen an; Stimmung laut Reportern vor Ort aber entspannt | Update ~23:30: weiterhin verstärkte Polizeikontrollen an der Bastille, kleinere nächtliche Züge Richtung Bastille gemeldet",
    "first_seen": "2026-10-31T15:05",
-   "updated": "2026-10-31T21:15"
+   "updated": "2026-11-01T00:10"
   },
   {
    "id": "heurts-charenton-20261031",
@@ -2149,13 +2126,15 @@
     ]
    },
    "confirmed": false,
-   "level": 4,
-   "level_reason": "Aufruf trotz PP-Versammlungsverbot im Sektor; Polizei blockiert laut Videos Straßen um Châtelet; Lage vor Ort bislang ruhig (leere Terrassen, X @al_bonnel 20:54)",
+   "level": 3,
+   "level_reason": "Aufruf trotz PP-Versammlungsverbot im Sektor; Polizei blockiert laut Videos Straßen um Châtelet; Lage vor Ort bislang ruhig (leere Terrassen, X @al_bonnel 20:54) | Update 23:20: BFMTV – Ausgangssperre in Kraft, Lage an Châtelet 'sehr ruhig', starke Polizeipräsenz",
    "extra_urls": [
     "https://x.com/al_bonnel/status/2116620218088689678",
-    "https://x.com/nayinfos/status/2116620210195087574"
+    "https://x.com/nayinfos/status/2116620210195087574",
+    "https://www.bfmtv.com/police-justice/video-31-octobre-a-paris-situation-tres-calme-a-chatelet-ou-un-couvre-feu-est-entre-en-vigueur-il-y-a-quelques-minutes-les-policiers-restent-en-alerte_VN-202610310394.html"
    ],
-   "first_seen": "2026-10-31T21:15"
+   "first_seen": "2026-10-31T21:15",
+   "updated": "2026-11-01T00:10"
   },
   {
    "id": "remigration-ban-20261101",
@@ -2351,6 +2330,55 @@
    "level": 1,
    "level_reason": "Geplante Bauarbeiten laut RATP/20 Minutes; nur Verkehrsbehinderung (Linienverlauf auf Karte vereinfacht)",
    "first_seen": "2026-10-31T21:15"
+  },
+  {
+   "id": "trocadero-heurts-20261031",
+   "title": "Ausschreitungen Trocadéro: Halloween-Menge, Feuerwerksmörser auf Polizei, Tränengas/LBD, Esplanade eingekesselt, Festnahmen",
+   "time": "2026-10-31 ab ~23:00 (Menge seit ~21 Uhr)",
+   "place": "Place du Trocadéro / Parvis des Droits de l'Homme (16e)",
+   "url": "https://x.com/BFMTV/status/2116653143442284638",
+   "extra_urls": [
+    "https://x.com/CNEWS/status/2116660909221224704",
+    "https://x.com/LibreQg/status/2116657112340181315",
+    "https://x.com/QueteAmine/status/2116666940735250688"
+   ],
+   "first_seen": "2026-11-01T00:10",
+   "lat": 48.8619,
+   "lon": 2.2878,
+   "type": "Ausschreitungen",
+   "weight": 5,
+   "start": "2026-10-31T21:00",
+   "end": "2026-11-01T03:00",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       2.2858,
+       48.8631
+      ],
+      [
+       2.2898,
+       48.8631
+      ],
+      [
+       2.2902,
+       48.8612
+      ],
+      [
+       2.2862,
+       48.8608
+      ],
+      [
+       2.2858,
+       48.8631
+      ]
+     ]
+    ]
+   },
+   "confirmed": true,
+   "level": 5,
+   "level_reason": "BFMTV: Zusammenstöße zwischen mehreren Dutzend Personen und Polizei; CNEWS: Tränengas, Festnahme live; Augenzeugen: Mörser, Esplanade eingekesselt"
   }
  ]
 }
