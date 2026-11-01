@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-01T06:02",
+ "stand": "2026-11-01T09:03",
  "events": [
   {
    "id": "cgt-demo-20261031",
@@ -2379,6 +2379,61 @@
    "confirmed": true,
    "level": 5,
    "level_reason": "BFMTV: Zusammenstöße zwischen mehreren Dutzend Personen und Polizei; CNEWS: Tränengas, Festnahme live; Augenzeugen: Mörser, Esplanade eingekesselt"
+  },
+  {
+   "id": "pantheon-manif-20261103",
+   "title": "Studierenden-/Uni-Demo ab Panthéon, 14 Uhr (Interfac IDF, CGT Paris 1); dazu Aufrufe zu Blockaden von Lycées und Unis ab Dienstag",
+   "time": "2026-11-03 14:00",
+   "place": "Place du Panthéon (5e)",
+   "url": "https://france3-regions.franceinfo.fr/paris-ile-de-france/paris/on-espere-des-centaines-de-blocages-quelle-suite-pour-la-mobilisation-des-lyceens-et-des-etudiants-3440136.html",
+   "extra_urls": [
+    "https://cgt.fercsup.net/syndicats/ile-de-france/universite-paris-1-o-pantheon-sorbonne/article/pour-les-services-publics-contre-la-vie-chere-l-extreme-droite-et-la-precarite",
+    "https://www.franceinfo.fr/societe/education/blocage-des-lycees/l-union-syndicale-lyceenne-et-l-union-etudiante-appellent-a-bloquer-lycees-et-universites-mardi-et-jeudi_8261864.html"
+   ],
+   "first_seen": "2026-11-01T09:05",
+   "lat": 48.8464,
+   "lon": 2.3449,
+   "type": "Demonstration",
+   "weight": 3,
+   "start": "2026-11-03T14:00",
+   "end": "2026-11-03T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3449,
+     48.8464
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Angekündigte Kundgebung/Demo ab Panthéon (Route unbekannt); Bewegung mit Ausschreitungen am Rand der letzten Samstage, Blockade-Aufrufe für Lycées/Unis"
+  },
+  {
+   "id": "sncf-stdenis-20261103",
+   "title": "Bahngewerkschaften (intersyndicale): Kundgebung vor der SNCF-Zentrale, Lohnverhandlungen; Auftakt zum Streik am 5.11.",
+   "time": "2026-11-03 (Uhrzeit nicht bestätigt)",
+   "place": "Siège SNCF Campus Étoiles, 2 place aux Étoiles, Saint-Denis",
+   "url": "https://www.cheminotcgt.fr/maitrise_cadres/le-3-novembre-a-saint-denis-le-5-novembre-en-greve-et-en-manif/",
+   "extra_urls": [
+    "https://www.unsa-ferroviaire.org/nos-tracts/communique-unitaire-7/"
+   ],
+   "first_seen": "2026-11-01T09:05",
+   "lat": 48.9185,
+   "lon": 2.3515,
+   "type": "Kundgebung",
+   "weight": 2,
+   "start": "2026-11-03T10:00",
+   "end": "2026-11-03T14:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3515,
+     48.9185
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Gewerkschaftskundgebung vor Firmenzentrale, keine Hinweise auf Gewalt"
   }
  ]
 }
