@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-01T15:07",
+ "stand": "2026-11-01T18:03",
  "events": [
   {
    "id": "cgt-demo-20261031",
@@ -2345,14 +2345,15 @@
   },
   {
    "id": "pantheon-manif-20261103",
-   "title": "Studierenden-/Uni-Demo ab Panthéon, 14 Uhr (Interfac IDF, CGT Paris 1); Lycée-Blockaden schon ab Mo 2.11. angekündigt, Lycées+Unis Di",
+   "title": "Studierenden-/Uni-Demo Panthéon → Medef-Zentrale (av. Bosquet), 14 Uhr (Interfac IDF); Lycée-/Uni-Blockaden Di",
    "time": "2026-11-03 14:00",
-   "place": "Place du Panthéon (5e)",
+   "place": "Place du Panthéon (5e) → 55 av. Bosquet (7e), Route vorgeschlagen",
    "url": "https://france3-regions.franceinfo.fr/paris-ile-de-france/paris/on-espere-des-centaines-de-blocages-quelle-suite-pour-la-mobilisation-des-lyceens-et-des-etudiants-3440136.html",
    "extra_urls": [
     "https://cgt.fercsup.net/syndicats/ile-de-france/universite-paris-1-o-pantheon-sorbonne/article/pour-les-services-publics-contre-la-vie-chere-l-extreme-droite-et-la-precarite",
     "https://www.franceinfo.fr/societe/education/blocage-des-lycees/l-union-syndicale-lyceenne-et-l-union-etudiante-appellent-a-bloquer-lycees-et-universites-mardi-et-jeudi_8261864.html",
-    "https://www.leparisien.fr/societe/blocus-des-lycees-des-lundi-greve-le-5-novembre-six-seven-a-quelles-mobilisations-sattendre-cette-semaine-01-11-2026-HXXOLR22EZFG5KUVMDKB36XDHI.php"
+    "https://www.leparisien.fr/societe/blocus-des-lycees-des-lundi-greve-le-5-novembre-six-seven-a-quelles-mobilisations-sattendre-cette-semaine-01-11-2026-HXXOLR22EZFG5KUVMDKB36XDHI.php",
+    "https://actu.fr/ile-de-france/paris_75056/blocus-lyceen-greve-du-5-novembre-gilets-jaunes-a-paris-la-mobilisation-va-s-accentuer-cette-semaine_65001148.html"
    ],
    "first_seen": "2026-11-01T09:05",
    "lat": 48.8464,
@@ -2362,16 +2363,155 @@
    "start": "2026-11-03T14:00",
    "end": "2026-11-03T18:00",
    "geometry": {
-    "type": "Point",
     "coordinates": [
-     2.3449,
-     48.8464
-    ]
+     [
+      2.34467,
+      48.84632
+     ],
+     [
+      2.34487,
+      48.84606
+     ],
+     [
+      2.34455,
+      48.84548
+     ],
+     [
+      2.34375,
+      48.84591
+     ],
+     [
+      2.34297,
+      48.84611
+     ],
+     [
+      2.34335,
+      48.8468
+     ],
+     [
+      2.34085,
+      48.84733
+     ],
+     [
+      2.3408,
+      48.8475
+     ],
+     [
+      2.34009,
+      48.84765
+     ],
+     [
+      2.33892,
+      48.84914
+     ],
+     [
+      2.33732,
+      48.84929
+     ],
+     [
+      2.33706,
+      48.85146
+     ],
+     [
+      2.33392,
+      48.85123
+     ],
+     [
+      2.3319,
+      48.85138
+     ],
+     [
+      2.33112,
+      48.85159
+     ],
+     [
+      2.32996,
+      48.85198
+     ],
+     [
+      2.33003,
+      48.85227
+     ],
+     [
+      2.32782,
+      48.8537
+     ],
+     [
+      2.32457,
+      48.85501
+     ],
+     [
+      2.32259,
+      48.85601
+     ],
+     [
+      2.31811,
+      48.85741
+     ],
+     [
+      2.31656,
+      48.85778
+     ],
+     [
+      2.31515,
+      48.85795
+     ],
+     [
+      2.31433,
+      48.85825
+     ],
+     [
+      2.31344,
+      48.85839
+     ],
+     [
+      2.31335,
+      48.85868
+     ],
+     [
+      2.31307,
+      48.85881
+     ],
+     [
+      2.31263,
+      48.85875
+     ],
+     [
+      2.31244,
+      48.85844
+     ],
+     [
+      2.31122,
+      48.8584
+     ],
+     [
+      2.31108,
+      48.85804
+     ],
+     [
+      2.30582,
+      48.85447
+     ],
+     [
+      2.30549,
+      48.85471
+     ],
+     [
+      2.30558,
+      48.85482
+     ],
+     [
+      2.30476,
+      48.85656
+     ]
+    ],
+    "type": "LineString"
    },
-   "confirmed": true,
+   "confirmed": false,
    "level": 3,
-   "level_reason": "Angekündigte Kundgebung/Demo ab Panthéon (Route unbekannt); Bewegung mit Ausschreitungen am Rand der letzten Samstage, Blockade-Aufrufe für Lycées/Unis | Update 1.11.: 'Les Lycéens!' kündigen Blockaden ab Montag an, USL/Union étudiante blockieren Di (Le Parisien)",
-   "updated": "2026-11-01T12:15"
+   "level_reason": "Angekündigte Kundgebung/Demo ab Panthéon (Route unbekannt); Bewegung mit Ausschreitungen am Rand der letzten Samstage, Blockade-Aufrufe für Lycées/Unis | Update 1.11. 18h: Ziel laut actu.fr Medef-Sitz (av. Bosquet); genaue Route nicht veröffentlicht",
+   "updated": "2026-11-01T12:15",
+   "changed": "2026-11-01T18:05"
   },
   {
    "id": "sncf-stdenis-20261103",
@@ -2423,6 +2563,84 @@
    "confirmed": true,
    "level": 1,
    "level_reason": "Behördliche Schließung des besetzten/blockierten Campus verlängert; kein Lehrbetrieb, keine Hinweise auf Gewalt"
+  },
+  {
+   "id": "ultradroite-bfmtv-20261101",
+   "title": "Trotz Verbot: Ultrarechtes 'Remigration'-Treffen in Restaurant am Fuß von BFMTV (Altice Campus) – Dutzende CRS im Einsatz",
+   "time": "2026-11-01 ab ~14:00",
+   "place": "Altice Campus / BFMTV, 2 rue du Général Alain de Boissieu (15e)",
+   "url": "https://www.cg-tv.com/articles/info-cgtv-interdit-par-la-prefecture-un-rassemblement-d-ultradroite-se-tient-finalement-au-pied-de-bfmtv-des-dizaines-de-crs-mobilises-la-direction-en-alerte",
+   "extra_urls": [
+    "https://x.com/Ligne__Droite/status/2116906053988216934"
+   ],
+   "lat": 48.8366,
+   "lon": 2.27386,
+   "type": "Polizeieinsatz/Kundgebung",
+   "weight": 3,
+   "start": "2026-11-01T13:30",
+   "end": "2026-11-01T20:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.27386,
+     48.8366
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Verbotenes Ultrarechts-Treffen findet trotzdem statt, Dutzende CRS vor Ort, BFMTV-Leitung in Alarm; keine Zusammenstöße gemeldet",
+   "first_seen": "2026-11-01T18:05"
+  },
+  {
+   "id": "blocus-voltaire-20261102",
+   "title": "Lycée-Blockaden ab Mo 2.11. angekündigt – Lycée Voltaire war vor den Ferien noch blockiert",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Voltaire, 101 av. de la République (11e)",
+   "url": "https://actu.fr/ile-de-france/paris_75056/blocus-lyceen-greve-du-5-novembre-gilets-jaunes-a-paris-la-mobilisation-va-s-accentuer-cette-semaine_65001148.html",
+   "extra_urls": [
+    "https://www.lefigaro.fr/actualite-france/en-ce-lundi-de-rentree-les-blocages-s-organisent-devant-les-lycees-et-universites-20261101"
+   ],
+   "lat": 48.8641,
+   "lon": 2.38473,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-02T07:00",
+   "end": "2026-11-03T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.38473,
+     48.8641
+    ]
+   },
+   "confirmed": false,
+   "level": 2,
+   "level_reason": "Blockade-Aufrufe ab Montag, stärker ab Di (USL/Union étudiante); Standort vor den Ferien aktiv, für Mo noch nicht bestätigt",
+   "first_seen": "2026-11-01T18:05"
+  },
+  {
+   "id": "blocus-heleneboucher-20261102",
+   "title": "Lycée-Blockaden ab Mo 2.11. angekündigt – Lycée Hélène-Boucher war vor den Ferien noch blockiert",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Hélène-Boucher, cours de Vincennes (20e)",
+   "url": "https://actu.fr/ile-de-france/paris_75056/blocus-lyceen-greve-du-5-novembre-gilets-jaunes-a-paris-la-mobilisation-va-s-accentuer-cette-semaine_65001148.html",
+   "lat": 48.84829,
+   "lon": 2.40717,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-02T07:00",
+   "end": "2026-11-03T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.40717,
+     48.84829
+    ]
+   },
+   "confirmed": false,
+   "level": 2,
+   "level_reason": "Blockade-Aufrufe ab Montag, stärker ab Di; Standort vor den Ferien aktiv, für Mo noch nicht bestätigt",
+   "first_seen": "2026-11-01T18:05"
   }
  ]
 }
