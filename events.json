@@ -1,349 +1,6 @@
 {
- "stand": "2026-11-01T18:03",
+ "stand": "2026-11-01T21:08",
  "events": [
-  {
-   "id": "cgt-demo-20261031",
-   "title": "Conseil d'État kippt TA-Urteil: Zug Bastille → Nation wieder VERBOTEN (Aufrufe, trotzdem dort zu marschieren)",
-   "time": "2026-10-31 ab 14:00",
-   "place": "Bastille → Nation (11e/12e)",
-   "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
-   "first_seen": "2026-10-29T11:57",
-   "lat": 48.85,
-   "lon": 2.38,
-   "type": "Demonstration (verboten)",
-   "weight": 4,
-   "start": "2026-10-31T13:00",
-   "end": "2026-10-31T19:00",
-   "geometry": {
-    "coordinates": [
-     [
-      2.36863,
-      48.85331
-     ],
-     [
-      2.36891,
-      48.85353
-     ],
-     [
-      2.36944,
-      48.85352
-     ],
-     [
-      2.36972,
-      48.8533
-     ],
-     [
-      2.37046,
-      48.85321
-     ],
-     [
-      2.37202,
-      48.8524
-     ],
-     [
-      2.37614,
-      48.85131
-     ],
-     [
-      2.37429,
-      48.84961
-     ],
-     [
-      2.37145,
-      48.848
-     ],
-     [
-      2.37155,
-      48.8477
-     ],
-     [
-      2.37231,
-      48.84595
-     ],
-     [
-      2.37266,
-      48.84568
-     ],
-     [
-      2.37741,
-      48.84628
-     ],
-     [
-      2.38043,
-      48.84481
-     ],
-     [
-      2.37877,
-      48.84412
-     ],
-     [
-      2.3781,
-      48.84438
-     ],
-     [
-      2.37733,
-      48.84524
-     ],
-     [
-      2.37696,
-      48.84547
-     ],
-     [
-      2.37599,
-      48.84611
-     ],
-     [
-      2.37741,
-      48.84628
-     ],
-     [
-      2.38752,
-      48.84148
-     ],
-     [
-      2.39521,
-      48.83971
-     ],
-     [
-      2.39536,
-      48.83989
-     ],
-     [
-      2.39589,
-      48.83978
-     ],
-     [
-      2.39627,
-      48.8397
-     ],
-     [
-      2.39891,
-      48.8411
-     ],
-     [
-      2.39782,
-      48.84234
-     ],
-     [
-      2.40036,
-      48.84253
-     ],
-     [
-      2.40111,
-      48.84241
-     ],
-     [
-      2.40096,
-      48.84201
-     ],
-     [
-      2.40041,
-      48.8405
-     ],
-     [
-      2.39947,
-      48.84045
-     ],
-     [
-      2.39534,
-      48.84531
-     ],
-     [
-      2.39573,
-      48.84734
-     ],
-     [
-      2.39672,
-      48.84747
-     ],
-     [
-      2.39739,
-      48.84797
-     ],
-     [
-      2.39829,
-      48.84789
-     ],
-     [
-      2.39818,
-      48.84736
-     ],
-     [
-      2.39846,
-      48.84733
-     ],
-     [
-      2.39893,
-      48.84729
-     ],
-     [
-      2.40007,
-      48.84647
-     ],
-     [
-      2.40025,
-      48.84658
-     ],
-     [
-      2.39911,
-      48.84733
-     ],
-     [
-      2.3992,
-      48.84815
-     ],
-     [
-      2.39684,
-      48.84844
-     ],
-     [
-      2.39649,
-      48.84886
-     ],
-     [
-      2.39588,
-      48.84899
-     ],
-     [
-      2.39539,
-      48.84888
-     ],
-     [
-      2.39507,
-      48.84862
-     ],
-     [
-      2.39501,
-      48.84829
-     ],
-     [
-      2.39526,
-      48.84796
-     ]
-    ],
-    "type": "LineString"
-   },
-   "confirmed": false,
-   "level": 4,
-   "level_reason": "Conseil d'État hat in der Nacht die PP-Untersagung bestätigt; einzelne Aufrufe auf X, trotzdem Bastille–Nation zu laufen – Polizei wird unangemeldete Züge auflösen",
-   "last_update": "2026-10-30T12:15",
-   "updated": "2026-10-31T06:10"
-  },
-  {
-   "id": "cgt-demo-alt-20261031",
-   "title": "Demo-Zug Porte de Bagnolet → Porte de Charenton: 70.000 Teilnehmer (PP), ruhig verlaufen, Spitze ~16:05 am Ziel; Auflösung läuft, am Ende Ausschreitungen",
-   "time": "2026-10-31 12:00–18:00, Zugstart 14:00",
-   "place": "Porte de Bagnolet / T3",
-   "url": "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
-   "first_seen": "2026-10-29T11:57",
-   "lat": 48.864,
-   "lon": 2.409,
-   "type": "Demonstration",
-   "weight": 3,
-   "start": "2026-10-31T12:00",
-   "end": "2026-10-31T19:00",
-   "geometry": {
-    "coordinates": [
-     [
-      2.40922,
-      48.86421
-     ],
-     [
-      2.40884,
-      48.86411
-     ],
-     [
-      2.40898,
-      48.86456
-     ],
-     [
-      2.40854,
-      48.86461
-     ],
-     [
-      2.4114,
-      48.84887
-     ],
-     [
-      2.41124,
-      48.84727
-     ],
-     [
-      2.4108,
-      48.84712
-     ],
-     [
-      2.40621,
-      48.84741
-     ],
-     [
-      2.41081,
-      48.84701
-     ],
-     [
-      2.41113,
-      48.8468
-     ],
-     [
-      2.41096,
-      48.84623
-     ],
-     [
-      2.40777,
-      48.83681
-     ],
-     [
-      2.40647,
-      48.83552
-     ],
-     [
-      2.40443,
-      48.83429
-     ],
-     [
-      2.39909,
-      48.83239
-     ]
-    ],
-    "type": "LineString"
-   },
-   "confirmed": true,
-   "level": 4,
-   "level_reason": "Zug selbst ruhig (PP/franceinfo), aber am Endpunkt Porte de Charenton Zusammenstöße mit mehreren hundert Randalierern",
-   "extra_urls": [
-    "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/",
-    "https://x.com/BFMTV/status/2116392616015106332",
-    "https://x.com/bez_adrien/status/2116528238021451853",
-    "https://actu.fr/ile-de-france/paris_75056/direct-manifestation-a-paris-ce-samedi-31-octobre-parcours-bouleverse-metro-ferme-tensions-suivez-la-mobilisation_64998603.html"
-   ],
-   "last_update": "2026-10-30T12:15",
-   "updated": "2026-10-31T18:10"
-  },
-  {
-   "id": "cgt-demo-alt2-20261031",
-   "title": "Alternativroute Ende Porte de Charenton",
-   "time": "2026-10-31",
-   "place": "Porte de Charenton",
-   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/356351-manifestation-du-31-octobre-a-paris-le-parcours-de-la-cgt-refuse-un-nouveau-propose",
-   "first_seen": "2026-10-29T11:57",
-   "lat": 48.833,
-   "lon": 2.402,
-   "type": "Demonstration",
-   "weight": 2,
-   "start": "2026-10-31T13:00",
-   "end": "2026-10-31T19:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.399,
-     48.8325
-    ]
-   },
-   "confirmed": true,
-   "level": 3,
-   "level_reason": "Endpunkt der Ausweichroute (Porte de Charenton), Auflösung der Demo erwartet | Update 30.10.: Bürgermeister von Charenton-le-Pont lehnt Auflösungspunkt in seiner Gemeinde ab; PP-Arrêté noch nicht veröffentlicht (Referé: Frist Fr 12 Uhr) – lespritfr.com 30.10.",
-   "url2": "https://www.lespritfr.com/2026/10/30/charenton-parcours-manif-31-octobre-2026/"
-  },
   {
    "id": "pp-ban-centre-20261031",
    "title": "PP-Verbote 31.10.: Bastille–Nation (per Conseil d'État bestätigt), Gelbwesten-Route Bastille–Concorde, Ruches citoyennes, AFPS-Kundgebung (15e)",
@@ -369,197 +26,6 @@
    "level_reason": "Behördliches Verbot (Arrêté 30.10.), Kontrollen/Sperren im Zentrum; genauer Perimeter nicht in Quelle",
    "last_update": "2026-10-30T12:15",
    "updated": "2026-10-31T06:10"
-  },
-  {
-   "id": "gj-mairie-sitin-20261031",
-   "title": "Gilets jaunes: Sit-in vor Rathäusern, 14:00 (Akt III)",
-   "time": "2026-10-31 14:00",
-   "place": "Hôtel de Ville / Mairies",
-   "url": "https://17octobregiletjaune.net/actualites/vendredi-30-octobre-casserolade-devant-l-assemblee-nationale",
-   "first_seen": "2026-10-29T11:59",
-   "lat": 48.8564,
-   "lon": 2.3522,
-   "type": "Kundgebung",
-   "weight": 2,
-   "start": "2026-10-31T14:00",
-   "end": "2026-10-31T18:00",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       2.3497,
-       48.8574
-      ],
-      [
-       2.3517,
-       48.8574
-      ],
-      [
-       2.3517,
-       48.8561
-      ],
-      [
-       2.3497,
-       48.8561
-      ],
-      [
-       2.3497,
-       48.8574
-      ]
-     ]
-    ]
-   },
-   "confirmed": true,
-   "level": 3,
-   "level_reason": "Sit-in auf dem Rathausplatz, friedlich erwartet"
-  },
-  {
-   "id": "gj-route-bastille-concorde-20261031",
-   "title": "Gelbwesten-Route Bastille → Opéra → Concorde – per PP-Arrêté 30.10. offiziell VERBOTEN",
-   "time": "2026-10-31 ab 14:00",
-   "place": "Bd Beaumarchais, République, Bd Saint-Denis/Poissonnière, Opéra, Madeleine, Concorde",
-   "url": "https://www.franceinfo.fr/societe/manifestations/direct-manifestations-du-31-octobre-le-parcours-du-defile-parisien-objet-d-un-bras-de-fer-entre-les-syndicats-et-les-autorites_8259785.html",
-   "first_seen": "2026-10-29T15:05",
-   "lat": 48.8697,
-   "lon": 2.3534,
-   "type": "Demonstration",
-   "weight": 4,
-   "start": "2026-10-31T14:00",
-   "end": "2026-10-31T20:00",
-   "geometry": {
-    "coordinates": [
-     [
-      2.36863,
-      48.85331
-     ],
-     [
-      2.36717,
-      48.85345
-     ],
-     [
-      2.36726,
-      48.85801
-     ],
-     [
-      2.36715,
-      48.85845
-     ],
-     [
-      2.36784,
-      48.85856
-     ],
-     [
-      2.368,
-      48.85784
-     ],
-     [
-      2.36654,
-      48.86344
-     ],
-     [
-      2.36481,
-      48.86653
-     ],
-     [
-      2.36348,
-      48.86728
-     ],
-     [
-      2.36236,
-      48.86795
-     ],
-     [
-      2.35636,
-      48.86884
-     ],
-     [
-      2.35332,
-      48.86953
-     ],
-     [
-      2.346,
-      48.871
-     ],
-     [
-      2.33959,
-      48.87207
-     ],
-     [
-      2.33889,
-      48.87178
-     ],
-     [
-      2.332,
-      48.87061
-     ],
-     [
-      2.32799,
-      48.86993
-     ],
-     [
-      2.32441,
-      48.87097
-     ],
-     [
-      2.32332,
-      48.86987
-     ],
-     [
-      2.32408,
-      48.86921
-     ],
-     [
-      2.32498,
-      48.86936
-     ],
-     [
-      2.3251,
-      48.86981
-     ],
-     [
-      2.32559,
-      48.87063
-     ],
-     [
-      2.32441,
-      48.87097
-     ],
-     [
-      2.32334,
-      48.86995
-     ],
-     [
-      2.3239,
-      48.86926
-     ],
-     [
-      2.32261,
-      48.8675
-     ],
-     [
-      2.32199,
-      48.86667
-     ],
-     [
-      2.32104,
-      48.86627
-     ],
-     [
-      2.32053,
-      48.8656
-     ],
-     [
-      2.32083,
-      48.86571
-     ]
-    ],
-    "type": "LineString"
-   },
-   "confirmed": false,
-   "level": 3,
-   "level_reason": "Route offiziell verboten, Gelbwesten sollen mit CGT auf Maréchaux-Route; Concorde/Bastille in Verbotszonen, wilde Züge möglich",
-   "last_update": "2026-10-30T12:15"
   },
   {
    "id": "pp-zones-curfew-20261029",
@@ -811,30 +277,6 @@
    "level_reason": "Personenverkehr im Sektor verboten; PP begründet mit Ordnungsstörungen; Zone ungefähr | Vigie Liberté klagt mittags vor dem Tribunal administratif dagegen (BFMTV)"
   },
   {
-   "id": "gj-gambetta-20261030",
-   "title": "Gilets jaunes: Kundgebung vor Mairie du 20e (Fr 18 Uhr), Sit-in Sa 14 Uhr",
-   "time": "2026-10-30 18:00 / 2026-10-31 14:00",
-   "place": "Place Gambetta, Mairie du 20e",
-   "url": "https://www.mobilisationgiletsjaunes.fr/mobilisations/500002331/paris-mairie-du-20e-arrondissement",
-   "first_seen": "2026-10-30T15:10",
-   "lat": 48.86509,
-   "lon": 2.399,
-   "type": "Kundgebung",
-   "weight": 2,
-   "start": "2026-10-30T18:00",
-   "end": "2026-10-31T18:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.399,
-     48.86509
-    ]
-   },
-   "confirmed": true,
-   "level": 2,
-   "level_reason": "Kleine angekündigte Kundgebung (Gelbwesten-Listing), keine Gewaltberichte"
-  },
-  {
    "id": "pp-perimetre-gare-nord-20261031",
    "title": "PP-Arrêté 2026-01482: Schutzperimeter Gare du Nord (Versammlungen, Pyro, Wurfgegenstände verboten; Durchsuchungen)",
    "time": "2026-10-31 08:00–23:30",
@@ -919,30 +361,6 @@
    "confirmed": false,
    "level": 3,
    "level_reason": "Behördlicher Schutzperimeter mit Kontrollen am Demo-Tag; Umriss aus Straßennamen genähert"
-  },
-  {
-   "id": "interfac-bastille-20261031",
-   "title": "Interfac-IDF/UNEF: rufen jetzt zum erlaubten Zug ab Porte de Bagnolet 14 Uhr auf (kein Bastille-Treffpunkt mehr)",
-   "time": "2026-10-31 nachmittags",
-   "place": "Place de la Bastille (4e/11e/12e)",
-   "url": "https://www.leparisien.fr/societe/direct-mobilisation-du-31-octobre-nouvelle-journee-de-manifestations-dans-plusieurs-villes-lexecutif-craint-des-debordements-31-10-2026-DRJIUI3CBVHBBAGX66RVWDYPBM.php",
-   "lat": 48.8532,
-   "lon": 2.3691,
-   "type": "Demonstration (verboten)",
-   "weight": 2,
-   "start": "2026-10-31T12:00",
-   "end": "2026-10-31T19:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.3691,
-     48.8532
-    ]
-   },
-   "confirmed": true,
-   "level": 2,
-   "level_reason": "Le Parisien: Interfac IDF schließt sich dem genehmigten Zug an; Bastille-Treff entfällt",
-   "updated": "2026-10-31T12:05"
   },
   {
    "id": "ratp-etoile-20261031",
@@ -1706,7 +1124,8 @@
    "extra_urls": [
     "https://www.lessentiel.lu/fr/story/colere-sociale-la-fin-de-la-manifestation-tourne-au-vinaigre-a-paris-103659373",
     "https://www.bfmtv.com/societe/manifestations/direct-manifestations-du-31-octobre-un-samedi-de-mobilisation-a-haut-risque-attendu_LN-202610310082.html",
-    "https://www.leparisien.fr/faits-divers/mobilisation-du-31-octobre-des-gendarmes-prennent-feu-apres-le-jet-dengins-incendiaires-en-marge-de-la-manifestation-a-paris-31-10-2026-T4PCNVIJVNDRTDX6CLJ7ANGN3E.php"
+    "https://www.leparisien.fr/faits-divers/mobilisation-du-31-octobre-des-gendarmes-prennent-feu-apres-le-jet-dengins-incendiaires-en-marge-de-la-manifestation-a-paris-31-10-2026-T4PCNVIJVNDRTDX6CLJ7ANGN3E.php",
+    "https://www.franceinfo.fr/societe/manifestations/une-enquete-ouverte-pour-tentative-d-homicide-apres-un-jet-de-cocktail-molotov-sur-des-gendarmes-a-paris_8262818.html"
    ],
    "lat": 48.8335,
    "lon": 2.402,
@@ -1743,147 +1162,9 @@
    },
    "confirmed": false,
    "level": 5,
-   "level_reason": "AFP/PP: 'harter Kern von mehreren hundert Randalierern', Pflastersteine und Molotow auf Polizei, Platz voller Tränengas (Zone ungefähr)",
+   "level_reason": "AFP/PP: 'harter Kern von mehreren hundert Randalierern', Pflastersteine und Molotow auf Polizei, Platz voller Tränengas (Zone ungefähr) | Update 1.11.: Parquet ermittelt wegen versuchter Tötung (Molotows auf ~15 Gendarmen, Brandverletzungen 2. Grades), noch keine Festnahme",
    "first_seen": "2026-10-31T18:10",
-   "updated": "2026-10-31T21:15"
-  },
-  {
-   "id": "roquette-sauvage-20261031",
-   "title": "Unangemeldete Versammlung (~200 Pers.) in der Rue de la Roquette – Polizei fordert Auflösung bzw. Anschluss an erlaubten Zug",
-   "time": "2026-10-31 ~16:40",
-   "place": "Rue de la Roquette (11e), genauer Abschnitt nicht genannt",
-   "url": "https://actu.fr/ile-de-france/paris_75056/direct-manifestation-a-paris-ce-samedi-31-octobre-parcours-bouleverse-metro-ferme-tensions-suivez-la-mobilisation_64998603.html",
-   "lat": 48.8575,
-   "lon": 2.3795,
-   "type": "Wilde Demo",
-   "weight": 3,
-   "start": "2026-10-31T16:30",
-   "end": "2026-10-31T19:00",
-   "geometry": {
-    "coordinates": [
-     [
-      2.37117,
-      48.85397
-     ],
-     [
-      2.37104,
-      48.85402
-     ],
-     [
-      2.37144,
-      48.85434
-     ],
-     [
-      2.37137,
-      48.85442
-     ],
-     [
-      2.37198,
-      48.85508
-     ],
-     [
-      2.37202,
-      48.85532
-     ],
-     [
-      2.37101,
-      48.85631
-     ],
-     [
-      2.37287,
-      48.85723
-     ],
-     [
-      2.3765,
-      48.85855
-     ],
-     [
-      2.37788,
-      48.85677
-     ],
-     [
-      2.37968,
-      48.85742
-     ],
-     [
-      2.37975,
-      48.85753
-     ],
-     [
-      2.38011,
-      48.85768
-     ],
-     [
-      2.38042,
-      48.85766
-     ],
-     [
-      2.38053,
-      48.85778
-     ],
-     [
-      2.38047,
-      48.8579
-     ],
-     [
-      2.3803,
-      48.85796
-     ],
-     [
-      2.38013,
-      48.85793
-     ],
-     [
-      2.38003,
-      48.8578
-     ],
-     [
-      2.38016,
-      48.85766
-     ],
-     [
-      2.38037,
-      48.85764
-     ],
-     [
-      2.38053,
-      48.85781
-     ],
-     [
-      2.38065,
-      48.85779
-     ],
-     [
-      2.38117,
-      48.85789
-     ],
-     [
-      2.38901,
-      48.85989
-     ],
-     [
-      2.38845,
-      48.86102
-     ],
-     [
-      2.3882,
-      48.86097
-     ],
-     [
-      2.38834,
-      48.86069
-     ],
-     [
-      2.38795,
-      48.86061
-     ]
-    ],
-    "type": "LineString"
-   },
-   "confirmed": false,
-   "level": 3,
-   "level_reason": "PP: ca. 200 Personen, Aufforderung zur Auflösung; keine Gewalt gemeldet; Abschnitt unbekannt, daher ganze Straße gestrichelt",
-   "first_seen": "2026-10-31T18:10"
+   "updated": "2026-11-01T21:10"
   },
   {
    "id": "daumesnil-sauvage-20261031",
@@ -1985,88 +1266,6 @@
    "confirmed": false,
    "level": 3,
    "level_reason": "PP (via actu Paris): sporadische Züge bis mehrere hundert Personen im 12e, ohne Ausschreitungen, nach Aufforderung zerstreut; genauer Abschnitt der Avenue unbekannt",
-   "first_seen": "2026-10-31T21:15"
-  },
-  {
-   "id": "rochechouart-sauvage-20261031",
-   "title": "Unangemeldeter Zug (~150 Pers.) in der Rue de Rochechouart – von BRAV-M aufgelöst",
-   "time": "2026-10-31 ca. 17:00",
-   "place": "Rue de Rochechouart (9e)",
-   "url": "https://gasbu.app/fr/direct/blocages-31-octobre-2026",
-   "type": "Unangemeldete Demo",
-   "lat": 48.88,
-   "lon": 2.3447,
-   "weight": 2,
-   "start": "2026-10-31T16:45",
-   "end": "2026-10-31T18:30",
-   "geometry": {
-    "coordinates": [
-     [
-      2.34473,
-      48.88284
-     ],
-     [
-      2.34677,
-      48.88324
-     ],
-     [
-      2.34679,
-      48.88319
-     ],
-     [
-      2.34498,
-      48.8818
-     ],
-     [
-      2.34505,
-      48.88165
-     ],
-     [
-      2.3444,
-      48.88152
-     ],
-     [
-      2.34434,
-      48.88129
-     ],
-     [
-      2.34242,
-      48.87775
-     ],
-     [
-      2.3422,
-      48.877
-     ],
-     [
-      2.33987,
-      48.87589
-     ],
-     [
-      2.34263,
-      48.87574
-     ],
-     [
-      2.34314,
-      48.87566
-     ],
-     [
-      2.3437,
-      48.8758
-     ],
-     [
-      2.34435,
-      48.87653
-     ],
-     [
-      2.3446,
-      48.8772
-     ]
-    ],
-    "type": "LineString"
-   },
-   "confirmed": false,
-   "level": 3,
-   "level_reason": "PP gegenüber France Télévisions: ~150 Personen, Auflösung durch BRAV-M-Motorradeinheiten; keine Schäden gemeldet",
    "first_seen": "2026-10-31T21:15"
   },
   {
@@ -2641,6 +1840,68 @@
    "level": 2,
    "level_reason": "Blockade-Aufrufe ab Montag, stärker ab Di; Standort vor den Ferien aktiv, für Mo noch nicht bestätigt",
    "first_seen": "2026-11-01T18:05"
+  },
+  {
+   "id": "sentinelle-toussaint-20261101",
+   "title": "Toussaint: Innenminister ordnet verstärkten Schutz christlicher Stätten und Friedhöfe an – Soldaten (Sentinelle) u.a. vor Sacré-Cœur",
+   "time": "2026-11-01/02",
+   "place": "Sacré-Cœur (18e) und Kirchen/Friedhöfe",
+   "url": "https://x.com/i/trending/2116931180511498345",
+   "first_seen": "2026-11-01T21:10",
+   "lat": 48.8867,
+   "lon": 2.3431,
+   "type": "Sicherheitsmaßnahme",
+   "weight": 1,
+   "start": "2026-11-01T00:00",
+   "end": "2026-11-02T23:59",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3431,
+     48.8867
+    ]
+   },
+   "confirmed": true,
+   "level": 1,
+   "level_reason": "Präventive Bewachung an Allerheiligen/Allerseelen, kein konkreter Vorfall gemeldet"
+  },
+  {
+   "id": "rerb-travaux-nuit-20261102",
+   "title": "RER B: Mo–Fr ab 22:45 kein Verkehr Châtelet-Les Halles ↔ Mitry/CDG (Bauarbeiten, bis 10.11.)",
+   "time": "2026-11-02 bis 10.11., jeweils ab 22:45",
+   "place": "Châtelet – Gare du Nord – Nordast",
+   "url": "https://actu.fr/ile-de-france/paris_75056/ratp-et-sncf-les-perturbations-attendues-dans-les-transports-a-paris-et-en-ile-de-france-cette-semaine-79_65000857.html",
+   "first_seen": "2026-11-01T21:10",
+   "lat": 48.8809,
+   "lon": 2.3553,
+   "type": "Verkehr",
+   "weight": 1,
+   "start": "2026-11-02T22:45",
+   "end": "2026-11-03T01:30",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      2.347,
+      48.862
+     ],
+     [
+      2.3553,
+      48.8809
+     ],
+     [
+      2.36,
+      48.8975
+     ],
+     [
+      2.3653,
+      48.918
+     ]
+    ]
+   },
+   "confirmed": false,
+   "level": 1,
+   "level_reason": "Geplante nächtliche Bauarbeiten, nur Verkehrseinschränkung (Linienverlauf genähert)"
   }
  ]
 }
