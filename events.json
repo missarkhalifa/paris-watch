@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-01T12:09",
+ "stand": "2026-11-01T15:07",
  "events": [
   {
    "id": "cgt-demo-20261031",
@@ -919,43 +919,6 @@
    "confirmed": false,
    "level": 3,
    "level_reason": "Behördlicher Schutzperimeter mit Kontrollen am Demo-Tag; Umriss aus Straßennamen genähert"
-  },
-  {
-   "id": "antifourrure-ban-20261031",
-   "title": "PP-Arrêté 2026-01483: drei Anti-Pelz-Kundgebungen an Luxusboutiquen verboten",
-   "time": "2026-10-31 ca. 12:00",
-   "place": "Rue Saint-Honoré / Rue du Faubourg-Saint-Honoré (1er/8e)",
-   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/355779-manifestation-du-31-octobre-a-paris-parcours-impose-couvre-feu-metro-les-infos",
-   "lat": 48.868,
-   "lon": 2.325,
-   "type": "Demo-Verbot",
-   "weight": 2,
-   "start": "2026-10-31T11:00",
-   "end": "2026-10-31T15:00",
-   "geometry": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      2.3165,
-      48.8712
-     ],
-     [
-      2.3237,
-      48.8693
-     ],
-     [
-      2.329,
-      48.8668
-     ],
-     [
-      2.336,
-      48.8635
-     ]
-    ]
-   },
-   "confirmed": false,
-   "level": 2,
-   "level_reason": "Kleine Kundgebungen, verboten; genaue Boutiquen nicht genannt, Straßenzug genähert"
   },
   {
    "id": "interfac-bastille-20261031",
