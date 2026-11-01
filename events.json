@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-01T09:03",
+ "stand": "2026-11-01T12:09",
  "events": [
   {
    "id": "cgt-demo-20261031",
@@ -2382,13 +2382,14 @@
   },
   {
    "id": "pantheon-manif-20261103",
-   "title": "Studierenden-/Uni-Demo ab Panthéon, 14 Uhr (Interfac IDF, CGT Paris 1); dazu Aufrufe zu Blockaden von Lycées und Unis ab Dienstag",
+   "title": "Studierenden-/Uni-Demo ab Panthéon, 14 Uhr (Interfac IDF, CGT Paris 1); Lycée-Blockaden schon ab Mo 2.11. angekündigt, Lycées+Unis Di",
    "time": "2026-11-03 14:00",
    "place": "Place du Panthéon (5e)",
    "url": "https://france3-regions.franceinfo.fr/paris-ile-de-france/paris/on-espere-des-centaines-de-blocages-quelle-suite-pour-la-mobilisation-des-lyceens-et-des-etudiants-3440136.html",
    "extra_urls": [
     "https://cgt.fercsup.net/syndicats/ile-de-france/universite-paris-1-o-pantheon-sorbonne/article/pour-les-services-publics-contre-la-vie-chere-l-extreme-droite-et-la-precarite",
-    "https://www.franceinfo.fr/societe/education/blocage-des-lycees/l-union-syndicale-lyceenne-et-l-union-etudiante-appellent-a-bloquer-lycees-et-universites-mardi-et-jeudi_8261864.html"
+    "https://www.franceinfo.fr/societe/education/blocage-des-lycees/l-union-syndicale-lyceenne-et-l-union-etudiante-appellent-a-bloquer-lycees-et-universites-mardi-et-jeudi_8261864.html",
+    "https://www.leparisien.fr/societe/blocus-des-lycees-des-lundi-greve-le-5-novembre-six-seven-a-quelles-mobilisations-sattendre-cette-semaine-01-11-2026-HXXOLR22EZFG5KUVMDKB36XDHI.php"
    ],
    "first_seen": "2026-11-01T09:05",
    "lat": 48.8464,
@@ -2406,7 +2407,8 @@
    },
    "confirmed": true,
    "level": 3,
-   "level_reason": "Angekündigte Kundgebung/Demo ab Panthéon (Route unbekannt); Bewegung mit Ausschreitungen am Rand der letzten Samstage, Blockade-Aufrufe für Lycées/Unis"
+   "level_reason": "Angekündigte Kundgebung/Demo ab Panthéon (Route unbekannt); Bewegung mit Ausschreitungen am Rand der letzten Samstage, Blockade-Aufrufe für Lycées/Unis | Update 1.11.: 'Les Lycéens!' kündigen Blockaden ab Montag an, USL/Union étudiante blockieren Di (Le Parisien)",
+   "updated": "2026-11-01T12:15"
   },
   {
    "id": "sncf-stdenis-20261103",
@@ -2434,6 +2436,30 @@
    "confirmed": true,
    "level": 2,
    "level_reason": "Gewerkschaftskundgebung vor Firmenzentrale, keine Hinweise auf Gewalt"
+  },
+  {
+   "id": "campus-nation-ferme-20261103",
+   "title": "Sorbonne Nouvelle Campus Nation bleibt bis einschl. Di 3.11. geschlossen (Arrêté AR 2026/22)",
+   "time": "2026-10-30 – 2026-11-03",
+   "place": "8–12 av. de Saint-Mandé / 31–33 rue de Picpus (12e)",
+   "url": "https://paris.evous.fr/citoyen/manifestations/",
+   "first_seen": "2026-11-01T12:15",
+   "lat": 48.84528,
+   "lon": 2.39665,
+   "type": "Uni-Schließung",
+   "weight": 1,
+   "start": "2026-11-02T00:00",
+   "end": "2026-11-03T23:59",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.39665,
+     48.84528
+    ]
+   },
+   "confirmed": true,
+   "level": 1,
+   "level_reason": "Behördliche Schließung des besetzten/blockierten Campus verlängert; kein Lehrbetrieb, keine Hinweise auf Gewalt"
   }
  ]
 }
