@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-02T15:05",
+ "stand": "2026-11-02T18:00",
  "events": [
   {
    "id": "pp-zones-curfew-20261029",
@@ -186,151 +186,23 @@
    "first_seen": "2026-10-30T21:05"
   },
   {
-   "id": "remigration-ban-20261101",
-   "title": "'Objectif Remigration'-Demo Place des Pyramides → Assemblée nationale per PP-Arrêté VERBOTEN; Gegenprotest angekündigt",
-   "time": "2026-11-01",
-   "place": "Place des Pyramides → Assemblée nationale (1er/7e)",
-   "url": "https://mairie10.paris.fr/pages/mobilisations-du-week-end-les-restrictions-temporaires-a-connaitre-37060",
-   "type": "Demo-Verbot",
-   "lat": 48.863,
-   "lon": 2.327,
-   "weight": 2,
-   "start": "2026-11-01T10:00",
-   "end": "2026-11-01T19:00",
-   "geometry": {
-    "coordinates": [
-     [
-      2.33268,
-      48.86361
-     ],
-     [
-      2.32524,
-      48.86603
-     ],
-     [
-      2.32382,
-      48.86644
-     ],
-     [
-      2.32338,
-      48.8664
-     ],
-     [
-      2.32312,
-      48.86646
-     ],
-     [
-      2.32276,
-      48.86642
-     ],
-     [
-      2.32199,
-      48.86667
-     ],
-     [
-      2.32157,
-      48.86639
-     ],
-     [
-      2.32132,
-      48.86637
-     ],
-     [
-      2.32104,
-      48.86627
-     ],
-     [
-      2.32053,
-      48.8656
-     ],
-     [
-      2.32071,
-      48.86555
-     ],
-     [
-      2.32083,
-      48.86571
-     ],
-     [
-      2.3211,
-      48.86608
-     ],
-     [
-      2.32152,
-      48.86637
-     ],
-     [
-      2.32132,
-      48.86637
-     ],
-     [
-      2.32104,
-      48.86627
-     ],
-     [
-      2.32018,
-      48.86512
-     ],
-     [
-      2.32017,
-      48.86489
-     ],
-     [
-      2.3203,
-      48.86465
-     ],
-     [
-      2.32003,
-      48.86421
-     ],
-     [
-      2.32011,
-      48.86407
-     ],
-     [
-      2.31899,
-      48.86252
-     ],
-     [
-      2.31937,
-      48.86239
-     ],
-     [
-      2.31966,
-      48.86218
-     ],
-     [
-      2.3194,
-      48.8617
-     ]
-    ],
-    "type": "LineString"
-   },
-   "confirmed": false,
-   "level": 3,
-   "level_reason": "Verbot wegen Risiko gewaltsamer Zusammenstöße zwischen verfeindeten Gruppen (PP); Organisatoren klagen, Gegenproteste angekündigt – Route nur als Plan, Uhrzeit unbekannt",
-   "extra_urls": [
-    "https://www.bfmtv.com/police-justice/le-colloque-et-la-manifestation-du-collectif-d-extreme-droite-objectif-remigration-interdits-ce-week-end-a-paris_AD-202610290450.html"
-   ],
-   "first_seen": "2026-10-31T21:15"
-  },
-  {
    "id": "pantheon-manif-20261103",
-   "title": "Studierenden-/Uni-Demo Panthéon → Medef-Zentrale (av. Bosquet), 14 Uhr (Interfac IDF); Lycée-/Uni-Blockaden Di",
+   "title": "Uni-/Lycée-Demo Panthéon → Medef (av. Bosquet) per PP-Arrêté VERBOTEN – Organisatoren (Interfac IDF/CRE) wollen das Verbot ignorieren, Klage beim Verwaltungsgericht",
    "time": "2026-11-03 14:00",
    "place": "Place du Panthéon (5e) → 55 av. Bosquet (7e), Route vorgeschlagen",
-   "url": "https://france3-regions.franceinfo.fr/paris-ile-de-france/paris/on-espere-des-centaines-de-blocages-quelle-suite-pour-la-mobilisation-des-lyceens-et-des-etudiants-3440136.html",
+   "url": "https://france3-regions.franceinfo.fr/paris-ile-de-france/paris/manifestation-du-3-novembre-la-prefecture-interdit-le-parcours-pantheon-medef-les-organisateurs-annoncent-qu-ils-braveront-l-interdiction-3442827.html",
    "extra_urls": [
     "https://cgt.fercsup.net/syndicats/ile-de-france/universite-paris-1-o-pantheon-sorbonne/article/pour-les-services-publics-contre-la-vie-chere-l-extreme-droite-et-la-precarite",
     "https://www.franceinfo.fr/societe/education/blocage-des-lycees/l-union-syndicale-lyceenne-et-l-union-etudiante-appellent-a-bloquer-lycees-et-universites-mardi-et-jeudi_8261864.html",
     "https://www.leparisien.fr/societe/blocus-des-lycees-des-lundi-greve-le-5-novembre-six-seven-a-quelles-mobilisations-sattendre-cette-semaine-01-11-2026-HXXOLR22EZFG5KUVMDKB36XDHI.php",
-    "https://actu.fr/ile-de-france/paris_75056/blocus-lyceen-greve-du-5-novembre-gilets-jaunes-a-paris-la-mobilisation-va-s-accentuer-cette-semaine_65001148.html"
+    "https://actu.fr/ile-de-france/paris_75056/blocus-lyceen-greve-du-5-novembre-gilets-jaunes-a-paris-la-mobilisation-va-s-accentuer-cette-semaine_65001148.html",
+    "https://www.leparisien.fr/paris-75/revolte-lyceenne-la-prefecture-de-police-interdit-la-manifestation-de-linterfac-idf-prevue-ce-mardi-a-paris-02-11-2026-IO644UBH3RF27OFBTRXTGFPOMA.php"
    ],
    "first_seen": "2026-11-01T09:05",
    "lat": 48.8464,
    "lon": 2.3449,
    "type": "Demonstration",
-   "weight": 3,
+   "weight": 4,
    "start": "2026-11-03T14:00",
    "end": "2026-11-03T18:00",
    "geometry": {
@@ -479,9 +351,9 @@
     "type": "LineString"
    },
    "confirmed": false,
-   "level": 3,
-   "level_reason": "Angekündigte Kundgebung/Demo ab Panthéon (Route unbekannt); Bewegung mit Ausschreitungen am Rand der letzten Samstage, Blockade-Aufrufe für Lycées/Unis | Update 1.11. 18h: Ziel laut actu.fr Medef-Sitz (av. Bosquet); genaue Route nicht veröffentlicht",
-   "updated": "2026-11-01T12:15",
+   "level": 4,
+   "level_reason": "Verbotene Route, Organisatoren kündigen an das Verbot zu 'brechen' – Konfrontation mit Polizei am Panthéon/Quartier Latin wahrscheinlich",
+   "updated": "2026-11-02T18:05",
    "changed": "2026-11-01T18:05"
   },
   {
@@ -1051,6 +923,140 @@
     "https://www.france24.com/fr/info-en-continu/20261102-parcours-de-manifestation-on-ne-va-pas-se-cacher-quand-m%C3%AAme-estime-sophie-binet",
     "https://actu.fr/ile-de-france/paris_75056/greve-du-5-novembre-a-paris-on-ne-va-pas-se-cacher-quand-meme-la-cgt-exige-un-parcours-de-bastille-a-concorde_65002723.html"
    ]
+  },
+  {
+   "id": "marechaux-interfac-20261103",
+   "title": "Von der PP genehmigte Ersatzroute der Studierenden-Demo: Porte de Charenton → Porte de Montreuil über bd des Maréchaux (Soult/Davout), Start 14 Uhr",
+   "time": "2026-11-03 12:30–19:00, Abmarsch 14:00",
+   "place": "Porte de Charenton (12e) → bd Soult → Porte de Vincennes → bd Davout → Porte de Montreuil (20e); Straßenverlauf aus 'bd des Maréchaux' abgeleitet",
+   "url": "https://www.leparisien.fr/paris-75/revolte-lyceenne-la-prefecture-de-police-interdit-la-manifestation-de-linterfac-idf-prevue-ce-mardi-a-paris-02-11-2026-IO644UBH3RF27OFBTRXTGFPOMA.php",
+   "first_seen": "2026-11-02T18:05",
+   "lat": 48.8333,
+   "lon": 2.399,
+   "type": "Demonstration",
+   "weight": 3,
+   "start": "2026-11-03T12:30",
+   "end": "2026-11-03T19:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.39899,
+      48.83331
+     ],
+     [
+      2.40077,
+      48.83464
+     ],
+     [
+      2.40218,
+      48.83331
+     ],
+     [
+      2.40473,
+      48.83428
+     ],
+     [
+      2.40694,
+      48.8356
+     ],
+     [
+      2.40647,
+      48.83552
+     ],
+     [
+      2.4066,
+      48.83537
+     ],
+     [
+      2.40687,
+      48.83553
+     ],
+     [
+      2.40796,
+      48.83667
+     ],
+     [
+      2.41145,
+      48.84707
+     ],
+     [
+      2.40623,
+      48.84752
+     ],
+     [
+      2.41081,
+      48.84701
+     ],
+     [
+      2.41144,
+      48.84702
+     ],
+     [
+      2.41151,
+      48.84905
+     ],
+     [
+      2.41021,
+      48.85591
+     ],
+     [
+      2.4105,
+      48.8536
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Genehmigte Route, aber unklar ob Organisatoren sie nutzen; am 31.10. Molotow-Würfe auf Gendarmen an der Porte de Charenton"
+  },
+  {
+   "id": "blocus-arago-20261102",
+   "title": "Blockade am Lycée Arago",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Arago, 4 place de la Nation (12e)",
+   "url": "https://www.nouvelobs.com/societe/20261102.OBS119772/mobilisation-lyceenne-a-lille-marseille-paris-quelques-lycees-bloques-au-premier-jour-de-la-rentree.html",
+   "first_seen": "2026-11-02T18:05",
+   "lat": 48.84795,
+   "lon": 2.39421,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-02T07:00",
+   "end": "2026-11-03T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.39421,
+     48.84795
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Schülerblockade laut Le Monde/Nouvel Obs, keine Zwischenfälle gemeldet; Di weitere Blockaden angekündigt"
+  },
+  {
+   "id": "blocus-bergson-20261102",
+   "title": "Blockade am Lycée Henri-Bergson (Einzelquelle Libération via Aggregator, Stand 17:24)",
+   "time": "2026-11-02 ganztägig",
+   "place": "Lycée Henri-Bergson, 27 rue Édouard-Pailleron (19e)",
+   "url": "https://www.manifsendirect.fr/",
+   "first_seen": "2026-11-02T18:05",
+   "lat": 48.88047,
+   "lon": 2.37861,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-02T07:00",
+   "end": "2026-11-03T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.37861,
+     48.88047
+    ]
+   },
+   "confirmed": false,
+   "level": 2,
+   "level_reason": "Blockade gemeldet (nur eine Quelle), keine Gewalt berichtet"
   }
  ]
 }
