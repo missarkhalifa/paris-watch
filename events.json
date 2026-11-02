@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-02T03:04",
+ "stand": "2026-11-02T06:02",
  "events": [
   {
    "id": "pp-zones-curfew-20261029",
@@ -494,55 +494,6 @@
    "first_seen": "2026-10-31T21:15"
   },
   {
-   "id": "trocadero-heurts-20261031",
-   "title": "Ausschreitungen Trocadéro: Halloween-Menge, Feuerwerksmörser auf Polizei, Tränengas/LBD, Esplanade eingekesselt, Festnahmen",
-   "time": "2026-10-31 ab ~23:00 (Menge seit ~21 Uhr)",
-   "place": "Place du Trocadéro / Parvis des Droits de l'Homme (16e)",
-   "url": "https://x.com/BFMTV/status/2116653143442284638",
-   "extra_urls": [
-    "https://x.com/CNEWS/status/2116660909221224704",
-    "https://x.com/LibreQg/status/2116657112340181315",
-    "https://x.com/QueteAmine/status/2116666940735250688"
-   ],
-   "first_seen": "2026-11-01T00:10",
-   "lat": 48.8619,
-   "lon": 2.2878,
-   "type": "Ausschreitungen",
-   "weight": 5,
-   "start": "2026-10-31T21:00",
-   "end": "2026-11-01T03:00",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       2.2858,
-       48.8631
-      ],
-      [
-       2.2898,
-       48.8631
-      ],
-      [
-       2.2902,
-       48.8612
-      ],
-      [
-       2.2862,
-       48.8608
-      ],
-      [
-       2.2858,
-       48.8631
-      ]
-     ]
-    ]
-   },
-   "confirmed": true,
-   "level": 5,
-   "level_reason": "BFMTV: Zusammenstöße zwischen mehreren Dutzend Personen und Polizei; CNEWS: Tränengas, Festnahme live; Augenzeugen: Mörser, Esplanade eingekesselt"
-  },
-  {
    "id": "pantheon-manif-20261103",
    "title": "Studierenden-/Uni-Demo Panthéon → Medef-Zentrale (av. Bosquet), 14 Uhr (Interfac IDF); Lycée-/Uni-Blockaden Di",
    "time": "2026-11-03 14:00",
@@ -926,6 +877,30 @@
    "confirmed": false,
    "level": 2,
    "level_reason": "Schlägerei laut einzelnem X-Account, keine Verletzten- oder Polizeiangaben, unbestätigt"
+  },
+  {
+   "id": "greve-interpro-sncf-20261105",
+   "title": "Do 5.11.: Interprofessioneller Streiktag – SNCF-Streik (TGV/Intercités/TER/RER/Transilien), CGT-Paris-Demo 14 Uhr (Ort/Route noch nicht veröffentlicht)",
+   "time": "2026-11-05 ganztägig, Demo 14:00",
+   "place": "Pariser Bahnhöfe (u.a. Gare du Nord); Demo-Ort offen",
+   "url": "https://www.sortiraparis.com/actualites/a-paris/articles/355255-greve-sncf-du-5-novembre-2026-trains-rer-ce-que-l-on-sait",
+   "first_seen": "2026-11-02T06:10",
+   "lat": 48.8809,
+   "lon": 2.3553,
+   "type": "Streik/Verkehr",
+   "weight": 3,
+   "start": "2026-11-05T00:00",
+   "end": "2026-11-05T23:59",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3553,
+     48.8809
+    ]
+   },
+   "confirmed": false,
+   "level": 3,
+   "level_reason": "Bundesweiter Streik aller SNCF-Gewerkschaften + Gewerkschaftsdemo; Route offen, Plan de transport erst Mi 4.11. ~17 Uhr (Punkt nur Platzhalter Gare du Nord)"
   }
  ]
 }
