@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-02T18:00",
+ "stand": "2026-11-02T21:01",
  "events": [
   {
    "id": "pp-zones-curfew-20261029",
@@ -406,33 +406,6 @@
    "confirmed": true,
    "level": 1,
    "level_reason": "Behördliche Schließung des besetzten/blockierten Campus verlängert; kein Lehrbetrieb, keine Hinweise auf Gewalt"
-  },
-  {
-   "id": "ultradroite-bfmtv-20261101",
-   "title": "Trotz Verbot: Ultrarechtes 'Remigration'-Treffen in Restaurant am Fuß von BFMTV (Altice Campus) – Dutzende CRS im Einsatz",
-   "time": "2026-11-01 ab ~14:00",
-   "place": "Altice Campus / BFMTV, 2 rue du Général Alain de Boissieu (15e)",
-   "url": "https://www.cg-tv.com/articles/info-cgtv-interdit-par-la-prefecture-un-rassemblement-d-ultradroite-se-tient-finalement-au-pied-de-bfmtv-des-dizaines-de-crs-mobilises-la-direction-en-alerte",
-   "extra_urls": [
-    "https://x.com/Ligne__Droite/status/2116906053988216934"
-   ],
-   "lat": 48.8366,
-   "lon": 2.27386,
-   "type": "Polizeieinsatz/Kundgebung",
-   "weight": 3,
-   "start": "2026-11-01T13:30",
-   "end": "2026-11-01T20:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.27386,
-     48.8366
-    ]
-   },
-   "confirmed": true,
-   "level": 3,
-   "level_reason": "Verbotenes Ultrarechts-Treffen findet trotzdem statt, Dutzende CRS vor Ort, BFMTV-Leitung in Alarm; keine Zusammenstöße gemeldet",
-   "first_seen": "2026-11-01T18:05"
   },
   {
    "id": "blocus-voltaire-20261102",
