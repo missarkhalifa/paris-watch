@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-02T06:02",
+ "stand": "2026-11-02T09:08",
  "events": [
   {
    "id": "pp-zones-curfew-20261029",
@@ -48,71 +48,6 @@
    "confirmed": true,
    "level": 3,
    "level_reason": "Gegenkundgebung; Organisatoren von 'Objectif Remigration' wollen ihre verbotene Demo laut Nouvel Obs bis zum Gerichtsentscheid aufrechterhalten – Konfrontationsrisiko"
-  },
-  {
-   "id": "halloween-dispositif-20261031",
-   "title": "31.10.: PP/Innenminister – 'sehr hohes Risiko', Großeinsatz ganztägig; Halloween-Aufrufe ab ~20 Uhr verboten, werden aufgelöst (Innenstadt-Schutz, Zone ungefähr)",
-   "time": "2026-10-31 ganztägig, v.a. ab 20:00",
-   "place": "Pariser Innenstadt (Handelszonen, Bahnhöfe; genaue Sektoren nicht veröffentlicht)",
-   "url": "https://x.com/prefpolice/status/2115889776230572363",
-   "url2": "https://www.france24.com/fr/info-en-continu/20261029-manifestations-du-31-octobre-70-000-policiers-et-gendarmes-mobilis%C3%A9s-un-dispositif-exceptionnel-reconduit-selon-nu%C3%B1ez",
-   "first_seen": "2026-10-29T21:05",
-   "lat": 48.864,
-   "lon": 2.34,
-   "type": "Polizei-Großeinsatz",
-   "weight": 4,
-   "start": "2026-10-31T08:00",
-   "end": "2026-11-01T06:00",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       2.295,
-       48.8738
-      ],
-      [
-       2.308,
-       48.879
-      ],
-      [
-       2.34,
-       48.876
-      ],
-      [
-       2.365,
-       48.87
-      ],
-      [
-       2.37,
-       48.853
-      ],
-      [
-       2.355,
-       48.851
-      ],
-      [
-       2.33,
-       48.856
-      ],
-      [
-       2.31,
-       48.861
-      ],
-      [
-       2.295,
-       48.868
-      ],
-      [
-       2.295,
-       48.8738
-      ]
-     ]
-    ]
-   },
-   "confirmed": false,
-   "level": 4,
-   "level_reason": "Nuñez: 70.000 Polizisten bundesweit, Aufrufe zu Plünderungen/'attroupements violents' ab 20 Uhr, Auflösung + Festnahmen angekündigt; Kontrollen an Bahnhöfen"
   },
   {
    "id": "couvrefeu-chatelet-20261031",
@@ -249,30 +184,6 @@
    "confirmed": false,
    "level": 4,
    "level_reason": "Personenverkehr im Sektor verboten; PP begründet mit Ordnungsstörungen; Zone ungefähr | Vigie Liberté klagt mittags vor dem Tribunal administratif dagegen (BFMTV)"
-  },
-  {
-   "id": "ratp-chatelet-20261031",
-   "title": "Metro: Châtelet & Les Halles zu ab 10 Uhr, M1 unterbrochen Châtelet–Hôtel de Ville; ab 20 Uhr auch RER Châtelet-Les Halles zu",
-   "time": "2026-10-31 ab 10:00",
-   "place": "Châtelet-Les Halles (1er)",
-   "url": "https://www.ratp.fr/infos-trafic",
-   "lat": 48.861,
-   "lon": 2.347,
-   "type": "Verkehr",
-   "weight": 3,
-   "start": "2026-10-31T10:00",
-   "end": "2026-11-01T06:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.347,
-     48.861
-    ]
-   },
-   "confirmed": true,
-   "level": 3,
-   "level_reason": "Großer Knoten geschlossen, ab 20 Uhr RER-Station zu; Sektor mit nächtlicher Ausgangssperre",
-   "first_seen": "2026-10-30T21:05"
   },
   {
    "id": "rerb-strike-20261031",
@@ -770,14 +681,14 @@
   },
   {
    "id": "blocus-heleneboucher-20261102",
-   "title": "Lycée-Blockaden ab Mo 2.11. angekündigt – Lycée Hélène-Boucher war vor den Ferien noch blockiert",
+   "title": "Lycée Hélène-Boucher blockiert (Mülltonnen vor dem Eingang), Polizei in der Nähe",
    "time": "2026-11-02 morgens",
    "place": "Lycée Hélène-Boucher, cours de Vincennes (20e)",
-   "url": "https://actu.fr/ile-de-france/paris_75056/blocus-lyceen-greve-du-5-novembre-gilets-jaunes-a-paris-la-mobilisation-va-s-accentuer-cette-semaine_65001148.html",
+   "url": "https://www.20minutes.fr/societe/4259543-20261102-direct-colere-sociale-executif-va-savoir-matin-niveau-tension-fait-rentree",
    "lat": 48.84829,
    "lon": 2.40717,
    "type": "Blockade",
-   "weight": 2,
+   "weight": 3,
    "start": "2026-11-02T07:00",
    "end": "2026-11-03T18:00",
    "geometry": {
@@ -787,10 +698,11 @@
      48.84829
     ]
    },
-   "confirmed": false,
-   "level": 2,
-   "level_reason": "Blockade-Aufrufe ab Montag, stärker ab Di; Standort vor den Ferien aktiv, für Mo noch nicht bestätigt",
-   "first_seen": "2026-11-01T18:05"
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "BFMTV/20 Minutes: ~20 Schüler blockieren seit dem Morgen, Polizei vor Ort",
+   "first_seen": "2026-11-01T18:05",
+   "updated": "2026-11-02T09:10"
   },
   {
    "id": "sentinelle-toussaint-20261101",
@@ -901,6 +813,78 @@
    "confirmed": false,
    "level": 3,
    "level_reason": "Bundesweiter Streik aller SNCF-Gewerkschaften + Gewerkschaftsdemo; Route offen, Plan de transport erst Mi 4.11. ~17 Uhr (Punkt nur Platzhalter Gare du Nord)"
+  },
+  {
+   "id": "blocus-turgot-20261102",
+   "title": "Blockade Lycée Turgot – CRS versuchen das Tor freizuräumen",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Turgot, 69 rue de Turbigo (3e)",
+   "url": "https://www.leparisien.fr/societe/direct-colere-des-lyceens-des-appels-aux-blocages-lances-ce-lundi-de-reprise-des-cours-avant-une-journee-de-greve-generale-jeudi-02-11-2026-OHINEQTPLFARDKVHE2EAP3XQIE.php",
+   "first_seen": "2026-11-02T09:10",
+   "lat": 48.86625,
+   "lon": 2.35905,
+   "type": "Blockade/Polizeieinsatz",
+   "weight": 3,
+   "start": "2026-11-02T07:30",
+   "end": "2026-11-02T13:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.35905,
+     48.86625
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Le Parisien: Blockade läuft, CRS vor Ort, Verkehr in der Umgebung wieder frei"
+  },
+  {
+   "id": "blocus-condorcet-20261102",
+   "title": "Polizei verhindert Blockade am Lycée Condorcet, Festnahmen von Schülern",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Condorcet, 8 rue du Havre (9e)",
+   "url": "https://www.leparisien.fr/societe/direct-colere-des-lyceens-des-appels-aux-blocages-lances-ce-lundi-de-reprise-des-cours-avant-une-journee-de-greve-generale-jeudi-02-11-2026-OHINEQTPLFARDKVHE2EAP3XQIE.php",
+   "first_seen": "2026-11-02T09:10",
+   "lat": 48.87487,
+   "lon": 2.32667,
+   "type": "Blockade/Polizeieinsatz",
+   "weight": 3,
+   "start": "2026-11-02T07:30",
+   "end": "2026-11-02T13:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.32667,
+     48.87487
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Le Parisien: Polizei griff ein, Festnahmen; Einlass unter Polizeiaufsicht"
+  },
+  {
+   "id": "blocus-charlemagne-20261102",
+   "title": "Blockade Lycée Charlemagne – Menschenkette vor dem Eingang, Polizei erfolglos",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Charlemagne, 14 rue Charlemagne (4e)",
+   "url": "https://www.leparisien.fr/societe/direct-colere-des-lyceens-des-appels-aux-blocages-lances-ce-lundi-de-reprise-des-cours-avant-une-journee-de-greve-generale-jeudi-02-11-2026-OHINEQTPLFARDKVHE2EAP3XQIE.php",
+   "first_seen": "2026-11-02T09:10",
+   "lat": 48.85415,
+   "lon": 2.36115,
+   "type": "Blockade/Polizeieinsatz",
+   "weight": 3,
+   "start": "2026-11-02T07:30",
+   "end": "2026-11-02T13:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.36115,
+     48.85415
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Le Parisien (08:48): Schüler blockieren, Polizei vor Ort, Räumung bisher ohne Erfolg"
   }
  ]
 }
