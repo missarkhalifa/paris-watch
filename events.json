@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-02T21:01",
+ "stand": "2026-11-03T00:09",
  "events": [
   {
    "id": "pp-zones-curfew-20261029",
@@ -160,30 +160,6 @@
    "confirmed": false,
    "level": 4,
    "level_reason": "Personenverkehr im Sektor verboten; PP begründet mit Ordnungsstörungen; Zone ungefähr | Vigie Liberté klagt mittags vor dem Tribunal administratif dagegen (BFMTV)"
-  },
-  {
-   "id": "rerb-strike-20261031",
-   "title": "RER B Streik: Nordast (CDG/Mitry) nur 2 von 3 Zügen, Umsteigen in Gare du Nord (Gleise 43/44)",
-   "time": "2026-10-31 & 2026-11-01 ganztägig",
-   "place": "Gare du Nord (10e)",
-   "url": "https://www.ratp.fr/infos-trafic/rer-transilien/b",
-   "lat": 48.8809,
-   "lon": 2.3553,
-   "type": "Streik/Verkehr",
-   "weight": 2,
-   "start": "2026-10-31T05:00",
-   "end": "2026-11-01T23:59",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.3553,
-     48.8809
-    ]
-   },
-   "confirmed": true,
-   "level": 2,
-   "level_reason": "Lokaler Streik laut RATP/maligneb.fr, Süd fast normal",
-   "first_seen": "2026-10-30T21:05"
   },
   {
    "id": "pantheon-manif-20261103",
@@ -526,33 +502,6 @@
    "confirmed": false,
    "level": 1,
    "level_reason": "Geplante nächtliche Bauarbeiten, nur Verkehrseinschränkung (Linienverlauf genähert)"
-  },
-  {
-   "id": "rixe-toureiffel-20261101",
-   "title": "Rixe am Fuß des Eiffelturms zwischen britischen Identitären-Aktivisten und Straßenverkäufern (nur X-Post, von Presse nicht bestätigt)",
-   "time": "2026-11-01 abends",
-   "place": "Fuß des Eiffelturms / Champ de Mars (7e)",
-   "url": "https://x.com/french_report78/status/2116976796914586092",
-   "first_seen": "2026-11-02T00:10",
-   "lat": 48.8584,
-   "lon": 2.2945,
-   "type": "Sicherheitsvorfall",
-   "weight": 2,
-   "start": "2026-11-01T17:00",
-   "end": "2026-11-01T22:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.2945,
-     48.8584
-    ]
-   },
-   "confirmed": false,
-   "level": 2,
-   "level_reason": "Schlägerei laut X-Posts/X-Trending-Zusammenfassung (Aktivist mit Metallgegenständen geschlagen, Ausrüstung in die Seine geworfen); keine Presse- oder Polizeibestätigung",
-   "extra_urls": [
-    "https://x.com/i/trending/2117215587424227834"
-   ]
   },
   {
    "id": "greve-interpro-sncf-20261105",
@@ -1030,6 +979,30 @@
    "confirmed": false,
    "level": 2,
    "level_reason": "Blockade gemeldet (nur eine Quelle), keine Gewalt berichtet"
+  },
+  {
+   "id": "blocus-jussieu-20261102",
+   "title": "Campus Jussieu (Sorbonne Université) blockiert – ~800 Studierende stimmten in der AG für den Blocus (nur X-Post Révolution Permanente)",
+   "time": "2026-11-02 ab ~14:30, Blocus voraussichtlich auch Di 3.11.",
+   "place": "Campus Jussieu, 4 place Jussieu (5e)",
+   "url": "https://x.com/RevPermanente/status/2117248230551404897",
+   "first_seen": "2026-11-03T00:10",
+   "lat": 48.8466,
+   "lon": 2.3561,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-02T14:00",
+   "end": "2026-11-03T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3561,
+     48.8466
+    ]
+   },
+   "confirmed": false,
+   "level": 2,
+   "level_reason": "Friedliche Blockade per AG-Beschluss, Einzelquelle aus Aktivistenkreisen; für Di 3.11. landesweiter Blockadeaufruf (USL/Union étudiante)"
   }
  ]
 }
