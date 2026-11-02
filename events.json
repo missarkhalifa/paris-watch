@@ -1,5 +1,5 @@
 {
- "stand": "2026-11-02T09:08",
+ "stand": "2026-11-02T12:04",
  "events": [
   {
    "id": "pp-zones-curfew-20261029",
@@ -339,72 +339,6 @@
    "first_seen": "2026-10-31T21:15"
   },
   {
-   "id": "metro13-travaux-20261101",
-   "title": "Metro 13 auf ganzer Linie unterbrochen bis 12 Uhr (Bauarbeiten); Porte de Clichy ohne Halt",
-   "time": "2026-11-01 bis 12:00",
-   "place": "Linie 13 (Châtillon–Saint-Denis/Asnières)",
-   "url": "https://www.20minutes.fr/paris/4257400-20261026-paris-ile-france-perturbations-prevoir-ratp-sncf-semaine",
-   "type": "Verkehr",
-   "lat": 48.8756,
-   "lon": 2.3253,
-   "weight": 1,
-   "start": "2026-11-01T05:30",
-   "end": "2026-11-01T12:00",
-   "geometry": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      2.3015,
-      48.8101
-     ],
-     [
-      2.3165,
-      48.831
-     ],
-     [
-      2.3226,
-      48.8424
-     ],
-     [
-      2.3152,
-      48.851
-     ],
-     [
-      2.3144,
-      48.861
-     ],
-     [
-      2.3141,
-      48.8676
-     ],
-     [
-      2.3253,
-      48.8756
-     ],
-     [
-      2.3277,
-      48.8836
-     ],
-     [
-      2.3297,
-      48.8875
-     ],
-     [
-      2.3443,
-      48.8996
-     ],
-     [
-      2.359,
-      48.9361
-     ]
-    ]
-   },
-   "confirmed": false,
-   "level": 1,
-   "level_reason": "Geplante Bauarbeiten laut RATP/20 Minutes; nur Verkehrsbehinderung (Linienverlauf auf Karte vereinfacht)",
-   "first_seen": "2026-10-31T21:15"
-  },
-  {
    "id": "pantheon-manif-20261103",
    "title": "Studierenden-/Uni-Demo Panthéon → Medef-Zentrale (av. Bosquet), 14 Uhr (Interfac IDF); Lycée-/Uni-Blockaden Di",
    "time": "2026-11-03 14:00",
@@ -654,19 +588,20 @@
   },
   {
    "id": "blocus-voltaire-20261102",
-   "title": "Lycée-Blockaden ab Mo 2.11. angekündigt – Lycée Voltaire war vor den Ferien noch blockiert",
+   "title": "Lycée Voltaire komplett blockiert (auch Nebeneingang zu)",
    "time": "2026-11-02 morgens",
    "place": "Lycée Voltaire, 101 av. de la République (11e)",
-   "url": "https://actu.fr/ile-de-france/paris_75056/blocus-lyceen-greve-du-5-novembre-gilets-jaunes-a-paris-la-mobilisation-va-s-accentuer-cette-semaine_65001148.html",
+   "url": "https://www.leparisien.fr/societe/direct-colere-des-lyceens-des-appels-aux-blocages-lances-ce-lundi-de-reprise-des-cours-avant-une-journee-de-greve-generale-jeudi-02-11-2026-OHINEQTPLFARDKVHE2EAP3XQIE.php",
    "extra_urls": [
-    "https://www.lefigaro.fr/actualite-france/en-ce-lundi-de-rentree-les-blocages-s-organisent-devant-les-lycees-et-universites-20261101"
+    "https://www.lefigaro.fr/actualite-france/en-ce-lundi-de-rentree-les-blocages-s-organisent-devant-les-lycees-et-universites-20261101",
+    "https://etudiant.lefigaro.fr/article/lycee/en-france-la-plupart-des-lyceens-ont-repris-les-cours-tandis-qu-a-paris-des-blocages-subsistent-20261102/"
    ],
    "lat": 48.8641,
    "lon": 2.38473,
    "type": "Blockade",
-   "weight": 2,
+   "weight": 3,
    "start": "2026-11-02T07:00",
-   "end": "2026-11-03T18:00",
+   "end": "2026-11-02T18:00",
    "geometry": {
     "type": "Point",
     "coordinates": [
@@ -674,10 +609,11 @@
      48.8641
     ]
    },
-   "confirmed": false,
-   "level": 2,
-   "level_reason": "Blockade-Aufrufe ab Montag, stärker ab Di (USL/Union étudiante); Standort vor den Ferien aktiv, für Mo noch nicht bestätigt",
-   "first_seen": "2026-11-01T18:05"
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Le Parisien/Figaro: Blockade integral, Seiteneingang nach Buhrufen ebenfalls blockiert",
+   "first_seen": "2026-11-01T18:05",
+   "changed": "2026-11-02T12:10"
   },
   {
    "id": "blocus-heleneboucher-20261102",
@@ -688,7 +624,7 @@
    "lat": 48.84829,
    "lon": 2.40717,
    "type": "Blockade",
-   "weight": 3,
+   "weight": 4,
    "start": "2026-11-02T07:00",
    "end": "2026-11-03T18:00",
    "geometry": {
@@ -699,10 +635,14 @@
     ]
    },
    "confirmed": true,
-   "level": 3,
-   "level_reason": "BFMTV/20 Minutes: ~20 Schüler blockieren seit dem Morgen, Polizei vor Ort",
+   "level": 4,
+   "level_reason": "CNEWS: 'Dutzende CRS-Fourgons' vor dem Lycée; Le Parisien: Blockade seit 6:30, Mülltonnen am Eingang",
    "first_seen": "2026-11-01T18:05",
-   "updated": "2026-11-02T09:10"
+   "updated": "2026-11-02T09:10",
+   "changed": "2026-11-02T12:10",
+   "extra_urls": [
+    "https://www.cnews.fr/france/2026-11-02/blocus-des-lycees-les-entrees-de-plusieurs-etablissements-occupees-par-des-eleves"
+   ]
   },
   {
    "id": "sentinelle-toussaint-20261101",
@@ -812,7 +752,7 @@
    },
    "confirmed": false,
    "level": 3,
-   "level_reason": "Bundesweiter Streik aller SNCF-Gewerkschaften + Gewerkschaftsdemo; Route offen, Plan de transport erst Mi 4.11. ~17 Uhr (Punkt nur Platzhalter Gare du Nord)"
+   "level_reason": "Bundesweiter Streik aller SNCF-Gewerkschaften + Gewerkschaftsdemo; Route offen, Plan de transport erst Mi 4.11. ~17 Uhr (Punkt nur Platzhalter Gare du Nord) | Demo-Route separat eingetragen (Bastille→Concorde beantragt)"
   },
   {
    "id": "blocus-turgot-20261102",
@@ -885,6 +825,253 @@
    "confirmed": true,
    "level": 3,
    "level_reason": "Le Parisien (08:48): Schüler blockieren, Polizei vor Ort, Räumung bisher ohne Erfolg"
+  },
+  {
+   "id": "blocus-sophiegermain-20261102",
+   "title": "Blockade Lycée Sophie-Germain – ~200 Schüler, Mülltonnen vor dem Eingang",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Sophie-Germain, 9 rue de Jouy (4e)",
+   "url": "https://www.leparisien.fr/societe/direct-colere-des-lyceens-des-appels-aux-blocages-lances-ce-lundi-de-reprise-des-cours-avant-une-journee-de-greve-generale-jeudi-02-11-2026-OHINEQTPLFARDKVHE2EAP3XQIE.php",
+   "first_seen": "2026-11-02T12:10",
+   "lat": 48.85486,
+   "lon": 2.35821,
+   "type": "Blockade",
+   "weight": 3,
+   "start": "2026-11-02T07:00",
+   "end": "2026-11-02T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.35821,
+     48.85486
+    ]
+   },
+   "confirmed": true,
+   "level": 3,
+   "level_reason": "Le Parisien: 200 Schüler versammelt, Eingang mit Mülltonnen blockiert, 'blockieren bis Forderungen erfüllt'",
+   "extra_urls": [
+    "https://etudiant.lefigaro.fr/article/lycee/en-france-la-plupart-des-lyceens-ont-repris-les-cours-tandis-qu-a-paris-des-blocages-subsistent-20261102/"
+   ]
+  },
+  {
+   "id": "blocus-victorhugo-20261102",
+   "title": "Lycée Victor-Hugo (teilweise/ganz) blockiert",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Victor-Hugo, 27 rue de Sévigné (3e)",
+   "url": "https://etudiant.lefigaro.fr/article/lycee/en-france-la-plupart-des-lyceens-ont-repris-les-cours-tandis-qu-a-paris-des-blocages-subsistent-20261102/",
+   "first_seen": "2026-11-02T12:10",
+   "lat": 48.85767,
+   "lon": 2.36273,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-02T07:00",
+   "end": "2026-11-02T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.36273,
+     48.85767
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Le Figaro Étudiant: unter mind. 7 blockierten Pariser Lycées; keine Polizeieinsätze gemeldet"
+  },
+  {
+   "id": "blocus-colbert-20261102",
+   "title": "Lycée Colbert teilweise blockiert (Nebeneingang geöffnet)",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Colbert, 27 rue du Château-Landon (10e)",
+   "url": "https://etudiant.lefigaro.fr/article/lycee/en-france-la-plupart-des-lyceens-ont-repris-les-cours-tandis-qu-a-paris-des-blocages-subsistent-20261102/",
+   "first_seen": "2026-11-02T12:10",
+   "lat": 48.88269,
+   "lon": 2.36342,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-02T07:00",
+   "end": "2026-11-02T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.36342,
+     48.88269
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Le Figaro Étudiant: Blockade nur partiell, Schule öffnete Nebeneingang"
+  },
+  {
+   "id": "blocus-balzac-20261102",
+   "title": "Cité scolaire Honoré-de-Balzac friedlich blockiert ('blocage filtrant'), mehrere hundert Jugendliche",
+   "time": "2026-11-02 ab 07:00",
+   "place": "118 bd Bessières, Porte de Clichy (17e)",
+   "url": "https://www.leparisien.fr/societe/direct-colere-des-lyceens-des-appels-aux-blocages-lances-ce-lundi-de-reprise-des-cours-avant-une-journee-de-greve-generale-jeudi-02-11-2026-OHINEQTPLFARDKVHE2EAP3XQIE.php",
+   "first_seen": "2026-11-02T12:10",
+   "lat": 48.89609,
+   "lon": 2.3163,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-02T07:00",
+   "end": "2026-11-02T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3163,
+     48.89609
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Le Parisien: friedlich, filtrierende Blockade seit 7 Uhr, mehrere hundert Jugendliche am Boulevard"
+  },
+  {
+   "id": "blocus-chaptal-20261102",
+   "title": "Mülltonnen vor dem Eingang des Lycée Chaptal",
+   "time": "2026-11-02 morgens",
+   "place": "Lycée Chaptal, 45 bd des Batignolles (8e)",
+   "url": "https://www.cnews.fr/france/2026-11-02/blocus-des-lycees-les-entrees-de-plusieurs-etablissements-occupees-par-des-eleves",
+   "first_seen": "2026-11-02T12:10",
+   "lat": 48.88129,
+   "lon": 2.31991,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-02T07:00",
+   "end": "2026-11-02T13:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.31991,
+     48.88129
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "CNEWS: Mülltonnen vor dem Eingang aufgetürmt; Umfang der Blockade unklar"
+  },
+  {
+   "id": "metro8-panne-20261102",
+   "title": "Metro 8: Signalstörung zwischen Invalides und Concorde – ganze Linie (sehr) gestört",
+   "time": "2026-11-02 ab 08:12",
+   "place": "Metro 8, Invalides ↔ Concorde (7e/8e)",
+   "url": "https://ratpstatus.fr/",
+   "first_seen": "2026-11-02T12:10",
+   "lat": 48.8636,
+   "lon": 2.317,
+   "type": "Verkehr",
+   "weight": 1,
+   "start": "2026-11-02T08:12",
+   "end": "2026-11-02T13:00",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      2.31475,
+      48.86103
+     ],
+     [
+      2.31631,
+      48.86386
+     ],
+     [
+      2.32107,
+      48.86563
+     ]
+    ]
+   },
+   "confirmed": true,
+   "level": 1,
+   "level_reason": "RATP/PRIM: seit 08:12 Signalstörung, 08:39–10:29 'trafic très perturbé', um 10:40 weiter gestört"
+  },
+  {
+   "id": "manif-intersyndicale-20261105",
+   "title": "Do 5.11. Gewerkschafts-Großdemo 14 Uhr: beantragte Route Bastille → Concorde (PP hat noch nicht entschieden)",
+   "time": "2026-11-05 14:00",
+   "place": "Place de la Bastille → rue Saint-Antoine/Rivoli → Place de la Concorde (Route vorgeschlagen)",
+   "url": "https://www.leparisien.fr/economie/on-doit-pouvoir-etre-vus-pour-la-manifestation-du-5-novembre-a-paris-les-syndicats-veulent-defiler-entre-bastille-et-concorde-02-11-2026-TQXWFJIHOFD2ZKSDKV7ZHDFRIE.php",
+   "first_seen": "2026-11-02T12:10",
+   "lat": 48.8532,
+   "lon": 2.3691,
+   "type": "Demonstration",
+   "weight": 4,
+   "start": "2026-11-05T13:00",
+   "end": "2026-11-05T20:00",
+   "geometry": {
+    "coordinates": [
+     [
+      2.36863,
+      48.85331
+     ],
+     [
+      2.36568,
+      48.85374
+     ],
+     [
+      2.36115,
+      48.85524
+     ],
+     [
+      2.35387,
+      48.85696
+     ],
+     [
+      2.35266,
+      48.8554
+     ],
+     [
+      2.35071,
+      48.85607
+     ],
+     [
+      2.35108,
+      48.85679
+     ],
+     [
+      2.35037,
+      48.85701
+     ],
+     [
+      2.34925,
+      48.85732
+     ],
+     [
+      2.34967,
+      48.85808
+     ],
+     [
+      2.33846,
+      48.86175
+     ],
+     [
+      2.32404,
+      48.86639
+     ],
+     [
+      2.32199,
+      48.86667
+     ],
+     [
+      2.32104,
+      48.86627
+     ],
+     [
+      2.32053,
+      48.8656
+     ],
+     [
+      2.32083,
+      48.86571
+     ]
+    ],
+    "type": "LineString"
+   },
+   "confirmed": false,
+   "level": 4,
+   "level_reason": "Alle großen Gewerkschaften + Lycéens/Gilets jaunes erwartet; nach Ausschreitungen/Plünderungen am 17.10. lehnt PP Routen im Zentrum bisher ab – Route unbestätigt",
+   "extra_urls": [
+    "https://www.france24.com/fr/info-en-continu/20261102-parcours-de-manifestation-on-ne-va-pas-se-cacher-quand-m%C3%AAme-estime-sophie-binet",
+    "https://actu.fr/ile-de-france/paris_75056/greve-du-5-novembre-a-paris-on-ne-va-pas-se-cacher-quand-meme-la-cgt-exige-un-parcours-de-bastille-a-concorde_65002723.html"
+   ]
   }
  ]
 }
