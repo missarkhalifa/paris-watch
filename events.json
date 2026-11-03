@@ -1,12 +1,12 @@
 {
- "stand": "2026-11-03T12:02",
+ "stand": "2026-11-03T15:07",
  "events": [
   {
    "id": "pantheon-manif-20261103",
-   "title": "Uni-/Lycée-Demo Panthéon → Medef (av. Bosquet) per PP-Arrêté VERBOTEN – Organisatoren (Interfac IDF/CRE) wollen das Verbot ignorieren, Klage beim Verwaltungsgericht",
+   "title": "Verbotene Uni-/Lycée-Demo Panthéon: Gericht bestätigt Verbot, trotzdem wilde Demo-Versuche im 5e – Polizei drängt Demonstrierende zurück",
    "time": "2026-11-03 14:00",
    "place": "Place du Panthéon (5e) → 55 av. Bosquet (7e), Route vorgeschlagen",
-   "url": "https://france3-regions.franceinfo.fr/paris-ile-de-france/paris/manifestation-du-3-novembre-la-prefecture-interdit-le-parcours-pantheon-medef-les-organisateurs-annoncent-qu-ils-braveront-l-interdiction-3442827.html",
+   "url": "https://www.bfmtv.com/politique/direct-colere-sociale-nouvel-appel-a-bloquer-les-lycees-et-les-universites-laurent-nunez-auditionne-par-l-assemblee-nationale-cet-apres-midi_LN-202611030137.html",
    "extra_urls": [
     "https://cgt.fercsup.net/syndicats/ile-de-france/universite-paris-1-o-pantheon-sorbonne/article/pour-les-services-publics-contre-la-vie-chere-l-extreme-droite-et-la-precarite",
     "https://www.franceinfo.fr/societe/education/blocage-des-lycees/l-union-syndicale-lyceenne-et-l-union-etudiante-appellent-a-bloquer-lycees-et-universites-mardi-et-jeudi_8261864.html",
@@ -18,7 +18,7 @@
    "lat": 48.8464,
    "lon": 2.3449,
    "type": "Demonstration",
-   "weight": 4,
+   "weight": 5,
    "start": "2026-11-03T14:00",
    "end": "2026-11-03T18:00",
    "geometry": {
@@ -168,9 +168,9 @@
    },
    "confirmed": false,
    "level": 4,
-   "level_reason": "Verbotene Route, Organisatoren kündigen an das Verbot zu 'brechen' – Konfrontation mit Polizei am Panthéon/Quartier Latin wahrscheinlich",
-   "updated": "2026-11-02T18:05",
-   "changed": "2026-11-01T18:05"
+   "level_reason": "Verwaltungsgericht hat Verbot bestätigt; BFM meldet laufende Versuche wilder Demos im 5e, Polizei drängt zurück",
+   "updated": "2026-11-03T15:10",
+   "changed": "2026-11-03T15:10"
   },
   {
    "id": "sncf-stdenis-20261103",
@@ -368,78 +368,6 @@
    "level_reason": "Bundesweiter Streik aller SNCF-Gewerkschaften + Gewerkschaftsdemo; Route offen, Plan de transport erst Mi 4.11. ~17 Uhr (Punkt nur Platzhalter Gare du Nord) | Demo-Route separat eingetragen (Bastille→Concorde beantragt)"
   },
   {
-   "id": "blocus-turgot-20261102",
-   "title": "Blockade Lycée Turgot – CRS versuchen das Tor freizuräumen",
-   "time": "2026-11-02 morgens",
-   "place": "Lycée Turgot, 69 rue de Turbigo (3e)",
-   "url": "https://www.leparisien.fr/societe/direct-colere-des-lyceens-des-appels-aux-blocages-lances-ce-lundi-de-reprise-des-cours-avant-une-journee-de-greve-generale-jeudi-02-11-2026-OHINEQTPLFARDKVHE2EAP3XQIE.php",
-   "first_seen": "2026-11-02T09:10",
-   "lat": 48.86625,
-   "lon": 2.35905,
-   "type": "Blockade/Polizeieinsatz",
-   "weight": 3,
-   "start": "2026-11-02T07:30",
-   "end": "2026-11-02T13:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.35905,
-     48.86625
-    ]
-   },
-   "confirmed": true,
-   "level": 3,
-   "level_reason": "Le Parisien: Blockade läuft, CRS vor Ort, Verkehr in der Umgebung wieder frei"
-  },
-  {
-   "id": "blocus-condorcet-20261102",
-   "title": "Polizei verhindert Blockade am Lycée Condorcet, Festnahmen von Schülern",
-   "time": "2026-11-02 morgens",
-   "place": "Lycée Condorcet, 8 rue du Havre (9e)",
-   "url": "https://www.leparisien.fr/societe/direct-colere-des-lyceens-des-appels-aux-blocages-lances-ce-lundi-de-reprise-des-cours-avant-une-journee-de-greve-generale-jeudi-02-11-2026-OHINEQTPLFARDKVHE2EAP3XQIE.php",
-   "first_seen": "2026-11-02T09:10",
-   "lat": 48.87487,
-   "lon": 2.32667,
-   "type": "Blockade/Polizeieinsatz",
-   "weight": 3,
-   "start": "2026-11-02T07:30",
-   "end": "2026-11-02T13:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.32667,
-     48.87487
-    ]
-   },
-   "confirmed": true,
-   "level": 3,
-   "level_reason": "Le Parisien: Polizei griff ein, Festnahmen; Einlass unter Polizeiaufsicht | Le Parisien-Video: 15-Jährige bei der Blockade festgenommen"
-  },
-  {
-   "id": "blocus-charlemagne-20261102",
-   "title": "Blockade Lycée Charlemagne – Menschenkette vor dem Eingang, Polizei erfolglos",
-   "time": "2026-11-02 morgens",
-   "place": "Lycée Charlemagne, 14 rue Charlemagne (4e)",
-   "url": "https://www.leparisien.fr/societe/direct-colere-des-lyceens-des-appels-aux-blocages-lances-ce-lundi-de-reprise-des-cours-avant-une-journee-de-greve-generale-jeudi-02-11-2026-OHINEQTPLFARDKVHE2EAP3XQIE.php",
-   "first_seen": "2026-11-02T09:10",
-   "lat": 48.85415,
-   "lon": 2.36115,
-   "type": "Blockade/Polizeieinsatz",
-   "weight": 3,
-   "start": "2026-11-02T07:30",
-   "end": "2026-11-02T13:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.36115,
-     48.85415
-    ]
-   },
-   "confirmed": true,
-   "level": 3,
-   "level_reason": "Le Parisien (08:48): Schüler blockieren, Polizei vor Ort, Räumung bisher ohne Erfolg"
-  },
-  {
    "id": "blocus-sophiegermain-20261102",
    "title": "Blockade Lycée Sophie-Germain – ~200 Schüler, Mülltonnen vor dem Eingang",
    "time": "2026-11-02 morgens",
@@ -537,64 +465,6 @@
    "confirmed": true,
    "level": 2,
    "level_reason": "Le Parisien: friedlich, filtrierende Blockade seit 7 Uhr, mehrere hundert Jugendliche am Boulevard"
-  },
-  {
-   "id": "blocus-chaptal-20261102",
-   "title": "Mülltonnen vor dem Eingang des Lycée Chaptal",
-   "time": "2026-11-02 morgens",
-   "place": "Lycée Chaptal, 45 bd des Batignolles (8e)",
-   "url": "https://www.cnews.fr/france/2026-11-02/blocus-des-lycees-les-entrees-de-plusieurs-etablissements-occupees-par-des-eleves",
-   "first_seen": "2026-11-02T12:10",
-   "lat": 48.88129,
-   "lon": 2.31991,
-   "type": "Blockade",
-   "weight": 2,
-   "start": "2026-11-02T07:00",
-   "end": "2026-11-02T13:00",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     2.31991,
-     48.88129
-    ]
-   },
-   "confirmed": true,
-   "level": 2,
-   "level_reason": "CNEWS: Mülltonnen vor dem Eingang aufgetürmt; Umfang der Blockade unklar"
-  },
-  {
-   "id": "metro8-panne-20261102",
-   "title": "Metro 8: Signalstörung zwischen Invalides und Concorde – ganze Linie (sehr) gestört",
-   "time": "2026-11-02 ab 08:12",
-   "place": "Metro 8, Invalides ↔ Concorde (7e/8e)",
-   "url": "https://ratpstatus.fr/",
-   "first_seen": "2026-11-02T12:10",
-   "lat": 48.8636,
-   "lon": 2.317,
-   "type": "Verkehr",
-   "weight": 1,
-   "start": "2026-11-02T08:12",
-   "end": "2026-11-02T13:00",
-   "geometry": {
-    "type": "LineString",
-    "coordinates": [
-     [
-      2.31475,
-      48.86103
-     ],
-     [
-      2.31631,
-      48.86386
-     ],
-     [
-      2.32107,
-      48.86563
-     ]
-    ]
-   },
-   "confirmed": true,
-   "level": 1,
-   "level_reason": "RATP/PRIM: seit 08:12 Signalstörung, 08:39–10:29 'trafic très perturbé', um 10:40 weiter gestört"
   },
   {
    "id": "manif-intersyndicale-20261105",
@@ -843,6 +713,33 @@
    "confirmed": false,
    "level": 2,
    "level_reason": "Friedliche Blockade per AG-Beschluss, Einzelquelle aus Aktivistenkreisen; für Di 3.11. landesweiter Blockadeaufruf (USL/Union étudiante)"
+  },
+  {
+   "id": "blocus-julesferry-20261103",
+   "title": "Blockade am Lycée Jules-Ferry, Polizei vor Ort",
+   "time": "2026-11-03 morgens",
+   "place": "Lycée Jules-Ferry, 77 bd de Clichy (9e)",
+   "url": "https://www.aa.com.tr/fr/france/paris-la-cour-maintient-l-interdiction-partielle-de-la-manifestation-%C3%A9tudiante-un-seul-itin%C3%A9raire-autoris%C3%A9/4110052",
+   "extra_urls": [],
+   "first_seen": "2026-11-03T15:10",
+   "lat": 48.8838,
+   "lon": 2.3307,
+   "type": "Blockade",
+   "weight": 2,
+   "start": "2026-11-03T07:00",
+   "end": "2026-11-03T18:00",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.3307,
+     48.8838
+    ]
+   },
+   "confirmed": true,
+   "level": 2,
+   "level_reason": "Schulblockade mit Polizeipräsenz, keine Ausschreitungen gemeldet",
+   "updated": "2026-11-03T15:10",
+   "changed": "2026-11-03T15:10"
   }
  ]
 }
