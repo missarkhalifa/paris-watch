@@ -2,147 +2,162 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>Büro-Suche Hamburg – neue Angebote 29.10.–18.11.2026</title>
 <link rel="stylesheet" href="vendor/leaflet.css">
 <style>
-  :root {
-    --ink: #172033;
-    --muted: #5b6475;
-    --line: #e4e7ee;
-    --bg: #f3f5f8;
-    --card: #fff;
-    --blue: #1f5fcc;
-    --orange: #c67a10;
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink);
-    font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  header { background: #fff; border-bottom: 1px solid var(--line); padding: 14px 18px 12px; }
-  h1 { font-size: 1.15rem; margin: 0; letter-spacing: -0.02em; }
-  header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
-  #wrap { display: flex; height: calc(100% - 72px); min-height: 0; }
-  #map { flex: 1 1 58%; min-width: 0; }
-  #list { flex: 0 0 420px; width: 420px; overflow-y: auto; padding: 12px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-    padding: 12px 14px; margin: 0 0 10px; cursor: pointer; transition: border-color .15s, box-shadow .15s; }
-  .card:hover { border-color: #b9c9ea; }
-  .card.sel { border-color: var(--blue); box-shadow: 0 0 0 2px rgba(31,95,204,.28); }
-  .card h2 { font-size: 14.5px; line-height: 1.3; margin: 0 0 6px; display: flex; gap: 8px; align-items: flex-start; }
-  .num { flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--blue); color: #fff;
-    font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; }
-  .num.approx { background: var(--orange); }
-  .meta, .sub { color: var(--muted); font-size: 13px; }
-  .price { font-weight: 700; font-size: 15px; margin: 6px 0 2px; }
-  .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px;
-    background: #fff4dc; color: #8a5500; margin-left: 4px; vertical-align: 1px; }
-  .card a { color: var(--blue); font-weight: 600; text-decoration: none; }
-  .card a:hover { text-decoration: underline; }
-  .pin { width: 28px; height: 28px; border-radius: 50%; background: var(--blue); color: #fff;
-    font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center;
-    border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,.4); }
-  .pin.approx { background: var(--orange); border-style: dashed; }
-  .pin.sel { background: #c41e7a; transform: scale(1.25); }
-  .leaflet-popup-content { margin: 10px 12px; font-size: 13.5px; line-height: 1.4; }
-  .leaflet-popup-content a { color: var(--blue); font-weight: 600; }
-  @media (max-width: 840px) {
-    html, body { height: auto; }
-    #wrap { display: block; height: auto; }
-    #map { height: 52vh; width: 100%; }
-    #list { width: 100%; flex: none; }
-  }
+*{box-sizing:border-box}html,body{margin:0;height:100%;font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#222}
+#app{display:flex;height:100%}#side{width:340px;max-width:90vw;overflow-y:auto;background:#fafafa;border-right:1px solid #ddd;padding:10px 12px;z-index:1000}
+#map{flex:1;height:100%}
+h1{font-size:17px;margin:2px 0 6px}.muted{color:#777;font-size:12px}
+fieldset{border:1px solid #ddd;border-radius:6px;margin:8px 0;padding:6px 8px}legend{font-size:12px;color:#555}
+label{display:inline-flex;align-items:center;gap:4px;margin:2px 8px 2px 0;cursor:pointer}
+.item{display:flex;gap:8px;padding:6px;border-radius:6px;cursor:pointer;border:1px solid transparent}.item:hover{background:#eef4ff;border-color:#cfe0ff}
+.item img{width:64px;height:48px;object-fit:cover;border-radius:4px;flex:none;background:#ddd}
+.item .t{font-weight:600;font-size:13px}.item .s{font-size:12px;color:#555}
+.badge{display:inline-block;padding:0 5px;border-radius:8px;font-size:11px;font-weight:700;color:#fff;vertical-align:1px}
+.kW{background:#111;color:#fff!important;border:1.5px solid #fff;box-shadow:0 0 0 1px #111}.pin.kW{border:2.5px solid #fff;box-shadow:0 0 0 1.5px #111,0 1px 5px rgba(0,0,0,.7)}.pin.kW span{color:#fff}
+.kA{background:#2e9d3a}.kB{background:#2b6fd6}.kC{background:#ee8a12}.kX{background:#999}.neu{background:#d6249f}
+.pin{width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center}
+.pin span{transform:rotate(45deg);color:#fff;font-weight:700;font-size:12px}
+.pin.approx{border-style:dashed}.pinwrap{position:relative}
+.pinwrap .nb{position:absolute;top:-10px;left:16px;background:#d6249f;color:#fff;font-size:9px;font-weight:700;padding:0 3px;border-radius:6px;border:1px solid #fff}
+.leaflet-popup-content{margin:10px;width:min(420px,78vw)!important}
+.gal{position:relative;background:#111;border-radius:6px;overflow:hidden}.gal img{width:100%;height:min(240px,42vw,32vh);object-fit:contain;display:block}
+.gal button{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);color:#fff;border:0;font-size:22px;width:34px;height:44px;cursor:pointer;border-radius:4px}
+.gal .p{left:4px}.gal .n{right:4px}.gal .c{position:absolute;bottom:4px;right:8px;color:#fff;font-size:11px;background:rgba(0,0,0,.4);padding:0 4px;border-radius:4px}
+.thumbs{display:flex;gap:3px;margin-top:3px;overflow-x:auto}.thumbs img{width:52px;height:38px;object-fit:cover;border-radius:3px;opacity:.6;cursor:pointer}.thumbs img.on{opacity:1;outline:2px solid #2b6fd6}
+table.kv{width:100%;border-collapse:collapse;margin-top:6px;font-size:12.5px}table.kv td{padding:2px 4px;vertical-align:top;border-bottom:1px solid #eee}table.kv td:first-child{color:#666;white-space:nowrap;width:30%}
+.warn{background:#fff4d6;border:1px solid #f0d58a;border-radius:4px;padding:3px 6px;font-size:12px;margin-top:6px}
+.btn{display:inline-block;margin-top:8px;background:#2b6fd6;color:#fff!important;text-decoration:none;padding:6px 12px;border-radius:5px;font-weight:600}
+#toggle{display:none;position:absolute;top:10px;left:54px;z-index:1300;background:#fff;border:1px solid #bbb;border-radius:6px;padding:6px 10px;font-weight:600;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.legend{background:#fff;padding:6px 8px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.3);font-size:12px;line-height:1.6}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+@media (max-width:760px){#side{position:absolute;top:0;bottom:0;left:0;z-index:1250;padding-top:52px;transform:translateX(-100%);transition:transform .2s;box-shadow:2px 0 8px rgba(0,0,0,.3)}#side.open{transform:none}#toggle{display:block}}
 </style>
 </head>
 <body>
-<header>
-  <h1>Büro-Suche Hamburg – neue Angebote 29.10.–18.11.2026</h1>
-  <p>14 neue Büro-Angebote, die neuesten zuerst. Orange und gestrichelt markierte Punkte sind eine ungefähre Lage, weil die genaue Adresse in der Anzeige fehlt.</p>
-</header>
-<div id="wrap">
+<button id="toggle" type="button" onclick="document.getElementById('side').classList.toggle('open')">☰ Liste</button>
+<div id="app">
+  <div id="side">
+    <h1>Büro-Suche Hamburg – neue Angebote 29.10.–18.11.2026</h1>
+    <div class="muted">14 neue Büro-Angebote aus den letzten drei Wochen, die neuesten zuerst. Stand 18.11.2026 · <span id="cnt"></span></div>
+    <fieldset>
+      <legend>Kategorie</legend>
+      <label><input type="checkbox" class="fk" value="A" checked><span class="badge kA">A</span> sehr gut</label>
+      <label><input type="checkbox" class="fk" value="B" checked><span class="badge kB">B</span> gut</label>
+      <label><input type="checkbox" class="fk" value="C" checked><span class="badge kC">C</span> mit Abweichung</label>
+    </fieldset>
+    <div id="list"></div>
+    <p class="muted">Gestrichelter Pin = ungefähre Lage, weil die genaue Adresse in der Anzeige fehlt. Klick auf Pin oder Listeneintrag öffnet Vorschau mit Fotos und allen Angaben.<br>Karte: © OpenStreetMap-Mitwirkende</p>
+  </div>
   <div id="map"></div>
-  <div id="list"></div>
 </div>
 <script src="vendor/leaflet.js"></script>
 <script>
-const DATA = [{"id": 0, "title": "Gewerbefläche auf 2 Ebenen mit Terrasse, Grindelberg (Harvestehude), 100 m²", "district": "Harvestehude", "address": "Grindelberg, 20144 Hamburg (Harvestehude)", "sqm": "100", "warm": "3.250 €", "cold": "3.000 €", "ca": true, "netto": "netto zzgl. MwSt", "avail": "sofort", "seen": "18.11.2026", "source": "Kleinanzeigen (Makler)", "url": "https://www.kleinanzeigen.de/s-anzeige/-vielseitig-nutzbare-gewerbeflaeche-auf-2-ebenen-terrasse-stark-frequentierte-lage-grindelberg/3573889855-277-9432", "rank": "A", "lat": 53.5727257, "lon": 9.9784346, "approx": true}, {"id": 1, "title": "Frisch sanierte Bürofläche am Rothenbaum (Rothenbaumchaussee 40), 123 m²", "district": "Harvestehude / Rotherbaum", "address": "Rothenbaumchaussee 40, 20148 Hamburg", "sqm": "123", "warm": "2.706 €", "cold": "2.214 €", "ca": false, "netto": "netto zzgl. MwSt", "avail": "nach Kernsanierung, nicht angegeben", "seen": "17.11.2026", "source": "Hamburg Business (Angermann)", "url": "https://hamburg-business.com/en/expose/14366", "rank": "A", "lat": 53.5658301, "lon": 9.9895828, "approx": false}, {"id": 2, "title": "Gewerbefläche in erster Alsterlinie (Schwanenwik), 72 m²", "district": "Uhlenhorst", "address": "Schwanenwik, 22087 Hamburg", "sqm": "72", "warm": "3.420 €", "cold": "2.850 €", "ca": true, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "November 2026", "seen": "16.11.2026", "source": "Kleinanzeigen (privat)", "url": "https://www.kleinanzeigen.de/s-anzeige/gewerbeflaeche-in-erster-alsterlinie-hamburg-uhlenhorst/3573177802-277-9486", "rank": "B", "lat": 53.5627964, "lon": 10.0153115, "approx": true}, {"id": 3, "title": "Charmantes Büro-Loft im Hinterhof (Eimsbüttel, abgehend vom Eppendorfer Weg)", "district": "Eimsbüttel (nahe Isebek/Hoheluft)", "address": "PLZ 20259, abgehend vom Eppendorfer Weg", "sqm": "85", "warm": "1.950 €", "cold": "1.500 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "nicht angegeben", "seen": "13.11.2026", "source": "Immowelt via immobilo", "url": "https://www.immobilo.de/immobilien/charmantes-buero-loft-in-eimsbuettel-H7SKK4", "rank": "C", "lat": 53.5717909, "lon": 9.9582529, "approx": true}, {"id": 4, "title": "Charmante Bürofläche oder Atelier im Hinterhof (Eimsbüttel, Nähe Osterstraße)", "district": "Eimsbüttel (nahe Isebek/Hoheluft)", "address": "Sillemstraße 60, 20257 Hamburg", "sqm": "127", "warm": "2.145 €", "cold": "1.845 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "nach Absprache (Nachmieter, zeitlich flexibel)", "seen": "12.11.2026", "source": "Kleinanzeigen (ohne-makler.net)", "url": "https://www.kleinanzeigen.de/s-anzeige/charmante-bueroflaeche-oder-atelier-direkt-in-eimsbuettel-im-hinterhof/3567454848-277-26477", "rank": "C", "lat": 53.5776365, "lon": 9.9449254, "approx": false}, {"id": 5, "title": "Büro-/Ausstellungsfläche ca. 100 m² (und 130 m²) im Herzen von Uhlenhorst", "district": "Uhlenhorst", "address": "PLZ 22085, nahe Uhlenhorster Kanal", "sqm": "100", "warm": null, "cold": null, "ca": false, "netto": null, "avail": "nach Absprache (Sanierung vor Mietbeginn)", "seen": "10.11.2026", "source": "hoork (Jacobi Immobilien)", "url": "https://www.hoork.com/ca-100-m-und-ca-130-m-barrierefreie-buro-ausstellungsflachen-im-herzen-von-uhlenhorst/", "rank": "C", "lat": 53.5732161, "lon": 10.0147729, "approx": true}, {"id": 6, "title": "Ab 2027: Bürofläche 75 m² in ruhiger Eppendorfer Hinterhoflage", "district": "Eppendorf", "address": "Schottmüllerstraße 20a, 20251 Hamburg", "sqm": "75", "warm": "2.400 €", "cold": "2.100 €", "ca": true, "netto": "netto zzgl. MwSt", "avail": "ab 2027", "seen": "08.11.2026", "source": "ImmoScout24 (BHI Büro Hamburg Immobilien)", "url": "https://www.immobilienscout24.de/expose/172458748", "rank": "C", "lat": 53.591028, "lon": 9.9858449, "approx": false}, {"id": 7, "title": "Repräsentative Gewerberäume in altem Fabrikhaus (Gründerzeit), zentral Winterhude", "district": "Winterhude", "address": "PLZ 22303, Winterhude", "sqm": "130", "warm": "2.250 €", "cold": "2.050 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "nicht angegeben", "seen": "07.11.2026", "source": "Immowelt (via immobilo)", "url": "https://www.immobilo.de/immobilien/repraesentative-gewerberaeume-in-zentraler-lage-von-hamburg-winterhude-H7K83R", "rank": "B", "lat": 53.5914191, "lon": 10.0216029, "approx": true}, {"id": 8, "title": "Helles Büro Eppendorf 82,5 m² mit 25 m² Terrasse (Nachmieter/Untermiete)", "district": "Eppendorf", "address": "PLZ 20249, nahe U Kellinghusenstraße", "sqm": "82,5", "warm": null, "cold": null, "ca": true, "netto": null, "avail": "ab 01.11.2026", "seen": "07.11.2026", "source": "Kleinanzeigen (privat)", "url": "https://www.kleinanzeigen.de/s-anzeige/schoenes-helles-buero-in-eppendorf-82-5-m-mit-grosser-terrasse/3510328910-277-9476", "rank": "C", "lat": 53.5882587, "lon": 9.989054, "approx": true}, {"id": 9, "title": "Helle Büroetage Univiertel Grindelallee 43 (Hinterhof, voll ausgestattet)", "district": "Rotherbaum", "address": "Grindelallee 43, 20146 Hamburg", "sqm": "113", "warm": "2.040 €", "cold": "1.750 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "sofort", "seen": "06.11.2026", "source": "ImmoScout24", "url": "https://www.immobilienscout24.de/expose/172397041", "rank": "B", "lat": 53.5661185, "lon": 9.9806631, "approx": false}, {"id": 10, "title": "Bürofläche Hoheluftchaussee 66 (Erstbezug nach Sanierung)", "district": "Hoheluft-Ost", "address": "Hoheluftchaussee 66, 20251 Hamburg", "sqm": "96", "warm": "2.280 €", "cold": "1.900 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "ab sofort", "seen": "06.11.2026", "source": "ImmoScout24", "url": "https://www.immobilienscout24.de/expose/167713515", "rank": "B", "lat": 53.582252, "lon": 9.9719294, "approx": false}, {"id": 11, "title": "Helles Büro direkt am Mühlenkampkanal (Immowelt)", "district": "Winterhude", "address": "PLZ 22303, nahe Mühlenkampkanal", "sqm": "134", "warm": "2.628 €", "cold": "2.278 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "nicht angegeben", "seen": "05.11.2026", "source": "Immowelt (via immobilo)", "url": "https://www.immobilo.de/immobilien/helles-buero-direkt-am-muehlenkampkanal-22303-hh-winterhude-H7FGBJ", "rank": "B", "lat": 53.5914191, "lon": 10.022402900000001, "approx": true}, {"id": 12, "title": "Traumhaftes Büro im Loftstil in ruhiger Lage (Witthöft)", "district": "Eppendorf", "address": "PLZ 20251, Eppendorf, Hinterhof", "sqm": "126,3", "warm": "2.803,72 €", "cold": "2.248 €", "ca": true, "netto": "netto zzgl. MwSt", "avail": "nicht angegeben", "seen": "29.10.2026", "source": "Witthöft Gewerbeimmobilien", "url": "https://witthoeft.com/anlage-immobilien/traumhaftes-buro-im-loftstil-in-ruhiger-lage-im-schonen-eppendorf", "rank": "B", "lat": 53.591507, "lon": 9.9797716, "approx": true}, {"id": 13, "title": "Büro-Loft am Eppendorfer Baum (Immowelt)", "district": "Harvestehude/Eppendorf", "address": "PLZ 20249, nahe Eppendorfer Baum", "sqm": null, "warm": "2.650 €", "cold": "2.250 €", "ca": false, "netto": "netto zzgl. MwSt", "avail": "nicht angegeben", "seen": "29.10.2026", "source": "Immowelt (via immobilo)", "url": "https://www.immobilo.de/immobilien/buero-loft-am-eppendorfer-baum-GSVDNN", "rank": "B", "lat": 53.583787, "lon": 9.9852871, "approx": true}];
-const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
-  "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
-}[c]));
+const STAND = '2026-11-18';
+const today = new Date(STAND + 'T00:00:00');
+const DATA = [{"id": "ka_3573889855", "kategorie": "A", "score": 9, "stadtteil": "Harvestehude", "strasse": "Grindelberg, 20144 Hamburg (Harvestehude)", "m2": 100, "zimmer": "Eigener Eingang, Großraum/Empfang, Küche, Süd-Terrasse mit Garten, Souterrain-Office, Kellerraum", "kalt": 3000, "nk": 250, "warm": 3250, "warm_hinweis": "geschätzt", "einzug": "sofort", "titel": "Gewerbefläche auf 2 Ebenen mit Terrasse, Grindelberg (Harvestehude), 100 m²", "ausstattung": "2022 saniert; Anzeige nennt Warmmiete 3.000 € + Heizkosten 250 € (Warm gesamt 3.250 € geschätzt, netto zzgl. MwSt); Courtage 3 NKM zzgl. MwSt; TG-Stellplatz optional extra; Büro ca. 100 m², Laden ca. 80 m²", "anbieter": "Kleinanzeigen (Makler)", "url": "https://www.kleinanzeigen.de/s-anzeige/-vielseitig-nutzbare-gewerbeflaeche-auf-2-ebenen-terrasse-stark-frequentierte-lage-grindelberg/3573889855-277-9432", "first_seen": "2026-11-18", "first_seen_de": "18.11.2026", "foto_hinweis": "", "geo": {"lat": 53.5727257, "lon": 9.9784346, "lage_genau": false, "hinweis": "Adresse nicht genannt, Lage nach Straße (Grindelberg, 20144 Hamburg)"}, "_pin": [53.5727257, 9.9784346], "fotos": ["fotos/ka_3573889855/01.jpg", "fotos/ka_3573889855/02.jpg", "fotos/ka_3573889855/03.jpg", "fotos/ka_3573889855/04.jpg"]}, {"id": "hamburg_business_com_en_expose_14366", "kategorie": "A", "score": 9, "stadtteil": "Harvestehude / Rotherbaum", "strasse": "Rothenbaumchaussee 40, 20148 Hamburg", "m2": 123, "zimmer": "Altbau 1885, Echtholzparkett, hohe Decken, Glasaufzug, Terrassen", "kalt": 2214, "nk": 492, "warm": 2706, "warm_hinweis": "", "einzug": "nach Kernsanierung, nicht angegeben", "titel": "Frisch sanierte Bürofläche am Rothenbaum (Rothenbaumchaussee 40), 123 m²", "ausstattung": "Netto-Kaltmiete 18 €/m², NK 4 €/m² laut Anzeige = ca. 22 €/m² x 123 m²; netto zzgl. MwSt; Courtage 3 Bruttomonatsmieten zzgl. MwSt; Angermann Real Estate Advisory (Sinan Korkmaz, +49 40 34 914 224)", "anbieter": "Hamburg Business (Angermann)", "url": "https://hamburg-business.com/en/expose/14366", "first_seen": "2026-11-17", "first_seen_de": "17.11.2026", "foto_hinweis": "", "geo": {"lat": 53.5658301, "lon": 9.9895828, "lage_genau": true, "hinweis": ""}, "_pin": [53.5658301, 9.9895828], "fotos": ["fotos/hamburg_business_com_en_expose_14366/01.jpg", "fotos/hamburg_business_com_en_expose_14366/02.jpg", "fotos/hamburg_business_com_en_expose_14366/03.jpg", "fotos/hamburg_business_com_en_expose_14366/04.jpg"]}, {"id": "ka_3573177802", "kategorie": "B", "score": 7, "stadtteil": "Uhlenhorst", "strasse": "Schwanenwik, 22087 Hamburg", "m2": 72, "zimmer": "2 Haupträume, Küche, Duschbad/WC", "kalt": 2850, "nk": 570, "warm": 3420, "warm_hinweis": "geschätzt", "einzug": "November 2026", "titel": "Gewerbefläche in erster Alsterlinie (Schwanenwik), 72 m²", "ausstattung": "eigener Zugang von der Straße, unmöbliert; Kaltmiete 2.850 € (Verhandlungsbasis), NK nach Vereinbarung (NK ca. 20 % geschätzt); Preise vermutlich netto zzgl. MwSt; privat", "anbieter": "Kleinanzeigen (privat)", "url": "https://www.kleinanzeigen.de/s-anzeige/gewerbeflaeche-in-erster-alsterlinie-hamburg-uhlenhorst/3573177802-277-9486", "first_seen": "2026-11-16", "first_seen_de": "16.11.2026", "foto_hinweis": "", "geo": {"lat": 53.5627964, "lon": 10.0153115, "lage_genau": false, "hinweis": "nur Straße bekannt"}, "_pin": [53.5627964, 10.0153115], "fotos": ["fotos/ka_3573177802/01.jpg", "fotos/ka_3573177802/02.jpg", "fotos/ka_3573177802/03.jpg", "fotos/ka_3573177802/04.jpg"]}, {"id": "www_immobilo_de_immobilien_charmantes_buero_loft_in_eimsbuet", "kategorie": "C", "score": 5, "stadtteil": "Eimsbüttel (nahe Isebek/Hoheluft)", "strasse": "PLZ 20259, abgehend vom Eppendorfer Weg", "m2": 85, "zimmer": "1 Zimmer Loft, Zugang über Außentreppe im Hinterhof", "kalt": 1500, "nk": 450, "warm": 1950, "warm_hinweis": "", "einzug": "nicht angegeben", "titel": "Charmantes Büro-Loft im Hinterhof (Eimsbüttel, abgehend vom Eppendorfer Weg)", "ausstattung": "Warmmiete 1.950 € laut Anzeige (NK 450 inkl. Heizkosten 150); 17,65 €/m²; Kaution 4.500; vermutlich netto zzgl. MwSt unklar; Quelle Immowelt via immobilo (Immowelt direkt blockiert)", "anbieter": "Immowelt via immobilo", "url": "https://www.immobilo.de/immobilien/charmantes-buero-loft-in-eimsbuettel-H7SKK4", "first_seen": "2026-11-13", "first_seen_de": "13.11.2026", "foto_hinweis": "Portal liefert keine Fotos – siehe Inserat", "geo": {"lat": 53.5717909, "lon": 9.9582529, "lage_genau": false, "hinweis": "Adresse nicht genannt, Lage nach PLZ 20259"}, "_pin": [53.5717909, 9.9582529], "fotos": ["fotos/www_immobilo_de_immobilien_charmantes_buero_loft_in_eimsbuet/01.jpg"]}, {"id": "ka_3567454848", "kategorie": "C", "score": 5, "stadtteil": "Eimsbüttel (nahe Isebek/Hoheluft)", "strasse": "Sillemstraße 60, 20257 Hamburg", "m2": 127, "zimmer": "k. A.", "kalt": 1845, "nk": 300, "warm": 2145, "warm_hinweis": "", "einzug": "nach Absprache (Nachmieter, zeitlich flexibel)", "titel": "Charmante Bürofläche oder Atelier im Hinterhof (Eimsbüttel, Nähe Osterstraße)", "ausstattung": "Parkett, Hinterhaus 1. OG, provisionsfrei, U2 Osterstraße ca. 500 m; Warmmiete laut Anzeige 2.145 € (NK 80 + Heizkosten 220); Preise vermutlich netto zzgl. MwSt unklar; Anbieter ohne-makler.net", "anbieter": "Kleinanzeigen (ohne-makler.net)", "url": "https://www.kleinanzeigen.de/s-anzeige/charmante-bueroflaeche-oder-atelier-direkt-in-eimsbuettel-im-hinterhof/3567454848-277-26477", "first_seen": "2026-11-12", "first_seen_de": "12.11.2026", "foto_hinweis": "", "geo": {"lat": 53.5776365, "lon": 9.9449254, "lage_genau": true, "hinweis": ""}, "_pin": [53.5776365, 9.9449254], "fotos": ["fotos/ka_3567454848/01.jpg", "fotos/ka_3567454848/02.jpg", "fotos/ka_3567454848/03.jpg", "fotos/ka_3567454848/04.jpg"]}, {"id": "www_hoork_com_ca_100_m_und_ca_130_m_barrierefreie_buro_ausst", "kategorie": "C", "score": 5, "stadtteil": "Uhlenhorst", "strasse": "PLZ 22085, nahe Uhlenhorster Kanal", "m2": 100, "zimmer": "k. A.", "kalt": null, "nk": null, "warm": null, "warm_hinweis": "Preis auf Anfrage", "einzug": "nach Absprache (Sanierung vor Mietbeginn)", "titel": "Büro-/Ausstellungsfläche ca. 100 m² (und 130 m²) im Herzen von Uhlenhorst", "ausstattung": "Miete auf Anfrage; ebenerdig, barrierefrei, Fensterfront, WC; zweite Fläche ca. 130 m² + 100 m² Lager (Souterrain), zusammen ca. 266 m²; Provision 3 Bruttomonatsmieten (Jacobi Immobilien); Aggregator-Anzeige vom 4.9., Verfügbarkeit unbestätigt", "anbieter": "hoork (Jacobi Immobilien)", "url": "https://www.hoork.com/ca-100-m-und-ca-130-m-barrierefreie-buro-ausstellungsflachen-im-herzen-von-uhlenhorst/", "first_seen": "2026-11-10", "first_seen_de": "10.11.2026", "foto_hinweis": "", "geo": {"lat": 53.5732161, "lon": 10.0147729, "lage_genau": false, "hinweis": "Adresse nicht genannt, Lage nach Straße (Uhlenhorster Kanal)"}, "_pin": [53.5732161, 10.0147729], "fotos": ["fotos/www_hoork_com_ca_100_m_und_ca_130_m_barrierefreie_buro_ausst/01.jpg", "fotos/www_hoork_com_ca_100_m_und_ca_130_m_barrierefreie_buro_ausst/02.jpg"]}, {"id": "www_immobilienscout24_de_expose_172458748", "kategorie": "C", "score": 5, "stadtteil": "Eppendorf", "strasse": "Schottmüllerstraße 20a, 20251 Hamburg", "m2": 75, "zimmer": "k. A.", "kalt": 2100, "nk": 300, "warm": 2400, "warm_hinweis": "geschätzt", "einzug": "ab 2027", "titel": "Ab 2027: Bürofläche 75 m² in ruhiger Eppendorfer Hinterhoflage", "ausstattung": "halbrundes Bürogebäude in Hoflage, gläserner Aufzug; Miete 2.100 €/Monat (Inserat); NK geschätzt (~4 €/m²); provisionsfrei; netto zzgl. MwSt.; weitere Flächen 26–90 m² im Haus (BHI / buerohamburg.de, Obj. 25565-079)", "anbieter": "ImmoScout24 (BHI Büro Hamburg Immobilien)", "url": "https://www.immobilienscout24.de/expose/172458748", "first_seen": "2026-11-08", "first_seen_de": "08.11.2026", "foto_hinweis": "", "geo": {"lat": 53.591028, "lon": 9.9858449, "lage_genau": true, "hinweis": ""}, "_pin": [53.591028, 9.9858449], "fotos": ["fotos/www_immobilienscout24_de_expose_172458748/01.jpg", "fotos/www_immobilienscout24_de_expose_172458748/02.jpg", "fotos/www_immobilienscout24_de_expose_172458748/03.jpg", "fotos/www_immobilienscout24_de_expose_172458748/04.jpg"]}, {"id": "www_immobilo_de_immobilien_repraesentative_gewerberaeume_in", "kategorie": "B", "score": 7, "stadtteil": "Winterhude", "strasse": "PLZ 22303, Winterhude", "m2": 130.0, "zimmer": "1 Großraumbüro vorne + 2 separate Büros hinten, Pantry, 2 WC", "kalt": 2050.0, "nk": 200.0, "warm": 2250.0, "warm_hinweis": "", "einzug": "nicht angegeben", "titel": "Repräsentative Gewerberäume in altem Fabrikhaus (Gründerzeit), zentral Winterhude", "ausstattung": "ca. 130 m² (über immobilo-Größenfilter 130–131 m² eingegrenzt); Bruttokaltmiete 2.050 € + NK 200 € = warm 2.250 €; Kaution 6.150 €; viele große Fenster; Aufteilung/Boden individuell anpassbar; MwSt.-Status unklar", "anbieter": "Immowelt (via immobilo)", "url": "https://www.immobilo.de/immobilien/repraesentative-gewerberaeume-in-zentraler-lage-von-hamburg-winterhude-H7K83R", "first_seen": "2026-11-07", "first_seen_de": "07.11.2026", "foto_hinweis": "Portal liefert keine Fotos – siehe Inserat", "geo": {"lat": 53.5914191, "lon": 10.0216029, "lage_genau": false, "hinweis": "Adresse nicht genannt, Lage nach PLZ 22303"}, "_pin": [53.5914191, 10.0216029], "fotos": ["fotos/www_immobilo_de_immobilien_repraesentative_gewerberaeume_in/01.jpg"]}, {"id": "ka_3510328910", "kategorie": "C", "score": 5, "stadtteil": "Eppendorf", "strasse": "PLZ 20249, nahe U Kellinghusenstraße", "m2": 82.5, "zimmer": "1 großer Raum + 5 kleinere Räume, Küche, eigenes WC", "kalt": null, "nk": null, "warm": null, "warm_hinweis": "geschätzt; Preis auf Anfrage", "einzug": "ab 01.11.2026", "titel": "Helles Büro Eppendorf 82,5 m² mit 25 m² Terrasse (Nachmieter/Untermiete)", "ausstattung": "82,5 m²; Terrasse ca. 25 m²; vor 3 J. saniert; Fußbodenheizung; EBK mit Geschirrspüler; LAN teilweise; (Halb-)Souterrain; provisionsfrei; Miete auf Anfrage (VB)", "anbieter": "Kleinanzeigen (privat)", "url": "https://www.kleinanzeigen.de/s-anzeige/schoenes-helles-buero-in-eppendorf-82-5-m-mit-grosser-terrasse/3510328910-277-9476", "first_seen": "2026-11-07", "first_seen_de": "07.11.2026", "foto_hinweis": "", "geo": {"lat": 53.5882587, "lon": 9.989054, "lage_genau": false, "hinweis": "Adresse nicht genannt, Lage nach PLZ 20249"}, "_pin": [53.5882587, 9.989054], "fotos": ["fotos/ka_3510328910/01.jpg", "fotos/ka_3510328910/02.jpg", "fotos/ka_3510328910/03.jpg", "fotos/ka_3510328910/04.jpg"]}, {"id": "www_immobilienscout24_de_expose_172397041", "kategorie": "B", "score": 7, "stadtteil": "Rotherbaum", "strasse": "Grindelallee 43, 20146 Hamburg", "m2": 113.0, "zimmer": "1. Etage", "kalt": 1750.0, "nk": 290.0, "warm": 2040.0, "warm_hinweis": "", "einzug": "sofort", "titel": "Helle Büroetage Univiertel Grindelallee 43 (Hinterhof, voll ausgestattet)", "ausstattung": "113 m²; kalt 1.750 € + NK 290 € = warm 2.040 €; provisionsfrei; modernisiert; Laminat; 1 Parkfläche 37 €; ruhig im Hinterhof; vermutlich netto zzgl. MwSt. (warm+MwSt. ≈ 2.428 €)", "anbieter": "ImmoScout24", "url": "https://www.immobilienscout24.de/expose/172397041", "first_seen": "2026-11-06", "first_seen_de": "06.11.2026", "foto_hinweis": "", "geo": {"lat": 53.5661185, "lon": 9.9806631, "lage_genau": true, "hinweis": ""}, "_pin": [53.5661185, 9.9806631], "fotos": ["fotos/www_immobilienscout24_de_expose_172397041/01.jpg", "fotos/www_immobilienscout24_de_expose_172397041/02.jpg", "fotos/www_immobilienscout24_de_expose_172397041/03.jpg", "fotos/www_immobilienscout24_de_expose_172397041/04.jpg"]}, {"id": "www_immobilienscout24_de_expose_167713515", "kategorie": "B", "score": 7, "stadtteil": "Hoheluft-Ost", "strasse": "Hoheluftchaussee 66, 20251 Hamburg", "m2": 96.0, "zimmer": "1. OG", "kalt": 1900.0, "nk": 380.0, "warm": 2280.0, "warm_hinweis": "", "einzug": "ab sofort", "titel": "Bürofläche Hoheluftchaussee 66 (Erstbezug nach Sanierung)", "ausstattung": "96 m² Büro/Praxis; kalt 1.900 € + NK 380 € = warm 2.280 €; provisionsfrei; Erstbezug nach Sanierung; Fernwärme; vermutlich netto zzgl. MwSt. (warm+MwSt. ≈ 2.713 €)", "anbieter": "ImmoScout24", "url": "https://www.immobilienscout24.de/expose/167713515", "first_seen": "2026-11-06", "first_seen_de": "06.11.2026", "foto_hinweis": "", "geo": {"lat": 53.582252, "lon": 9.9719294, "lage_genau": true, "hinweis": ""}, "_pin": [53.582252, 9.9719294], "fotos": ["fotos/www_immobilienscout24_de_expose_167713515/01.jpg", "fotos/www_immobilienscout24_de_expose_167713515/02.jpg", "fotos/www_immobilienscout24_de_expose_167713515/03.jpg", "fotos/www_immobilienscout24_de_expose_167713515/04.jpg"]}, {"id": "www_immobilo_de_immobilien_helles_buero_direkt_am_muehlenkam", "kategorie": "B", "score": 7, "stadtteil": "Winterhude", "strasse": "PLZ 22303, nahe Mühlenkampkanal", "m2": 134, "zimmer": "5 Zimmer", "kalt": 2278.0, "nk": 350.0, "warm": 2628.0, "warm_hinweis": "", "einzug": "nicht angegeben", "titel": "Helles Büro direkt am Mühlenkampkanal (Immowelt)", "ausstattung": "17 €/m² kalt; NK 350 €; Kaution 6.834 €; Fläche aus 2.278 €/17 €/m² abgeleitet (≈134 m²); vermutlich netto zzgl. MwSt.", "anbieter": "Immowelt (via immobilo)", "url": "https://www.immobilo.de/immobilien/helles-buero-direkt-am-muehlenkampkanal-22303-hh-winterhude-H7FGBJ", "first_seen": "2026-11-05", "first_seen_de": "05.11.2026", "foto_hinweis": "Portal liefert keine Fotos – siehe Inserat", "geo": {"lat": 53.5914191, "lon": 10.022402900000001, "lage_genau": false, "hinweis": "Adresse nicht genannt, Lage nach Straße (Mühlenkampkanal)"}, "_pin": [53.5914191, 10.022402900000001], "fotos": ["fotos/www_immobilo_de_immobilien_helles_buero_direkt_am_muehlenkam/01.jpg"]}, {"id": "witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil", "kategorie": "B", "score": 7, "stadtteil": "Eppendorf", "strasse": "PLZ 20251, Eppendorf, Hinterhof", "m2": 126.3, "zimmer": "Zwei Ebenen im separaten Hinterhaus, eigener Eingang; oben 2 Räume mit ca. 4 m Decken, EG 2 Räume, halboffene Küchenzeile, 2 WCs (eins mit Dusche), Abstellraum", "kalt": 2248.0, "nk": 555.72, "warm": 2803.72, "warm_hinweis": "geschätzt", "einzug": "nicht angegeben", "titel": "Traumhaftes Büro im Loftstil in ruhiger Lage (Witthöft)", "ausstattung": "17,80 €/m², zzgl. MwSt.; Altbau 1898, Loftcharakter; Stellplatz in der Zufahrt möglich; Courtage 3,57 Brutto-MM inkl. MwSt.; Witthöft Objekt-Nr. 11422", "anbieter": "Witthöft Gewerbeimmobilien", "url": "https://witthoeft.com/anlage-immobilien/traumhaftes-buro-im-loftstil-in-ruhiger-lage-im-schonen-eppendorf", "first_seen": "2026-10-29", "first_seen_de": "29.10.2026", "foto_hinweis": "", "geo": {"lat": 53.591507, "lon": 9.9797716, "lage_genau": false, "hinweis": "Adresse nicht genannt, Lage nach PLZ 20251"}, "_pin": [53.591507, 9.9797716], "fotos": ["fotos/witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil/01.jpg", "fotos/witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil/02.jpg", "fotos/witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil/03.jpg", "fotos/witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil/04.jpg"]}, {"id": "www_immobilo_de_immobilien_buero_loft_am_eppendorfer_baum_GS", "kategorie": "B", "score": 7, "stadtteil": "Harvestehude/Eppendorf", "strasse": "PLZ 20249, nahe Eppendorfer Baum", "m2": null, "zimmer": "3. Etage (Endetage) eines Loftgebäudes in zweiter Reihe; Glastrennwände, WC-Anlage, kleine Teeküche", "kalt": 2250.0, "nk": 400.0, "warm": 2650.0, "warm_hinweis": "", "einzug": "nicht angegeben", "titel": "Büro-Loft am Eppendorfer Baum (Immowelt)", "ausstattung": "Kaution 8.000 €; Miete und NK zzgl. MwSt.; Energieausweis in Vorbereitung; Fläche nicht angegeben", "anbieter": "Immowelt (via immobilo)", "url": "https://www.immobilo.de/immobilien/buero-loft-am-eppendorfer-baum-GSVDNN", "first_seen": "2026-10-29", "first_seen_de": "29.10.2026", "foto_hinweis": "Portal liefert keine Fotos – siehe Inserat", "geo": {"lat": 53.583787, "lon": 9.9852871, "lage_genau": false, "hinweis": "Adresse nicht genannt, Lage nach Straße (Eppendorfer Baum)"}, "_pin": [53.583787, 9.9852871], "fotos": ["fotos/www_immobilo_de_immobilien_buero_loft_am_eppendorfer_baum_GS/01.jpg"]}];
+const PHOTOS = {"ka_3573889855": ["fotos/ka_3573889855/01.jpg", "fotos/ka_3573889855/02.jpg", "fotos/ka_3573889855/03.jpg", "fotos/ka_3573889855/04.jpg"], "hamburg_business_com_en_expose_14366": ["fotos/hamburg_business_com_en_expose_14366/01.jpg", "fotos/hamburg_business_com_en_expose_14366/02.jpg", "fotos/hamburg_business_com_en_expose_14366/03.jpg", "fotos/hamburg_business_com_en_expose_14366/04.jpg"], "ka_3573177802": ["fotos/ka_3573177802/01.jpg", "fotos/ka_3573177802/02.jpg", "fotos/ka_3573177802/03.jpg", "fotos/ka_3573177802/04.jpg"], "www_immobilo_de_immobilien_charmantes_buero_loft_in_eimsbuet": ["fotos/www_immobilo_de_immobilien_charmantes_buero_loft_in_eimsbuet/01.jpg"], "ka_3567454848": ["fotos/ka_3567454848/01.jpg", "fotos/ka_3567454848/02.jpg", "fotos/ka_3567454848/03.jpg", "fotos/ka_3567454848/04.jpg"], "www_hoork_com_ca_100_m_und_ca_130_m_barrierefreie_buro_ausst": ["fotos/www_hoork_com_ca_100_m_und_ca_130_m_barrierefreie_buro_ausst/01.jpg", "fotos/www_hoork_com_ca_100_m_und_ca_130_m_barrierefreie_buro_ausst/02.jpg"], "www_immobilienscout24_de_expose_172458748": ["fotos/www_immobilienscout24_de_expose_172458748/01.jpg", "fotos/www_immobilienscout24_de_expose_172458748/02.jpg", "fotos/www_immobilienscout24_de_expose_172458748/03.jpg", "fotos/www_immobilienscout24_de_expose_172458748/04.jpg"], "www_immobilo_de_immobilien_repraesentative_gewerberaeume_in": ["fotos/www_immobilo_de_immobilien_repraesentative_gewerberaeume_in/01.jpg"], "ka_3510328910": ["fotos/ka_3510328910/01.jpg", "fotos/ka_3510328910/02.jpg", "fotos/ka_3510328910/03.jpg", "fotos/ka_3510328910/04.jpg"], "www_immobilienscout24_de_expose_172397041": ["fotos/www_immobilienscout24_de_expose_172397041/01.jpg", "fotos/www_immobilienscout24_de_expose_172397041/02.jpg", "fotos/www_immobilienscout24_de_expose_172397041/03.jpg", "fotos/www_immobilienscout24_de_expose_172397041/04.jpg"], "www_immobilienscout24_de_expose_167713515": ["fotos/www_immobilienscout24_de_expose_167713515/01.jpg", "fotos/www_immobilienscout24_de_expose_167713515/02.jpg", "fotos/www_immobilienscout24_de_expose_167713515/03.jpg", "fotos/www_immobilienscout24_de_expose_167713515/04.jpg"], "www_immobilo_de_immobilien_helles_buero_direkt_am_muehlenkam": ["fotos/www_immobilo_de_immobilien_helles_buero_direkt_am_muehlenkam/01.jpg"], "witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil": ["fotos/witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil/01.jpg", "fotos/witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil/02.jpg", "fotos/witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil/03.jpg", "fotos/witthoeft_com_anlage_immobilien_traumhaftes_buro_im_loftstil/04.jpg"], "www_immobilo_de_immobilien_buero_loft_am_eppendorfer_baum_GS": ["fotos/www_immobilo_de_immobilien_buero_loft_am_eppendorfer_baum_GS/01.jpg"]};
 
-function warmLabel(o) {
-  if (!o.warm) return "Miete auf Anfrage";
-  let s = (o.ca ? "ca. " : "") + o.warm + " Warmmiete";
-  if (o.netto) s += " · " + o.netto;
-  return s;
+function isToday(r){return r.first_seen === STAND}
+function isNew(r){if(!r.first_seen)return false;const d=(today-new Date(r.first_seen+'T00:00:00'))/864e5;return d<=3 && d>=0}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function eur(x){return x==null?'nicht angegeben':Number(x).toLocaleString('de-DE',{maximumFractionDigits:2})+' €'}
+function m2(x){return x==null?'nicht angegeben':Number(x).toLocaleString('de-DE',{maximumFractionDigits:1})+' m²'}
+function kcls(r){return isToday(r)?'W':r.kategorie}
+function icon(r){
+  const k=kcls(r);const ap=!(r.geo&&r.geo.lage_genau);
+  return L.divIcon({className:'',iconSize:[30,30],iconAnchor:[4,30],popupAnchor:[11,-28],
+    html:`<div class="pinwrap"><div class="pin k${k} ${ap?'approx':''}"><span>${r.score||r.kategorie}</span></div>${isNew(r)?'<div class="nb">NEU</div>':''}</div>`});
 }
-
-const map = L.map("map", { scrollWheelZoom: true });
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende'
-}).addTo(map);
-
-const list = document.getElementById("list");
-const markers = {};
-const cards = {};
-
-function select(id, fromCard) {
-  document.querySelectorAll(".card.sel").forEach(el => el.classList.remove("sel"));
-  document.querySelectorAll(".pin.sel").forEach(el => el.classList.remove("sel"));
-  cards[id].classList.add("sel");
-  const iconEl = markers[id].getElement();
-  if (iconEl) iconEl.querySelector(".pin").classList.add("sel");
-  if (fromCard) {
-    map.setView(markers[id].getLatLng(), 16, { animate: true });
-    markers[id].openPopup();
+function popup(r){
+  const ph=PHOTOS[r.id]||[];const gid='g'+r.id.replace(/\W/g,'');const ap=!(r.geo&&r.geo.lage_genau);
+  let h=`<div><span class="badge k${kcls(r)}">${esc(r.kategorie)}${r.score?` · ${r.score}/10`:''}</span> ${isToday(r)?'<span class="badge kW">heute neu</span>':isNew(r)?'<span class="badge neu">NEU</span>':''}
+  <div style="font-weight:700;margin:4px 0 4px">${esc(r.titel)}</div>
+  <div style="margin:0 0 6px">${esc(r.stadtteil)} – ${esc(r.strasse)}${ap?' <span class="badge" style="background:#c67a10">ungefähre Lage</span>':''}</div>`;
+  if(ph.length){
+    h+=`<div class="gal" id="${gid}" data-i="0"><img src="${ph[0]}" alt="Foto">${ph.length>1?`<button type="button" class="p" onclick="gal('${gid}','${esc(r.id)}',-1)">‹</button><button type="button" class="n" onclick="gal('${gid}','${esc(r.id)}',1)">›</button><span class="c">1/${ph.length}</span>`:''}</div>`;
+    if(ph.length>1) h+=`<div class="thumbs">`+ph.map((p,i)=>`<img src="${p}" class="${i?'':'on'}" alt="" onclick="gal('${gid}','${esc(r.id)}',0,${i})">`).join('')+'</div>';
   } else {
-    cards[id].scrollIntoView({ behavior: "smooth", block: "nearest" });
+    h+=`<div class="warn">Keine Fotos verfügbar${r.foto_hinweis?': '+esc(r.foto_hinweis):''}</div>`;
   }
+  if(ap) h+=`<div class="warn">📍 Ungefähre Lage${r.geo&&r.geo.hinweis?': '+esc(r.geo.hinweis):''}</div>`;
+  const hint=r.warm_hinweis?`<div class="muted">${esc(r.warm_hinweis)}</div>`:'';
+  const rows=[
+    ['Titel',esc(r.titel)],
+    ['Lage',esc(r.stadtteil)+' · '+esc(r.strasse)+(ap?' (ungefähr)':'')],
+    ['Fläche',m2(r.m2)],
+    ['Kaltmiete',eur(r.kalt)],
+    ['Nebenkosten',typeof r.nk==='number'?eur(r.nk):esc(r.nk||'k. A.')],
+    ['Warmmiete',eur(r.warm)+hint],
+    ['Verfügbarkeit',esc(r.einzug)],
+    ['Räume',esc(r.zimmer||'k. A.')],
+    ['Ausstattung',esc(r.ausstattung||'k. A.')],
+    ['Anbieter / Quelle',esc(r.anbieter)],
+    ['Erstmals gesehen',esc(r.first_seen_de)]
+  ];
+  h+='<table class="kv">'+rows.map(([a,b])=>`<tr><td>${a}</td><td>${b}</td></tr>`).join('')+'</table>';
+  h+=`<a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">Zum Inserat ↗</a>`;
+  return h+'</div>';
+}
+function gal(gid,id,d,j){
+  const el=document.getElementById(gid);if(!el)return;const ph=PHOTOS[id];if(!ph||!ph.length)return;
+  let i=+el.dataset.i;i=j!=null?j:(i+d+ph.length)%ph.length;el.dataset.i=i;
+  el.querySelector('img').src=ph[i];
+  const c=el.querySelector('.c');if(c)c.textContent=(i+1)+'/'+ph.length;
+  const th=el.nextElementSibling;if(th&&th.classList.contains('thumbs'))[...th.children].forEach((t,k)=>t.classList.toggle('on',k===i));
 }
 
-DATA.forEach((o, i) => {
-  const n = i + 1;
-  const approxClass = o.approx ? " approx" : "";
-  const label = warmLabel(o);
-  const sqm = o.sqm ? o.sqm + " m²" : "Fläche k. A.";
-  const marker = L.marker([o.lat, o.lon], {
-    icon: L.divIcon({
-      className: "",
-      html: `<div class="pin${approxClass}">${n}</div>`,
-      iconSize: [28, 28],
-      iconAnchor: [14, 14],
-      popupAnchor: [0, -14]
-    }),
-    zIndexOffset: o.approx ? 0 : 100,
-    title: n + ". " + o.title
-  }).addTo(map);
-  marker.bindPopup(
-    `<strong>${n}. ${esc(o.title)}</strong><br>${esc(o.address)}${o.approx ? " <em>(ungefähre Lage)</em>" : ""}<br>${esc(sqm)} · ${esc(label)}<br><a href="${esc(o.url)}" target="_blank" rel="noopener">Zur Anzeige</a>`
-  );
-  marker.on("click", () => select(o.id, false));
-  markers[o.id] = marker;
+const map=L.map('map',{zoomControl:true,scrollWheelZoom:true}).setView([53.585,10.0],13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+  maxZoom:19,
+  attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende'
+}).addTo(map);
+const lg=L.control({position:'bottomright'});
+lg.onAdd=()=>{const d=L.DomUtil.create('div','legend');d.innerHTML='<i style="background:#2e9d3a"></i>A sehr gut<br><i style="background:#2b6fd6"></i>B gut<br><i style="background:#ee8a12"></i>C mit Abweichung<br><i style="background:#111;border:1.5px solid #fff;outline:1px solid #111;box-sizing:border-box"></i>schwarz = heute neu<br><span style="border:1px dashed #666;display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:4px"></span>ungefähre Lage';return d};
+lg.addTo(map);
 
-  const card = document.createElement("article");
-  card.className = "card";
-  card.id = "card-" + o.id;
-  card.innerHTML = `
-    <h2><span class="num${approxClass}">${n}</span><span>${esc(o.title)}</span></h2>
-    <div class="meta">${esc(o.district)} · ${esc(o.address)}${o.approx ? '<span class="tag">ungefähre Lage</span>' : ""}</div>
-    <div class="price">${esc(sqm)} · ${esc(label)}</div>
-    <div class="sub">Verfügbarkeit: ${esc(o.avail)} · gefunden am ${esc(o.seen)} · ${esc(o.source)}</div>
-    <div class="sub" style="margin-top:6px"><a href="${esc(o.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Zur Anzeige</a></div>`;
-  card.addEventListener("click", () => select(o.id, true));
-  cards[o.id] = card;
-  list.appendChild(card);
+const markers={};
+DATA.forEach(r=>{
+  if(!r._pin)return;
+  const m=L.marker(r._pin,{icon:icon(r),zIndexOffset:(r.score||0)*100,title:r.titel});
+  m.bindPopup(()=>popup(r),{maxWidth:440,maxHeight:Math.round(window.innerHeight*0.62),autoPanPadding:[20,20]});
+  markers[r.id]=m;
 });
 
-function fitAll() {
-  const bounds = L.featureGroup(Object.values(markers)).getBounds();
+function apply(){
+  const ks=[...document.querySelectorAll('.fk:checked')].map(x=>x.value);
+  const vis=DATA.filter(r=>ks.includes(r.kategorie));
+  DATA.forEach(r=>{const m=markers[r.id];if(!m)return;if(vis.includes(r))m.addTo(map);else m.remove()});
+  document.getElementById('cnt').textContent=vis.length+' von '+DATA.length+' Büros sichtbar';
+  document.getElementById('list').innerHTML=vis.map(r=>{
+    const ph=(PHOTOS[r.id]||[])[0];
+    const ap=!(r.geo&&r.geo.lage_genau);
+    return `<div class="item" data-id="${esc(r.id)}">${ph?`<img src="${ph}" alt="">`:'<img alt="">'}<div>
+      <div class="t"><span class="badge k${kcls(r)}">${esc(r.kategorie)}${r.score?` ${r.score}`:''}</span> ${isToday(r)?'<span class="badge kW">heute</span> ':''}${isNew(r)&&!isToday(r)?'<span class="badge neu">NEU</span> ':''}${esc((r.stadtteil||'').split(/ [(\/–]/)[0])}</div>
+      <div class="s">${esc(r.strasse)}</div>
+      <div class="s">${m2(r.m2)} · warm ${eur(r.warm)}${ap?' · 📍≈':''}</div>
+    </div></div>`;
+  }).join('');
+  document.querySelectorAll('.item').forEach(el=>el.onclick=()=>{
+    const m=markers[el.dataset.id];if(!m)return;
+    map.setView(m.getLatLng(),Math.max(map.getZoom(),15),{animate:false});
+    setTimeout(()=>m.openPopup(),50);
+    document.getElementById('side').classList.remove('open');
+  });
+}
+document.querySelectorAll('#side input').forEach(i=>i.addEventListener('input',apply));
+apply();
+
+function fitAll(){
+  const vis=DATA.filter(r=>markers[r.id] && map.hasLayer(markers[r.id]));
+  const b=L.latLngBounds(vis.map(r=>r._pin));
   map.invalidateSize();
-  map.fitBounds(bounds, { padding: [36, 36], maxZoom: 13 });
+  if(b.isValid()) map.fitBounds(b,{padding:[36,36],maxZoom:13});
 }
 map.whenReady(fitAll);
-window.addEventListener("orientationchange", () => { map.invalidateSize(); fitAll(); });
+window.addEventListener('orientationchange',()=>{map.invalidateSize();fitAll()});
 </script>
 </body>
 </html>
