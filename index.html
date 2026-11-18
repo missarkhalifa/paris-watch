@@ -77,10 +77,9 @@ function warmLabel(o) {
 }
 
 const map = L.map("map", { scrollWheelZoom: true });
-L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-  subdomains: "abcd",
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende'
 }).addTo(map);
 
 const list = document.getElementById("list");
@@ -137,7 +136,13 @@ DATA.forEach((o, i) => {
   list.appendChild(card);
 });
 
-map.fitBounds(L.featureGroup(Object.values(markers)).getBounds().pad(0.12));
+function fitAll() {
+  const bounds = L.featureGroup(Object.values(markers)).getBounds();
+  map.invalidateSize();
+  map.fitBounds(bounds, { padding: [36, 36], maxZoom: 13 });
+}
+map.whenReady(fitAll);
+window.addEventListener("orientationchange", () => { map.invalidateSize(); fitAll(); });
 </script>
 </body>
 </html>
