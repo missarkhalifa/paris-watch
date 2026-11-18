@@ -1,105 +1,143 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Paris Lageradar</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Büro-Suche Hamburg – neue Angebote 29.10.–18.11.2026</title>
+<link rel="stylesheet" href="vendor/leaflet.css">
 <style>
-*{box-sizing:border-box}html,body{margin:0;overflow-x:hidden;background:#0b0d12;color:#eee;font-family:-apple-system,system-ui,sans-serif}
-header{padding:10px 14px 8px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-h1{font-size:18px;margin:0}#stand{color:#8a93a6;font-size:12px}
-#wrap{position:relative;height:70vh;min-height:420px}#map{position:absolute;inset:0;background:#0b0d12}
-.leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9)}
-.leaflet-heatmap-layer{opacity:.75}.glow{filter:blur(4px)}
-#legend{position:absolute;top:10px;left:10px;z-index:500;background:rgba(15,18,26,.75);backdrop-filter:blur(6px);border-radius:10px;padding:6px 10px;font-size:11px;color:#ccc}
-#legend .g{width:110px;height:8px;border-radius:4px;margin:4px 0 2px;background:linear-gradient(90deg,rgba(255,255,0,.2),#ffeb3b,#ff9800,#f44336,#8b0000)}
-#legend .r{display:flex;justify-content:space-between}
-#tl{position:absolute;left:0;right:0;bottom:0;z-index:600;background:linear-gradient(transparent,rgba(8,10,15,.92) 25%);padding:26px 0 calc(10px + env(safe-area-inset-bottom))}
-#tlhead{display:flex;align-items:center;gap:12px;padding:0 14px 6px}
-#play{flex:0 0 46px;height:46px;border-radius:50%;border:0;background:#ff6a00;color:#fff;font-size:18px;box-shadow:0 0 14px rgba(255,106,0,.6)}
-#tlabel{font-size:22px;font-weight:700;flex:1}#nowbtn{border:1px solid #555;background:rgba(40,44,56,.8);color:#eee;border-radius:16px;padding:6px 12px;font-size:13px}
-#track{position:relative;height:58px;margin:0 14px;touch-action:none}
-#rail{position:absolute;left:0;right:0;top:12px;height:6px;border-radius:3px;background:#2a2f3c}
-#fill{position:absolute;left:0;top:12px;height:6px;border-radius:3px;background:linear-gradient(90deg,#ffeb3b,#ff6a00)}
-.tick{position:absolute;top:22px;width:1px;height:6px;background:#556;transform:translateX(-.5px)}
-.tick.d{height:14px;background:#aab;top:20px}
-.tl{position:absolute;top:30px;font-size:10px;color:#8a93a6;transform:translateX(-50%);white-space:nowrap}
-.tl.d{color:#fff;font-weight:700;font-size:11px}
-#nowm{position:absolute;top:2px;width:2px;height:26px;background:#4dabf7;transform:translateX(-1px)}
-#nowm span{position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:9px;color:#4dabf7;font-weight:700}
-#thumb{position:absolute;top:3px;width:26px;height:26px;margin-left:-13px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,106,0,.5),0 2px 8px #000}
-main{padding:12px 14px 40px}h2{font-size:15px;margin:6px 0 10px;color:#ccd}
-.card{background:#151924;border-radius:12px;padding:10px 12px;margin-bottom:10px;border-left:4px solid #444;overflow-wrap:anywhere}
-.card.on{border-left-color:#ff6a00}.card.dim{opacity:.45}.card b{font-size:14px}
-.meta{font-size:12px;color:#9aa3b5;margin-top:4px}.neu{background:#e03131;color:#fff;font-size:10px;padding:1px 5px;border-radius:4px;margin-left:4px}
-.home{position:relative}.home i{position:absolute;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid #4dabf7;box-shadow:0 0 12px 4px rgba(77,171,247,.8)}.home span{position:absolute;left:12px;top:-10px;font:700 12px system-ui;color:#fff;text-shadow:0 0 4px #000,0 0 4px #000;white-space:nowrap}
-#homebtn{border:1px solid #555;background:rgba(40,44,56,.8);color:#eee;border-radius:16px;padding:6px 10px;font-size:14px}
-.lv{display:flex;gap:3px;margin:4px 0 2px}.lv i{font-style:normal;width:20px;height:16px;border-radius:3px;color:#000;font-weight:700;font-size:10px;text-align:center;line-height:16px}.lv i:last-child{color:#fff}.dl{margin-top:3px;color:#aaa}
-.bdg{display:inline-block;min-width:20px;padding:1px 6px;border-radius:5px;font-weight:800;font-size:11px;color:#000;margin-right:6px}.bdg.l5{color:#fff}.why{font-size:12px;color:#c9cfdb;margin-top:3px;font-style:italic}
-#ovl{flex:0 0 auto;padding:4px 8px;border-radius:8px;font-size:12px;font-weight:800;color:#000;background:#444;text-align:center;line-height:1.1}
-#tlabel{font-size:17px;white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
-a{color:#4dabf7}.leaflet-popup-content{font-size:13px}
-</style></head><body>
-<header><h1>Paris Lageradar</h1><span id="stand"></span></header>
-<div id="wrap"><div id="map"></div>
-<div id="legend">Gefahrenstufe<div class="lv"><i style="background:#ffe066">1</i><i style="background:#ffc107">2</i><i style="background:#ff9800">3</i><i style="background:#f44336">4</i><i style="background:#8b0000">5</i></div><div class="r"><span>Info</span><span>akut</span></div><div class="dl">┅ unbestätigt</div></div>
-<div id="tl"><div id="tlhead"><button id="play" aria-label="Abspielen">▶</button><div id="tlabel"></div><div id="ovl" title="Gesamtlage">–</div><button id="nowbtn">Jetzt</button><button id="homebtn" aria-label="Zuhause">🏠</button></div>
-<div id="track"><div id="rail"></div><div id="fill"></div><div id="nowm"><span>JETZT</span></div><div id="thumb"></div></div></div></div>
-<main><h2>Hotspots</h2><div id="list"></div></main>
+  :root {
+    --ink: #172033;
+    --muted: #5b6475;
+    --line: #e4e7ee;
+    --bg: #f3f5f8;
+    --card: #fff;
+    --blue: #1f5fcc;
+    --orange: #c67a10;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink);
+    font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  header { background: #fff; border-bottom: 1px solid var(--line); padding: 14px 18px 12px; }
+  h1 { font-size: 1.15rem; margin: 0; letter-spacing: -0.02em; }
+  header p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+  #wrap { display: flex; height: calc(100% - 72px); min-height: 0; }
+  #map { flex: 1 1 58%; min-width: 0; }
+  #list { flex: 0 0 420px; width: 420px; overflow-y: auto; padding: 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 14px; margin: 0 0 10px; cursor: pointer; transition: border-color .15s, box-shadow .15s; }
+  .card:hover { border-color: #b9c9ea; }
+  .card.sel { border-color: var(--blue); box-shadow: 0 0 0 2px rgba(31,95,204,.28); }
+  .card h2 { font-size: 14.5px; line-height: 1.3; margin: 0 0 6px; display: flex; gap: 8px; align-items: flex-start; }
+  .num { flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--blue); color: #fff;
+    font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .num.approx { background: var(--orange); }
+  .meta, .sub { color: var(--muted); font-size: 13px; }
+  .price { font-weight: 700; font-size: 15px; margin: 6px 0 2px; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px;
+    background: #fff4dc; color: #8a5500; margin-left: 4px; vertical-align: 1px; }
+  .card a { color: var(--blue); font-weight: 600; text-decoration: none; }
+  .card a:hover { text-decoration: underline; }
+  .pin { width: 28px; height: 28px; border-radius: 50%; background: var(--blue); color: #fff;
+    font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center;
+    border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,.4); }
+  .pin.approx { background: var(--orange); border-style: dashed; }
+  .pin.sel { background: #c41e7a; transform: scale(1.25); }
+  .leaflet-popup-content { margin: 10px 12px; font-size: 13.5px; line-height: 1.4; }
+  .leaflet-popup-content a { color: var(--blue); font-weight: 600; }
+  @media (max-width: 840px) {
+    html, body { height: auto; }
+    #wrap { display: block; height: auto; }
+    #map { height: 52vh; width: 100%; }
+    #list { width: 100%; flex: none; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Büro-Suche Hamburg – neue Angebote 29.10.–18.11.2026</h1>
+  <p>14 neue Büro-Angebote, die neuesten zuerst. Orange und gestrichelt markierte Punkte sind eine ungefähre Lage, weil die genaue Adresse in der Anzeige fehlt.</p>
+</header>
+<div id="wrap">
+  <div id="map"></div>
+  <div id="list"></div>
+</div>
+<script src="vendor/leaflet.js"></script>
 <script>
-const HOME=[48.867617,2.350194]; // 31 Rue du Caire, 75002 Paris (api-adresse.data.gouv.fr)
-const km=e=>(map.distance(HOME,[e.lat,e.lon])/1000).toLocaleString('de-DE',{maximumFractionDigits:1,minimumFractionDigits:1})+' km von Zuhause';
-const LC=['#888','#ffe066','#ffc107','#ff9800','#f44336','#8b0000'],LN=['','Info/Verkehr','Störung','Demo friedlich','Spannungen','Akute Gefahr'];
-const bdg=l=>`<span class="bdg l${l}" style="background:${LC[l]}">${l}</span>`;
-const MIN=-24,MAX=72;let val=0;
-const P=s=>new Date((s.length==16?s+':00':s)+'+01:00');
-const tz={timeZone:'Europe/Paris'};
-const fmt=d=>d.toLocaleString('de-DE',{...tz,weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
-const hm=d=>d.toLocaleTimeString('de-DE',{...tz,hour:'2-digit',minute:'2-digit'});
-const map=L.map('map',{zoomControl:false}).setView([48.858,2.36],12);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',maxZoom:19}).addTo(map);
-const heat=L.heatLayer([],{radius:38,blur:30,maxZoom:13,max:1,minOpacity:0.05,gradient:{0.1:'rgba(255,255,0,0)',0.3:'rgba(255,224,102,.5)',0.5:'#ffc107',0.65:'#ff9800',0.8:'#f44336',1:'#8b0000'}}).addTo(map);
-map.createPane('home').style.zIndex=650;L.marker(HOME,{pane:'home',interactive:false,icon:L.divIcon({className:'home',html:'<i></i><span>Zuhause</span>',iconSize:[0,0]})}).addTo(map);
-let EV=[],hits=[],base=new Date();base.setMinutes(0,0,0);const now=new Date();let timer=null;
-const T=()=>new Date(base.getTime()+val*36e5);
-function inten(e,t){const s=P(e.start),en=P(e.end),H=4*36e5;if(t>=s&&t<=en)return 1;const d=t<s?s-t:t-en;return d<H?1-d/H:0}
-const track=document.getElementById('track'),thumb=document.getElementById('thumb'),fill=document.getElementById('fill');
-const pct=v=>(v-MIN)/(MAX-MIN)*100;
-function ticks(){let h='';for(let v=MIN;v<=MAX;v++){const t=new Date(base.getTime()+v*36e5);const H=+t.toLocaleString('en-GB',{...tz,hour:'2-digit',hour12:false})%24;
- if(H==0){h+=`<div class="tick d" style="left:${pct(v)}%"></div><div class="tl d" style="left:${pct(v)}%">${t.toLocaleDateString('de-DE',{...tz,weekday:'short'}).replace('.','')}</div>`}
- else if(H%6==0){h+=`<div class="tick" style="left:${pct(v)}%"></div><div class="tl" style="left:${pct(v)}%">${H}h</div>`}
- else if(H%3==0)h+=`<div class="tick" style="left:${pct(v)}%"></div>`}
- track.insertAdjacentHTML('beforeend',h);document.getElementById('nowm').style.left=pct(0)+'%'}
-function render(){const t=T();document.getElementById('tlabel').textContent=t.toLocaleString('de-DE',{...tz,weekday:'short',hour:'2-digit',minute:'2-digit'}).replace(',','');
- thumb.style.left=pct(val)+'%';fill.style.width=pct(val)+'%';
- const pts=[];let mx=0;EV.forEach((e,i)=>{const a=inten(e,t);e.a=a;const w=a*(.15+.85*e.level/5);
-  if(a>0){{const S=samples(e),k=S.length>1?.28:1;S.forEach(q=>pts.push([q[0],q[1],w*k]))};if(a>.5)mx=Math.max(mx,e.level)}
-  hits[i].forEach(l=>l.setStyle({opacity:a*l.o,fillOpacity:a*(l.f||0),interactive:a>0}));
-  document.getElementById('c'+i).className='card'+(a==1?' on':a==0?' dim':'')});
- heat.setLatLngs(pts);const o=document.getElementById('ovl');o.innerHTML=mx?`Lage ${mx}<br><small>${LN[mx]}</small>`:'Lage<br><small>ruhig</small>';o.style.background=LC[mx];o.style.color=mx==5?'#fff':'#000'}
-function lls(e){const g=e.geometry,c=g.type=='Polygon'?g.coordinates[0]:g.type=='LineString'?g.coordinates:[g.coordinates];return c.map(([x,y])=>[y,x])}
-function samples(e){if(e._s)return e._s;const c=lls(e),out=[];if(c.length==1)return e._s=c;
- for(let i=1;i<c.length;i++){const A=c[i-1],B=c[i],n=Math.max(1,Math.ceil(map.distance(A,B)/120));for(let k=0;k<n;k++)out.push([A[0]+(B[0]-A[0])*k/n,A[1]+(B[1]-A[1])*k/n])}
- out.push(c[c.length-1]);if(e.geometry.type=='Polygon'){const cx=c.reduce((s,p)=>s+p[0],0)/c.length,cy=c.reduce((s,p)=>s+p[1],0)/c.length;out.push([cx,cy],[cx,cy])}return e._s=out}
-function draw(e){const c=lls(e),col=LC[e.level],dash=e.confirmed?null:'10 10',T=e.geometry.type,ls=[];
- const mk=(f,o,x)=>{const l=f.addTo(map);l.o=o;Object.assign(l,x||{});l.on('click',ev=>popup(ev.latlng));ls.push(l)};
- if(T=='LineString'){mk(L.polyline(c,{color:col,weight:22,opacity:.18,className:'glow',lineCap:'round'}),.18);mk(L.polyline(c,{color:col,weight:10,opacity:.35,className:'glow',lineCap:'round'}),.35);mk(L.polyline(c,{color:'#fff3d6',weight:3,opacity:.9,dashArray:dash,lineCap:'round'}),.9)}
- else if(T=='Polygon'){mk(L.polygon(c,{color:col,weight:8,opacity:.3,className:'glow',fillColor:col,fillOpacity:.35}),.3,{f:.35});mk(L.polygon(c,{color:'#fff3d6',weight:2,opacity:.8,dashArray:dash,fill:false}),.8)}
- else mk(L.circleMarker(c[0],{radius:14,weight:0,fillColor:col,opacity:0,fillOpacity:.0001}),0,{f:.0001});
- return ls}
-function setFromX(x){const r=track.getBoundingClientRect();val=Math.round(MIN+Math.min(1,Math.max(0,(x-r.left)/r.width))*(MAX-MIN));render()}
-track.addEventListener('pointerdown',e=>{track.setPointerCapture(e.pointerId);setFromX(e.clientX)});
-track.addEventListener('pointermove',e=>{if(e.buttons||e.pressure)setFromX(e.clientX)});
-L.DomEvent.disableClickPropagation(document.getElementById('tl'));L.DomEvent.disableScrollPropagation(document.getElementById('tl'));
-function popup(ll){const t=T(),near=EV.filter(e=>e.a>0&&samples(e).some(q=>map.distance(ll,q)<350)).sort((x,y)=>y.level-x.level);if(!near.length)return;
- L.popup().setLatLng(ll).setContent(near.map(e=>`${bdg(e.level)}<b>${e.title}</b><div class="why">${e.level_reason}</div><small>${e.z} · ${e.type} · ${km(e)}</small><br><a href="${e.url}" target="_blank" rel="noopener">Quelle</a>`).join('<hr>')).openOn(map)}
-fetch('events.json?'+Date.now()).then(r=>r.json()).then(d=>{EV=d.events;document.getElementById('stand').textContent='Stand '+fmt(P(d.stand));
- const latest=EV.map(e=>e.first_seen).sort().pop(),list=document.getElementById('list');
- EV.forEach((e,i)=>{const st=P(e.start),en=P(e.end);e.z=fmt(st)+' – '+hm(en);
-  hits.push(draw(e));
-  const c=document.createElement('div');c.id='c'+i;c.innerHTML=`${bdg(e.level)}<b>${e.title}</b>${e.first_seen==latest?'<span class="neu">NEU</span>':''}<div class="meta">${e.z} · ${e.place} · ${e.type} · ${km(e)}</div><div class="why">Stufe ${e.level}: ${e.level_reason}${e.confirmed?'':' (gestrichelt = unbestätigt/ungefähr)'}</div>`;
-  c.onclick=()=>{val=Math.max(MIN,Math.min(MAX,Math.round((st-base)/36e5)));render();map.setView([e.lat,e.lon],14);window.scrollTo({top:0,behavior:'smooth'});setTimeout(()=>popup(L.latLng(e.lat,e.lon)),400)};list.appendChild(c)});
- ticks();render()});
-document.getElementById('homebtn').onclick=()=>map.setView(HOME,15);
-document.getElementById('nowbtn').onclick=()=>{val=0;render()};
-document.getElementById('play').onclick=function(){if(timer){clearInterval(timer);timer=null;this.textContent='▶'}else{this.textContent='❚❚';timer=setInterval(()=>{val=val>=MAX?MIN:val+1;render()},350)}};
-</script></body></html>
+const DATA = [{"id": 0, "title": "Gewerbefläche auf 2 Ebenen mit Terrasse, Grindelberg (Harvestehude), 100 m²", "district": "Harvestehude", "address": "Grindelberg, 20144 Hamburg (Harvestehude)", "sqm": "100", "warm": "3.250 €", "cold": "3.000 €", "ca": true, "netto": "netto zzgl. MwSt", "avail": "sofort", "seen": "18.11.2026", "source": "Kleinanzeigen (Makler)", "url": "https://www.kleinanzeigen.de/s-anzeige/-vielseitig-nutzbare-gewerbeflaeche-auf-2-ebenen-terrasse-stark-frequentierte-lage-grindelberg/3573889855-277-9432", "rank": "A", "lat": 53.5727257, "lon": 9.9784346, "approx": true}, {"id": 1, "title": "Frisch sanierte Bürofläche am Rothenbaum (Rothenbaumchaussee 40), 123 m²", "district": "Harvestehude / Rotherbaum", "address": "Rothenbaumchaussee 40, 20148 Hamburg", "sqm": "123", "warm": "2.706 €", "cold": "2.214 €", "ca": false, "netto": "netto zzgl. MwSt", "avail": "nach Kernsanierung, nicht angegeben", "seen": "17.11.2026", "source": "Hamburg Business (Angermann)", "url": "https://hamburg-business.com/en/expose/14366", "rank": "A", "lat": 53.5658301, "lon": 9.9895828, "approx": false}, {"id": 2, "title": "Gewerbefläche in erster Alsterlinie (Schwanenwik), 72 m²", "district": "Uhlenhorst", "address": "Schwanenwik, 22087 Hamburg", "sqm": "72", "warm": "3.420 €", "cold": "2.850 €", "ca": true, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "November 2026", "seen": "16.11.2026", "source": "Kleinanzeigen (privat)", "url": "https://www.kleinanzeigen.de/s-anzeige/gewerbeflaeche-in-erster-alsterlinie-hamburg-uhlenhorst/3573177802-277-9486", "rank": "B", "lat": 53.5627964, "lon": 10.0153115, "approx": true}, {"id": 3, "title": "Charmantes Büro-Loft im Hinterhof (Eimsbüttel, abgehend vom Eppendorfer Weg)", "district": "Eimsbüttel (nahe Isebek/Hoheluft)", "address": "PLZ 20259, abgehend vom Eppendorfer Weg", "sqm": "85", "warm": "1.950 €", "cold": "1.500 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "nicht angegeben", "seen": "13.11.2026", "source": "Immowelt via immobilo", "url": "https://www.immobilo.de/immobilien/charmantes-buero-loft-in-eimsbuettel-H7SKK4", "rank": "C", "lat": 53.5717909, "lon": 9.9582529, "approx": true}, {"id": 4, "title": "Charmante Bürofläche oder Atelier im Hinterhof (Eimsbüttel, Nähe Osterstraße)", "district": "Eimsbüttel (nahe Isebek/Hoheluft)", "address": "Sillemstraße 60, 20257 Hamburg", "sqm": "127", "warm": "2.145 €", "cold": "1.845 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "nach Absprache (Nachmieter, zeitlich flexibel)", "seen": "12.11.2026", "source": "Kleinanzeigen (ohne-makler.net)", "url": "https://www.kleinanzeigen.de/s-anzeige/charmante-bueroflaeche-oder-atelier-direkt-in-eimsbuettel-im-hinterhof/3567454848-277-26477", "rank": "C", "lat": 53.5776365, "lon": 9.9449254, "approx": false}, {"id": 5, "title": "Büro-/Ausstellungsfläche ca. 100 m² (und 130 m²) im Herzen von Uhlenhorst", "district": "Uhlenhorst", "address": "PLZ 22085, nahe Uhlenhorster Kanal", "sqm": "100", "warm": null, "cold": null, "ca": false, "netto": null, "avail": "nach Absprache (Sanierung vor Mietbeginn)", "seen": "10.11.2026", "source": "hoork (Jacobi Immobilien)", "url": "https://www.hoork.com/ca-100-m-und-ca-130-m-barrierefreie-buro-ausstellungsflachen-im-herzen-von-uhlenhorst/", "rank": "C", "lat": 53.5732161, "lon": 10.0147729, "approx": true}, {"id": 6, "title": "Ab 2027: Bürofläche 75 m² in ruhiger Eppendorfer Hinterhoflage", "district": "Eppendorf", "address": "Schottmüllerstraße 20a, 20251 Hamburg", "sqm": "75", "warm": "2.400 €", "cold": "2.100 €", "ca": true, "netto": "netto zzgl. MwSt", "avail": "ab 2027", "seen": "08.11.2026", "source": "ImmoScout24 (BHI Büro Hamburg Immobilien)", "url": "https://www.immobilienscout24.de/expose/172458748", "rank": "C", "lat": 53.591028, "lon": 9.9858449, "approx": false}, {"id": 7, "title": "Repräsentative Gewerberäume in altem Fabrikhaus (Gründerzeit), zentral Winterhude", "district": "Winterhude", "address": "PLZ 22303, Winterhude", "sqm": "130", "warm": "2.250 €", "cold": "2.050 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "nicht angegeben", "seen": "07.11.2026", "source": "Immowelt (via immobilo)", "url": "https://www.immobilo.de/immobilien/repraesentative-gewerberaeume-in-zentraler-lage-von-hamburg-winterhude-H7K83R", "rank": "B", "lat": 53.5914191, "lon": 10.0216029, "approx": true}, {"id": 8, "title": "Helles Büro Eppendorf 82,5 m² mit 25 m² Terrasse (Nachmieter/Untermiete)", "district": "Eppendorf", "address": "PLZ 20249, nahe U Kellinghusenstraße", "sqm": "82,5", "warm": null, "cold": null, "ca": true, "netto": null, "avail": "ab 01.11.2026", "seen": "07.11.2026", "source": "Kleinanzeigen (privat)", "url": "https://www.kleinanzeigen.de/s-anzeige/schoenes-helles-buero-in-eppendorf-82-5-m-mit-grosser-terrasse/3510328910-277-9476", "rank": "C", "lat": 53.5882587, "lon": 9.989054, "approx": true}, {"id": 9, "title": "Helle Büroetage Univiertel Grindelallee 43 (Hinterhof, voll ausgestattet)", "district": "Rotherbaum", "address": "Grindelallee 43, 20146 Hamburg", "sqm": "113", "warm": "2.040 €", "cold": "1.750 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "sofort", "seen": "06.11.2026", "source": "ImmoScout24", "url": "https://www.immobilienscout24.de/expose/172397041", "rank": "B", "lat": 53.5661185, "lon": 9.9806631, "approx": false}, {"id": 10, "title": "Bürofläche Hoheluftchaussee 66 (Erstbezug nach Sanierung)", "district": "Hoheluft-Ost", "address": "Hoheluftchaussee 66, 20251 Hamburg", "sqm": "96", "warm": "2.280 €", "cold": "1.900 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "ab sofort", "seen": "06.11.2026", "source": "ImmoScout24", "url": "https://www.immobilienscout24.de/expose/167713515", "rank": "B", "lat": 53.582252, "lon": 9.9719294, "approx": false}, {"id": 11, "title": "Helles Büro direkt am Mühlenkampkanal (Immowelt)", "district": "Winterhude", "address": "PLZ 22303, nahe Mühlenkampkanal", "sqm": "134", "warm": "2.628 €", "cold": "2.278 €", "ca": false, "netto": "netto zzgl. MwSt (vermutlich)", "avail": "nicht angegeben", "seen": "05.11.2026", "source": "Immowelt (via immobilo)", "url": "https://www.immobilo.de/immobilien/helles-buero-direkt-am-muehlenkampkanal-22303-hh-winterhude-H7FGBJ", "rank": "B", "lat": 53.5914191, "lon": 10.022402900000001, "approx": true}, {"id": 12, "title": "Traumhaftes Büro im Loftstil in ruhiger Lage (Witthöft)", "district": "Eppendorf", "address": "PLZ 20251, Eppendorf, Hinterhof", "sqm": "126,3", "warm": "2.803,72 €", "cold": "2.248 €", "ca": true, "netto": "netto zzgl. MwSt", "avail": "nicht angegeben", "seen": "29.10.2026", "source": "Witthöft Gewerbeimmobilien", "url": "https://witthoeft.com/anlage-immobilien/traumhaftes-buro-im-loftstil-in-ruhiger-lage-im-schonen-eppendorf", "rank": "B", "lat": 53.591507, "lon": 9.9797716, "approx": true}, {"id": 13, "title": "Büro-Loft am Eppendorfer Baum (Immowelt)", "district": "Harvestehude/Eppendorf", "address": "PLZ 20249, nahe Eppendorfer Baum", "sqm": null, "warm": "2.650 €", "cold": "2.250 €", "ca": false, "netto": "netto zzgl. MwSt", "avail": "nicht angegeben", "seen": "29.10.2026", "source": "Immowelt (via immobilo)", "url": "https://www.immobilo.de/immobilien/buero-loft-am-eppendorfer-baum-GSVDNN", "rank": "B", "lat": 53.583787, "lon": 9.9852871, "approx": true}];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
+}[c]));
+
+function warmLabel(o) {
+  if (!o.warm) return "Miete auf Anfrage";
+  let s = (o.ca ? "ca. " : "") + o.warm + " Warmmiete";
+  if (o.netto) s += " · " + o.netto;
+  return s;
+}
+
+const map = L.map("map", { scrollWheelZoom: true });
+L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+  subdomains: "abcd",
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende &copy; <a href="https://carto.com/attributions">CARTO</a>'
+}).addTo(map);
+
+const list = document.getElementById("list");
+const markers = {};
+const cards = {};
+
+function select(id, fromCard) {
+  document.querySelectorAll(".card.sel").forEach(el => el.classList.remove("sel"));
+  document.querySelectorAll(".pin.sel").forEach(el => el.classList.remove("sel"));
+  cards[id].classList.add("sel");
+  const iconEl = markers[id].getElement();
+  if (iconEl) iconEl.querySelector(".pin").classList.add("sel");
+  if (fromCard) {
+    map.setView(markers[id].getLatLng(), 16, { animate: true });
+    markers[id].openPopup();
+  } else {
+    cards[id].scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+}
+
+DATA.forEach((o, i) => {
+  const n = i + 1;
+  const approxClass = o.approx ? " approx" : "";
+  const label = warmLabel(o);
+  const sqm = o.sqm ? o.sqm + " m²" : "Fläche k. A.";
+  const marker = L.marker([o.lat, o.lon], {
+    icon: L.divIcon({
+      className: "",
+      html: `<div class="pin${approxClass}">${n}</div>`,
+      iconSize: [28, 28],
+      iconAnchor: [14, 14],
+      popupAnchor: [0, -14]
+    }),
+    zIndexOffset: o.approx ? 0 : 100,
+    title: n + ". " + o.title
+  }).addTo(map);
+  marker.bindPopup(
+    `<strong>${n}. ${esc(o.title)}</strong><br>${esc(o.address)}${o.approx ? " <em>(ungefähre Lage)</em>" : ""}<br>${esc(sqm)} · ${esc(label)}<br><a href="${esc(o.url)}" target="_blank" rel="noopener">Zur Anzeige</a>`
+  );
+  marker.on("click", () => select(o.id, false));
+  markers[o.id] = marker;
+
+  const card = document.createElement("article");
+  card.className = "card";
+  card.id = "card-" + o.id;
+  card.innerHTML = `
+    <h2><span class="num${approxClass}">${n}</span><span>${esc(o.title)}</span></h2>
+    <div class="meta">${esc(o.district)} · ${esc(o.address)}${o.approx ? '<span class="tag">ungefähre Lage</span>' : ""}</div>
+    <div class="price">${esc(sqm)} · ${esc(label)}</div>
+    <div class="sub">Verfügbarkeit: ${esc(o.avail)} · gefunden am ${esc(o.seen)} · ${esc(o.source)}</div>
+    <div class="sub" style="margin-top:6px"><a href="${esc(o.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Zur Anzeige</a></div>`;
+  card.addEventListener("click", () => select(o.id, true));
+  cards[o.id] = card;
+  list.appendChild(card);
+});
+
+map.fitBounds(L.featureGroup(Object.values(markers)).getBounds().pad(0.12));
+</script>
+</body>
+</html>
